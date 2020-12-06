@@ -1,0 +1,57 @@
+@import "../base/base";
+
+
+
+.illustration-div{
+    position: relative;
+}
+
+.planet-image{
+    position: absolute;;
+    width: 25%;
+height: 30%;
+left: 0.5rem;
+top: 0.5rem;
+
+transform: rotate(-21.05deg);
+}
+
+.person-image{
+    position: absolute;
+    width: 75%;
+height: 85%;
+top: 2rem;
+transform: rotate(-16.93deg);
+}
+
+.rocket-image{
+    position: absolute;
+width: 10%;
+height: 30%;
+left: 45rem;
+top: 4rem;
+margin-top: -7vw;
+transform: rotate(51.39deg);
+}
+
+.camera-image{
+    position: absolute;
+    width: 15%;
+height: 20%;
+left: 35rem;
+top: 20rem;
+transform: rotate(20.53deg);
+}
+
+.star1{
+    margin-left: 75vw;
+    margin-top: -5vw;
+    width: 2%;
+height:3%
+}
+.star2{
+    margin-left: 40vw;
+    margin-top: 2vw;
+    width: 2%;
+height:3%
+}

@@ -1,0 +1,57 @@
+
+
+body{
+    background-color: #060930;
+    /* padding-left: 0; */
+}
+
+.logo{
+    display: block;
+  max-width:45%;
+  max-height:45%;
+  width: auto;
+  height: auto;
+    
+}
+
+
+
+// Login Register Pages
+.login-register-box{
+    color: #ffffff;
+    padding: 3rem;
+    margin: 2rem  auto ; 
+}
+
+.login-register-input{
+    background-color: transparent;
+    border-style: none none solid;
+    border-bottom-color: #595B83;
+    border-width: 0.15rem;
+    margin: 4rem auto; 
+}
+.login-register-box .form-control:focus {
+    background-color:transparent;
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+.login-register-button{
+    background-color: #F4ABC4;
+    color: #000000;
+    font-weight: bolder;
+    border-radius: 3.75rem;
+    
+}
+
+.forgot-password{
+      text-align: end;
+      margin: 1rem auto 2rem;
+}
+
+.login-register-box p{
+   text-align: center;
+   margin: 0 auto; 
+}
+
