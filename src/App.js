@@ -2,15 +2,16 @@
 import './App.css';
 import Loginpage from './pages/Loginpage';
 import SignupPage from './pages/SignupPage';
+import FeedPage from './containers/FeedPage';
 
 function App() {
   return (
     <div className="App">
 
-      <Loginpage />
+      {/* <Loginpage /> */}
       {/* <SignupPage /> */}
 
-
+     <FeedPage />
 
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

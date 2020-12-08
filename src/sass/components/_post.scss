@@ -1,0 +1,42 @@
+
+.post{
+    margin: 2rem auto;
+    border: 2px solid $primary-blue-light;
+    background-color: $primary-blue-dark;
+
+    &__avatar{
+     height: 2rem;
+     width:2rem;
+     border-radius: 100%;
+     margin-right: 0.5rem;
+    }
+
+   &__name{
+       color:#fff;
+   }
+.icons__box {
+    margin-right: 2rem;
+
+    .icon{
+        height:2rem;
+        width: 2rem;
+        margin-right: 5px;
+    }
+}
+  
+
+&__image{
+    height : 100%;
+    width: 100%;
+}
+
+
+&__comment{
+    margin-top:1rem;
+    .round-box{
+        background-color: rgba($primary-pink, 0.5);
+    }
+}
+
+
+}

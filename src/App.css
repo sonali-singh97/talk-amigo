@@ -1,5 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
 body {
   background-color: #060930;
+  box-sizing: border-box;
+  padding: 3rem;
   /* padding-left: 0; */ }
 
 .logo {
@@ -88,8 +101,20 @@ body {
   width: 2%;
   height: 3%; }
 
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
 body {
   background-color: #060930;
+  box-sizing: border-box;
+  padding: 3rem;
   /* padding-left: 0; */ }
 
 .logo {
@@ -174,3 +199,42 @@ body {
 
 .doodle-dots-bg {
   background-repeat: no-repeat; }
+
+.round-box {
+  display: inline-block;
+  border-radius: 50rem;
+  background-color: #333456;
+  padding: 0.5rem 1rem; }
+
+body {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  line-height: 1.7; }
+
+.paragraph {
+  font-size: 1.6rem; }
+
+.post {
+  margin: 2rem auto;
+  border: 2px solid #333456;
+  background-color: #060930; }
+  .post__avatar {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100%;
+    margin-right: 0.5rem; }
+  .post__name {
+    color: #fff; }
+  .post .icons__box {
+    margin-right: 2rem; }
+    .post .icons__box .icon {
+      height: 2rem;
+      width: 2rem;
+      margin-right: 5px; }
+  .post__image {
+    height: 100%;
+    width: 100%; }
+  .post__comment {
+    margin-top: 1rem; }
+    .post__comment .round-box {
+      background-color: rgba(244, 171, 196, 0.5); }
