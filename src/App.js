@@ -3,6 +3,7 @@ import './App.css';
 import Loginpage from './pages/Loginpage';
 import SignupPage from './pages/SignupPage';
 import FeedPage from './containers/FeedPage';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
 
       {/* <Loginpage /> */}
       {/* <SignupPage /> */}
-
+     <Navbar />
      <FeedPage />
       
       {/* <header className="App-header">

@@ -250,3 +250,9 @@ body {
     margin-left: 0.5rem; }
     .post__comment .round-box {
       background-color: rgba(244, 171, 196, 0.5); }
+
+.navbar-icons {
+  color: #ffffff;
+  margin-right: 2rem; }
+  .navbar-icons:hover {
+    color: #f4abc4; }
