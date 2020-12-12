@@ -1,7 +1,22 @@
 
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+html {
+
+    font-size: 62.5%; //1 rem = 10px; 
+}
 
 body{
     background-color: #060930;
+    box-sizing: border-box;
+    padding: 3rem;
     /* padding-left: 0; */
 }
 
@@ -42,6 +57,7 @@ body{
     color: #000000;
     font-weight: bolder;
     border-radius: 3.75rem;
+    
     
 }
 
