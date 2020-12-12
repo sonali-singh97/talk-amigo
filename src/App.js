@@ -2,6 +2,7 @@
 import './App.css';
 import Loginpage from './pages/Loginpage';
 import SignupPage from './pages/SignupPage';
+import UserProfile from './pages/userprofile';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
 
 
 
-      {/* <header className="App-header">
+      {/*<header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -26,6 +27,8 @@ function App() {
           Learn React
         </a>
       </header> */}
+
+      <UserProfile />
     </div>
   );
 }
