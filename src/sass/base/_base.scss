@@ -1,7 +1,24 @@
+@import "../abstracts/variables";
 
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+html {
+
+    font-size: 62.5%; //1 rem = 10px; 
+}
 
 body{
     background-color: #060930;
+    box-sizing: border-box;
+    padding: 3rem;
     /* padding-left: 0; */
 }
 
@@ -21,14 +38,16 @@ body{
     color: #ffffff;
     padding: 3rem;
     margin: 2rem  auto ; 
+    
 }
 
 .login-register-input{
     background-color: transparent;
     border-style: none none solid;
     border-bottom-color: #595B83;
-    border-width: 0.15rem;
-    margin: 4rem auto; 
+    border-width: 0.24rem;
+    margin: 7rem auto; 
+    font-size: 1.4rem;
 }
 .login-register-box .form-control:focus {
     background-color:transparent;
@@ -42,12 +61,16 @@ body{
     color: #000000;
     font-weight: bolder;
     border-radius: 3.75rem;
+    margin-top: 3rem;
+    font-size: 1.6rem;
+    
     
 }
 
 .forgot-password{
       text-align: end;
       margin: 1rem auto 2rem;
+      font-size: 1.2rem;
 }
 
 .login-register-box p{
