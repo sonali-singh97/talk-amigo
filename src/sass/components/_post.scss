@@ -1,26 +1,49 @@
 
 .post{
+    padding:0.5rem;
     margin: 2rem auto;
     border: 2px solid $primary-blue-light;
     background-color: $primary-blue-dark;
+    backdrop-filter: blur(1.5rem);
+    box-shadow:
+    -.25rem -.25rem .5rem rgba(#fff,.07),
+    .25rem .25rem .5rem rgba(#000,.12),
+    -.75rem -.75rem 1.75rem rgba(#fff,.07),
+    .75rem .75rem 1.75rem rgba(#000,.12),
+    inset 8rem 8rem 8rem rgba(#000,.05),
+    inset -8rem -8rem 8rem rgba(#fff,.05)
+  ;
+ 
 
     &__avatar{
-     height: 2rem;
-     width:2rem;
+     height: 3rem;
+     width:3rem;
      border-radius: 100%;
-     margin-right: 0.5rem;
+     margin-right: 1rem;
+     box-shadow:  inset 2px 2px 5px $secondary-blue, inset -5px -5px 10px rgba($primary-blue-dark , 0.5);
     }
 
    &__name{
        color:#fff;
+       font-size : 1.8rem;
    }
+
 .icons__box {
     margin-right: 2rem;
-
+    margin-bottom: 1rem;
+    font-size : $default-font-size;
+    //box-shadow: 0px -6px 10px rgba(#fff , 0.07), 0px 4px 15px rgba(0, 0, 0, 0.15);
+    color: #fff;
+    box-shadow:  inset 2px 2px 5px $secondary-blue, inset -5px -5px 10px rgba($primary-blue-dark , 0.5);
+  
     .icon{
         height:2rem;
         width: 2rem;
-        margin-right: 5px;
+        margin-right: 1rem;
+    }
+
+    &:hover{
+        box-shadow: inset -4px -4px 10px rgba(#fff,0.05), inset 4px 4px 10px rgba(0,0,0,0.1);
     }
 }
   
@@ -28,14 +51,20 @@
 &__image{
     height : 100%;
     width: 100%;
+    box-shadow: 0 1rem 2rem rgba(#000,.3);
 }
 
 
 &__comment{
     margin-top:1rem;
     margin-left: 0.5rem;
+    font-size : $default-font-size;
+   
     .round-box{
-        background-color: rgba($primary-pink, 0.5);
+        background-color: $primary-pink;
+      width: 100%;
+      box-shadow:  20px 20px 60px #2d2e4d, 
+             -20px -20px 60px #393a5f;
     }
 }
 

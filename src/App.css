@@ -226,25 +226,37 @@ body {
   font-size: 1.6rem; }
 
 .post {
+  padding: 0.5rem;
   margin: 2rem auto;
   border: 2px solid #333456;
-  background-color: #060930; }
+  background-color: #060930;
+  backdrop-filter: blur(1.5rem);
+  box-shadow: -0.25rem -0.25rem 0.5rem rgba(255, 255, 255, 0.07), 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.12), -0.75rem -0.75rem 1.75rem rgba(255, 255, 255, 0.07), 0.75rem 0.75rem 1.75rem rgba(0, 0, 0, 0.12), inset 8rem 8rem 8rem rgba(0, 0, 0, 0.05), inset -8rem -8rem 8rem rgba(255, 255, 255, 0.05); }
   .post__avatar {
-    height: 2rem;
-    width: 2rem;
+    height: 3rem;
+    width: 3rem;
     border-radius: 100%;
-    margin-right: 0.5rem; }
+    margin-right: 1rem;
+    box-shadow: inset 2px 2px 5px #595b83, inset -5px -5px 10px rgba(6, 9, 48, 0.5); }
   .post__name {
-    color: #fff; }
+    color: #fff;
+    font-size: 1.8rem; }
   .post .icons__box {
-    margin-right: 2rem; }
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+    box-shadow: inset 2px 2px 5px #595b83, inset -5px -5px 10px rgba(6, 9, 48, 0.5); }
     .post .icons__box .icon {
       height: 2rem;
       width: 2rem;
-      margin-right: 5px; }
+      margin-right: 1rem; }
+    .post .icons__box:hover {
+      box-shadow: inset -4px -4px 10px rgba(255, 255, 255, 0.05), inset 4px 4px 10px rgba(0, 0, 0, 0.1); }
   .post__image {
     height: 100%;
-    width: 100%; }
+    width: 100%;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
   .post__comment {
     margin-top: 1rem;
     margin-left: 0.5rem; }
@@ -256,3 +268,36 @@ body {
   margin-right: 2rem; }
   .navbar-icons:hover {
     color: #f4abc4; }
+    
+    .post__comment .round-box {
+      background-color: #f4abc4;
+      width: 100%;
+      box-shadow: 20px 20px 60px #2d2e4d, 
+ -20px -20px 60px #393a5f; }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px; }
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  max-width: 50%;
+  padding: 0 3px; }
+
+.column item {
+  margin-top: 8px;
+  vertical-align: middle; }
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+  .column {
+    flex: 33%;
+    max-width: 33%; } }
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%; } }

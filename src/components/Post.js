@@ -6,10 +6,13 @@ function Post(){
   <div className="row">
   <div className="col-sm-8">
 <div className='card post'>
+
 <div className="card-header" >
  <img src="images/photo.jpg" className="post__avatar" />  
     <span className="post__name">Name </span>
     </div>
+
+
     <div className="card-body" >
 <img src="images/photo.jpg" className="post__image" />
 </div>
@@ -24,12 +27,14 @@ function Post(){
     <img className="icon" src="images/speech-bubble.svg"/>
      <span>1000</span>
   </span>
-  <div className=" row post__comment">
+
+  <div className=" d-flex post__comment">
   <img src="images/photo.jpg" className=" post__avatar" />  
-  <span className="col-sm-10 round-box">
+  <span className=" round-box">
   Comment Something
 </span>
 </div>
+
 </div>
 
 
