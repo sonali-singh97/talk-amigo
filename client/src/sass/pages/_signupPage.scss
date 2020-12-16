@@ -1,0 +1,58 @@
+@import "../base/base";
+
+
+
+.illustration-div{
+    position: relative;
+}
+
+.treeperson-image{
+    position: absolute;
+max-width: 60vw;
+max-height: 40vw;
+top: 5rem;
+margin-left: -18vw;
+margin-bottom: -10vw;
+}
+
+.headphone-image{
+    position: absolute;
+    width: 15%;
+height: 20%;
+left: 16rem;
+top: 6rem;
+transform: rotate(-18.63deg);
+}
+
+.toy-image{
+    position: absolute;
+    width: 18%;
+height: 25%;
+left: 48rem;
+top: 12rem;
+transform: rotate(-10.44deg);
+}
+
+.phone-image{
+    position: absolute;
+    width: 15%;
+height: 20%;
+left: 32rem;
+top: 30rem;
+transform: rotate(0.66deg);
+}
+
+.login-register-input{
+    margin: 4rem auto; 
+}
+
+.login-register-box{
+    margin-top: 0;
+    // background: url("images/Doodle_Dots.png");
+}
+
+.doodle-dots-bg{
+    //background: url("../../../public/images/Doodle_Dots.png");
+   // background: url("images/Doodle_Dots.png");
+    background-repeat: no-repeat;
+}    
