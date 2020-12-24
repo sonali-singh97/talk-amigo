@@ -9,10 +9,13 @@ var cors = require("cors");
 var mongoose = require('mongoose');
 dotenv.config();
 
-var indexRouter = require('./routes/index');
+//var indexRouter = require('./routes/index');
+var authRouter = require("./routes/auth");
 var usersRouter = require('./routes/users');
 var testAPIRouter = require("./routes/testRoute");
 var app = express();
+
+const Users = require("./models/user");
 
 
 
@@ -43,9 +46,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+app.use('/', authRouter);
 app.use('/users', usersRouter);
 app.use("/testAPI", testAPIRouter);
+
 
 
 
