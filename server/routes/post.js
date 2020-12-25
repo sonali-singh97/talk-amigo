@@ -17,7 +17,7 @@ const  express = require("express"),
 
   router.get("/myposts",requireLogin, (req,res) => {
     Post.find({postedBy: req.user._id})
-      .populate("postedBy", "_id name")
+      .populate("postedBy", "_id username")
       .then(results => res.json({myPosts : results}))
 
       .catch(err => console.log(err));

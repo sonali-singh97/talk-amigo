@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Post from "../components/Post";
-import Navbar from "../components/Navbar";
+//import Navbar from "../components/Navbar";
 class Feed extends Component {
 
     render() {
 
         return (
             <div className="container-fluid" >
-                <Navbar />
+                {/* <Navbar /> */}
                 <div className="container stardust-bg" >
                     <Post />
                     <Post />
