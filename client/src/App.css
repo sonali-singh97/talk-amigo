@@ -27,6 +27,12 @@ body {
   padding: 3rem;
   margin: 2rem  auto; }
 
+.input-group-text {
+  background-color: transparent;
+  border: none;
+  margin: 3rem auto 1rem;
+  color: #ffffff; }
+
 .login-register-input {
   background-color: transparent;
   border-style: none none solid;
@@ -37,7 +43,7 @@ body {
 
 .login-register-box .form-control:focus {
   background-color: transparent;
-  border-color: inherit;
+  border-color: #ffffff;
   -webkit-box-shadow: none;
   box-shadow: none; }
 
@@ -48,6 +54,8 @@ body {
   border-radius: 3.75rem;
   margin-top: 3rem;
   font-size: 1.6rem; }
+  .login-register-button:hover {
+    background-color: #b37389; }
 
 .forgot-password {
   text-align: end;
@@ -136,6 +144,12 @@ body {
   padding: 3rem;
   margin: 2rem  auto; }
 
+.input-group-text {
+  background-color: transparent;
+  border: none;
+  margin: 3rem auto 1rem;
+  color: #ffffff; }
+
 .login-register-input {
   background-color: transparent;
   border-style: none none solid;
@@ -146,7 +160,7 @@ body {
 
 .login-register-box .form-control:focus {
   background-color: transparent;
-  border-color: inherit;
+  border-color: #ffffff;
   -webkit-box-shadow: none;
   box-shadow: none; }
 
@@ -157,6 +171,8 @@ body {
   border-radius: 3.75rem;
   margin-top: 3rem;
   font-size: 1.6rem; }
+  .login-register-button:hover {
+    background-color: #b37389; }
 
 .forgot-password {
   text-align: end;
@@ -203,13 +219,17 @@ body {
   transform: rotate(0.66deg); }
 
 .login-register-input {
-  margin: 4rem auto; }
+  margin: 3rem auto; }
 
 .login-register-box {
   margin-top: 0; }
 
 .doodle-dots-bg {
   background-repeat: no-repeat; }
+
+.loginLink {
+  padding-top: 1.5rem;
+  font-size: 1.2rem; }
 
 .round-box {
   display: inline-block;
@@ -287,7 +307,8 @@ body {
     display: inline-block;
     width: 30rem;
     height: 30rem;
-    margin: 1rem; }
+    margin: 1rem;
+    box-shadow: -.5rem -.5rem .75rem #7073a3, -.25rem -.25rem .25rem #434674; }
     .Gallery .img img {
       width: 100%;
       height: 100%; }
@@ -326,6 +347,24 @@ body {
 .background-texture {
   background-image: url("https://www.transparenttextures.com/patterns/stardust.png"); }
 
-.background-texture-gallery {
-  background: #020024;
-  background-image: url("https://www.transparenttextures.com/patterns/food.png"), linear-gradient(100deg, #020024 45%, #8131aa 100%); }
+.user-detail {
+  position: relative; }
+  .user-detail-box {
+    position: absolute;
+    top: 5rem;
+    left: 25rem; }
+    .user-detail-box .details {
+      margin-right: 2rem;
+      margin-top: 0.5rem; }
+  .user-detail-button {
+    background-color: #F4ABC4;
+    color: #000000;
+    font-weight: bolder;
+    border-radius: 4rem;
+    margin: 1rem;
+    margin-left: 0;
+    padding: 0.5rem 2rem;
+    font-size: 1.2rem;
+    border-width: 0; }
+    .user-detail-button:hover {
+      background-color: #b37389; }
