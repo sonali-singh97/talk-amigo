@@ -41,6 +41,14 @@ body{
     
 }
 
+
+.input-group-text{             
+    background-color: transparent;
+    border: none;
+    margin: 3rem auto 1rem;
+    color: #ffffff;
+}   //login register input icons
+
 .login-register-input{
     background-color: transparent;
     border-style: none none solid;
@@ -51,7 +59,7 @@ body{
 }
 .login-register-box .form-control:focus {
     background-color:transparent;
-    border-color: inherit;
+    border-color: #ffffff;
     -webkit-box-shadow: none;
     box-shadow: none;
   }
@@ -64,6 +72,9 @@ body{
     margin-top: 3rem;
     font-size: 1.6rem;
     
+    &:hover {
+        background-color: #b37389;
+      }
     
 }
 
