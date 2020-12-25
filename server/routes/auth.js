@@ -3,13 +3,18 @@ const dotenv = require("dotenv"),
   router = express.Router(),
   bcrypt = require("bcryptjs"),
   mongoose = require("mongoose"),
-  jwt = require('jsonwebtoken');
-
+  jwt = require('jsonwebtoken'),
+  requireLogin = require("../middleware/requireLogin");
 //const bodyParser= require("body-parser");
 
 const User = require("../models/user");
-const { route } = require("./users");
+//const { route } = require("./users");
 //router.use(bodyParser.json());
+
+dotenv.config();
+router.get("/protected", requireLogin , (req,res)=>{
+res.send("hello user");
+})
 
 router.route("/").get((req, res) => {
   res.send("hello");
@@ -29,7 +34,7 @@ router.post("/signup", (req, res, next) => {
         err.status = 403;
         next(err);
       } else {
-        bcrypt.hash(password, process.env.SALT).then((hashedPassword) => {
+        bcrypt.hash(password,12).then((hashedPassword) => {
           const user = new User({
             username: username,
             password: hashedPassword,
