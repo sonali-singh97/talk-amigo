@@ -1,0 +1,58 @@
+@import "../base/base";
+
+.friend-list-heading{
+    text-align: center;
+    font-size: 3rem;
+    color: #b37389;
+    border-bottom: 0.1rem solid #ffffff;
+}
+.friend-list {
+    padding: 2rem;
+    //height: 77rem;
+    overflow-y: scroll;
+    height: 50rem;
+
+    &::-webkit-scrollbar {
+        padding-top: 1rem;
+       width: 0.5rem;
+    }
+    &::-webkit-scrollbar-track {
+       background: #f1f1f1;
+       border-radius: 2rem;
+    }
+    &::-webkit-scrollbar-thumb {
+       background:#F4ABC4;
+       border-radius: 2rem;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+       background:#b37389;
+    }
+    
+    li {
+      padding-bottom: 2rem;
+    }
+    img {
+        float: left;
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+      }
+      
+      .about {
+        float: left;
+        margin-top: 1rem;
+        color: #ffffff;
+        padding-left: 0.8rem;
+      }
+      
+      .name{
+          font-size: 1.4rem;
+      }
+  }
+  
+  
+  
+//   .status {
+//     //color: $gray;
+//   }
+  

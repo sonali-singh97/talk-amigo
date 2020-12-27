@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 function SignupPage() {
 
@@ -25,7 +26,7 @@ function SignupPage() {
 
                         <div className="  ">
                             <form>
-                                <div className="form-group text-left  input-group">
+                                <div className="form-group text-left  input-group ">
 
                                     <div className="input-group-prepend">
                                         <span className="input-group-text"><i class="fas fa-user fa-2x input icon"></i></span>
@@ -67,7 +68,9 @@ function SignupPage() {
                                     SIGNUP
                     </button>
 
-                                <p className="loginLink">Already have an account? <a href=""> Login </a> </p>
+                                <Link  to="/login">
+                                   <p className="loginLink">Already have an account? <a href=""> Login </a> </p>
+                                </Link>
                             </form>
                         </div>
                     </div>

@@ -37,31 +37,42 @@ body{
 .login-register-box{
     color: #ffffff;
     padding: 3rem;
-    margin: 2rem  auto ; 
+    margin: 1.5rem  auto ; 
     
 }
 
-
+.input-group{
+    border-bottom: 0.24rem solid #595B83;
+    border-radius: 0.5rem; 
+    
+    &:focus-within{     
+        border-color: #ffffff ;      
+    }
+}
 .input-group-text{             
     background-color: transparent;
     border: none;
-    margin: 3rem auto 1rem;
+    margin: 2.5rem auto 1rem;
     color: #ffffff;
 }   //login register input icons
 
 .login-register-input{
     background-color: transparent;
-    border-style: none none solid;
-    border-bottom-color: #595B83;
-    border-width: 0.24rem;
-    margin: 7rem auto; 
+    border-style: none; 
+    // border-bottom-color: #595B83;
+    // border-width: 0.24rem;
+    margin: 2.5rem auto; 
     font-size: 1.4rem;
 }
 .login-register-box .form-control:focus {
     background-color:transparent;
-    border-color: #ffffff;
+    color: #ffffff;
+   // border-color: #ffffff;
     -webkit-box-shadow: none;
     box-shadow: none;
+  }
+  input[type="text"]:focus  {
+    color: #ffffff;
   }
 
 .login-register-button{

@@ -4,7 +4,7 @@ import React from 'react';
 function Post(){
     return(
   <div className="row">
-  <div className="col-sm-8">
+  <div className="col-sm-10">
 <div className='card post'>
 
 <div className="card-header" >

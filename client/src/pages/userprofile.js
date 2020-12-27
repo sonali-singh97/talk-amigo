@@ -1,9 +1,12 @@
 import React from 'react';
 import GalleryImage from '../components/GalleryImage';
+import Navbar from '../components/Navbar';
 
 function UserProfile() {
   return (
-    <div className="container  background-texture">
+    <div className="fluid-container   stardust-bg">
+      <Navbar />
+    <div className="container ">
       <div 
       className="user-detail"
       style={{
@@ -61,6 +64,7 @@ function UserProfile() {
       </div>
 
 
+    </div>
     </div>
   )
 }

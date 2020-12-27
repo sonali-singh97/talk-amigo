@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 function Loginpage() {
 
@@ -62,7 +63,9 @@ function Loginpage() {
                             </form>
 
                             <div className="forgot-password"> <a href=""  > Forgot Password </a> </div>
-                            <p className="signupLink">Don't have an account? <a href=""> SignUp </a> </p>
+                            <Link to="/">
+                              <p className="signupLink">Don't have an account? <a href=""> SignUp </a> </p>
+                            </Link>
                         </div>
                     </div>
 
