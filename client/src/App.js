@@ -7,7 +7,8 @@ import Loginpage from './components/pages/Loginpage';
 import SignupPage from './components/pages/SignupPage';
 import FeedPage from './containers/FeedPage';
 import Navbar from './components/Navbar';
-import UserProfile from './components/pages/userprofile';
+import UserProfile from './pages/userprofile';
+import CreatePost from "./containers/CreatePost";
 
 
 class App extends React.Component {
@@ -35,7 +36,8 @@ render() {
    <Route path="/login" exact component= {Loginpage} />
    <Route path="/feed" exact component= {FeedPage} />
    <Route path="/user_profile" exact component= {UserProfile} />
-  
+   <Route path="/create_post" exact component= {CreatePost} />
+
    <p className="App-intro">;{this.state.apiResponse}</p>
     </div>
     </BrowserRouter>

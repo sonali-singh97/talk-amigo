@@ -25,27 +25,34 @@ body {
 .login-register-box {
   color: #ffffff;
   padding: 3rem;
-  margin: 2rem  auto; }
+  margin: 1.5rem  auto; }
+
+.input-group {
+  border-bottom: 0.24rem solid #595B83;
+  border-radius: 0.5rem; }
+  .input-group:focus-within {
+    border-color: #ffffff; }
 
 .input-group-text {
   background-color: transparent;
   border: none;
-  margin: 3rem auto 1rem;
+  margin: 2.5rem auto 1rem;
   color: #ffffff; }
 
 .login-register-input {
   background-color: transparent;
-  border-style: none none solid;
-  border-bottom-color: #595B83;
-  border-width: 0.24rem;
-  margin: 7rem auto;
+  border-style: none;
+  margin: 2.5rem auto;
   font-size: 1.4rem; }
 
 .login-register-box .form-control:focus {
   background-color: transparent;
-  border-color: #ffffff;
+  color: #ffffff;
   -webkit-box-shadow: none;
   box-shadow: none; }
+
+input[type="text"]:focus {
+  color: #ffffff; }
 
 .login-register-button {
   background-color: #F4ABC4;
@@ -114,7 +121,8 @@ body {
   height: 3%; }
 
 .signupLink {
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  color: #ffffff; }
 
 *,
 *::after,
@@ -142,27 +150,34 @@ body {
 .login-register-box {
   color: #ffffff;
   padding: 3rem;
-  margin: 2rem  auto; }
+  margin: 1.5rem  auto; }
+
+.input-group {
+  border-bottom: 0.24rem solid #595B83;
+  border-radius: 0.5rem; }
+  .input-group:focus-within {
+    border-color: #ffffff; }
 
 .input-group-text {
   background-color: transparent;
   border: none;
-  margin: 3rem auto 1rem;
+  margin: 2.5rem auto 1rem;
   color: #ffffff; }
 
 .login-register-input {
   background-color: transparent;
-  border-style: none none solid;
-  border-bottom-color: #595B83;
-  border-width: 0.24rem;
-  margin: 7rem auto;
+  border-style: none;
+  margin: 2.5rem auto;
   font-size: 1.4rem; }
 
 .login-register-box .form-control:focus {
   background-color: transparent;
-  border-color: #ffffff;
+  color: #ffffff;
   -webkit-box-shadow: none;
   box-shadow: none; }
+
+input[type="text"]:focus {
+  color: #ffffff; }
 
 .login-register-button {
   background-color: #F4ABC4;
@@ -229,7 +244,8 @@ body {
 
 .loginLink {
   padding-top: 1.5rem;
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  color: #ffffff; }
 
 .round-box {
   display: inline-block;
@@ -344,9 +360,6 @@ body {
   .like-comment .round-box {
     max-width: 100%; }
 
-.background-texture {
-  background-image: url("https://www.transparenttextures.com/patterns/stardust.png"); }
-
 .user-detail {
   position: relative; }
   .user-detail-box {
@@ -368,3 +381,214 @@ body {
     border-width: 0; }
     .user-detail-button:hover {
       background-color: #b37389; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background-color: #060930;
+  box-sizing: border-box;
+  padding: 3rem;
+  /* padding-left: 0; */ }
+
+.logo {
+  display: block;
+  max-width: 45%;
+  max-height: 45%;
+  width: auto;
+  height: auto; }
+
+.login-register-box {
+  color: #ffffff;
+  padding: 3rem;
+  margin: 1.5rem  auto; }
+
+.input-group {
+  border-bottom: 0.24rem solid #595B83;
+  border-radius: 0.5rem; }
+  .input-group:focus-within {
+    border-color: #ffffff; }
+
+.input-group-text {
+  background-color: transparent;
+  border: none;
+  margin: 2.5rem auto 1rem;
+  color: #ffffff; }
+
+.login-register-input {
+  background-color: transparent;
+  border-style: none;
+  margin: 2.5rem auto;
+  font-size: 1.4rem; }
+
+.login-register-box .form-control:focus {
+  background-color: transparent;
+  color: #ffffff;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+input[type="text"]:focus {
+  color: #ffffff; }
+
+.login-register-button {
+  background-color: #F4ABC4;
+  color: #000000;
+  font-weight: bolder;
+  border-radius: 3.75rem;
+  margin-top: 3rem;
+  font-size: 1.6rem; }
+  .login-register-button:hover {
+    background-color: #b37389; }
+
+.forgot-password {
+  text-align: end;
+  margin: 1rem auto 2rem;
+  font-size: 1.2rem; }
+
+.login-register-box p {
+  text-align: center;
+  margin: 0 auto; }
+
+.friend-list-heading {
+  text-align: center;
+  font-size: 3rem;
+  color: #b37389;
+  border-bottom: 0.1rem solid #ffffff; }
+
+.friend-list {
+  padding: 2rem;
+  overflow-y: scroll;
+  height: 50rem; }
+  .friend-list::-webkit-scrollbar {
+    padding-top: 1rem;
+    width: 0.5rem; }
+  .friend-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 2rem; }
+  .friend-list::-webkit-scrollbar-thumb {
+    background: #F4ABC4;
+    border-radius: 2rem; }
+  .friend-list::-webkit-scrollbar-thumb:hover {
+    background: #b37389; }
+  .friend-list li {
+    padding-bottom: 2rem; }
+  .friend-list img {
+    float: left;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%; }
+  .friend-list .about {
+    float: left;
+    margin-top: 1rem;
+    color: #ffffff;
+    padding-left: 0.8rem; }
+  .friend-list .name {
+    font-size: 1.4rem; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background-color: #060930;
+  box-sizing: border-box;
+  padding: 3rem;
+  /* padding-left: 0; */ }
+
+.logo {
+  display: block;
+  max-width: 45%;
+  max-height: 45%;
+  width: auto;
+  height: auto; }
+
+.login-register-box {
+  color: #ffffff;
+  padding: 3rem;
+  margin: 1.5rem  auto; }
+
+.input-group {
+  border-bottom: 0.24rem solid #595B83;
+  border-radius: 0.5rem; }
+  .input-group:focus-within {
+    border-color: #ffffff; }
+
+.input-group-text {
+  background-color: transparent;
+  border: none;
+  margin: 2.5rem auto 1rem;
+  color: #ffffff; }
+
+.login-register-input {
+  background-color: transparent;
+  border-style: none;
+  margin: 2.5rem auto;
+  font-size: 1.4rem; }
+
+.login-register-box .form-control:focus {
+  background-color: transparent;
+  color: #ffffff;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+input[type="text"]:focus {
+  color: #ffffff; }
+
+.login-register-button {
+  background-color: #F4ABC4;
+  color: #000000;
+  font-weight: bolder;
+  border-radius: 3.75rem;
+  margin-top: 3rem;
+  font-size: 1.6rem; }
+  .login-register-button:hover {
+    background-color: #b37389; }
+
+.forgot-password {
+  text-align: end;
+  margin: 1rem auto 2rem;
+  font-size: 1.2rem; }
+
+.login-register-box p {
+  text-align: center;
+  margin: 0 auto; }
+
+.create-post-card {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  box-shadow: -.5rem -.5rem .75rem #7073a3, -.25rem -.25rem .25rem #434674, .5rem .5rem .75rem #7073a3, .25rem .25rem .25rem #434674; }
+  .create-post-card .card-header {
+    font-size: 2rem;
+    color: #F4ABC4; }
+  .create-post-card .create-post-input {
+    background-color: transparent;
+    border-style: none none solid;
+    border-bottom-color: #595B83;
+    border-width: 0.24rem;
+    margin: 2.5rem auto;
+    font-size: 1.4rem; }
+    .create-post-card .create-post-input:focus {
+      background-color: transparent;
+      color: #ffffff;
+      border-color: #ffffff;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
+  .create-post-card input[type="file"] {
+    padding-top: 1rem; }
+  .create-post-card button {
+    padding: 0.5rem 2rem; }

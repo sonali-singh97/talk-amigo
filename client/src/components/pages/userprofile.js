@@ -1,10 +1,13 @@
 import React from 'react';
-import GalleryImage from '../GalleryImage';
+import GalleryImage from '../components/GalleryImage';
+import Navbar from '../components/Navbar';
 
 function UserProfile() {
   return (
-    <div className="container  background-texture">
-      <div 
+    <div className="fluid-container   stardust-bg">
+      <Navbar />
+    <div className="container ">
+      <div
       className="user-detail"
       style={{
         display: "flex",
@@ -61,6 +64,7 @@ function UserProfile() {
       </div>
 
 
+    </div>
     </div>
   )
 }
