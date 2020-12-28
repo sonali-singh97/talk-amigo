@@ -1,7 +1,7 @@
 import React from 'react';
 
-import GalleryImage from '../components/GalleryImage';
-import Navbar from '../components/Navbar';
+import GalleryImage from '../GalleryImage';
+import Navbar from '../Navbar';
 
 
 function UserProfile() {

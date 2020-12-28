@@ -8,7 +8,7 @@ class Feed extends Component {
 
         return (
             <div className="container-fluid" >
-                <Navbar />
+                {/* <Navbar /> */}
                 <div className="container ">
                     <div className="row">
 
