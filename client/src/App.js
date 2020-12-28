@@ -7,7 +7,7 @@ import Loginpage from './components/pages/Loginpage';
 import SignupPage from './components/pages/SignupPage';
 import FeedPage from './containers/FeedPage';
 import Navbar from './components/Navbar';
-import UserProfile from './pages/userprofile';
+import UserProfile from './components/pages/userprofile';
 import CreatePost from "./containers/CreatePost";
 
 
