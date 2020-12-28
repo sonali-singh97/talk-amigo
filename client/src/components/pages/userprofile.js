@@ -7,7 +7,7 @@ function UserProfile() {
     <div className="fluid-container   stardust-bg">
       <Navbar />
     <div className="container ">
-      <div 
+      <div
       className="user-detail"
       style={{
         display: "flex",

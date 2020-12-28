@@ -30,9 +30,7 @@ router.post("/signup", (req, res, next) => {
   User.findOne({ email: email })
     .then((user) => {
       if (user != null) {
-        var err = new Error("User already exists with this mail");
-        err.status = 403;
-        next(err);
+        res.status(422).json({ error: "User already exists with this mail" });
       } else {
         bcrypt.hash(password,12).then((hashedPassword) => {
           const user = new User({
@@ -44,7 +42,7 @@ router.post("/signup", (req, res, next) => {
             (user) => {
               res.statusCode = 200;
               res.setHeader("Content-Type", "application/json");
-              res.json({ status: "Registeration Successful", user: user });
+              res.json({ message: "Registeration Successful", user: user });
             },
             (err) => next(err)
           );
@@ -75,7 +73,8 @@ User.findOne({email: email})
      if(doMatch){
        // res.json({ "status" : "user signed in successfully " , user: user});
        const token = jwt.sign({_id :user._id }, process.env.JWT_SECRET);
-       res.json({token});
+       const {_id ,name, email}= user;
+       res.json({token , user: {_id,name, email}});
      }
    
      else{
