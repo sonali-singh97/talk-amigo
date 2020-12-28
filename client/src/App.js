@@ -3,12 +3,11 @@ import React from "react";
 import {BrowserRouter } from 'react-router-dom';
 import {Route} from "react-router";
 import './App.css';
-import Loginpage from './pages/Loginpage';
-import SignupPage from './pages/SignupPage';
+import Loginpage from './components/pages/Loginpage';
+import SignupPage from './components/pages/SignupPage';
 import FeedPage from './containers/FeedPage';
 import Navbar from './components/Navbar';
-import UserProfile from './pages/userprofile';
-import CreatePost from "./containers/CreatePost";
+import UserProfile from './components/pages/userprofile';
 
 
 class App extends React.Component {
@@ -18,7 +17,7 @@ class App extends React.Component {
 }
 
 callAPI() {
-    fetch("http://localhost:9000/testAPI")
+    fetch("http://localhost:5000/testAPI")
         .then(res => res.text())
         .then(res => this.setState({ apiResponse: res }));
 }
@@ -31,7 +30,7 @@ render() {
   return (
     <BrowserRouter>
     <div className="App">
-
+   <Navbar />
    <Route path="/"  exact component ={SignupPage} />
    <Route path="/login" exact component= {Loginpage} />
    <Route path="/feed" exact component= {FeedPage} />

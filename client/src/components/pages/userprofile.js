@@ -1,6 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD:client/src/pages/userprofile.js
 import GalleryImage from '../components/GalleryImage';
 import Navbar from '../components/Navbar';
+=======
+import GalleryImage from '../GalleryImage';
+>>>>>>> main:client/src/components/pages/userprofile.js
 
 function UserProfile() {
   return (
