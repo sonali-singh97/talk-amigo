@@ -311,6 +311,9 @@ body {
   .navbar-icons:hover {
     color: #f4abc4; }
 
+.navbar-toggler {
+  color: #fff; }
+
 /* Create four equal columns that sits next to each other */
 .Gallery {
   display: flex;
