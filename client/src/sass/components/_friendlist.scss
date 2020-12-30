@@ -2,10 +2,37 @@
 
 .friend-list-heading{
     text-align: center;
-    font-size: 3rem;
-    color: #b37389;
+    color: #ffffff;
     border-bottom: 0.1rem solid #ffffff;
+    padding: 3rem 1rem;
+    overflow: auto;
+
+    img {
+      float: left;
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+    }
+    
+    .about-me{ 
+      margin-top: 1.5rem;
+      font-size: 1.5rem;
+    }
 }
+
+.suggestions{
+  padding-top: 2rem;
+  
+  .suggestion-heading{
+    font-size: 2rem;
+    color: #b37389
+  }
+
+}
+
+
+
+
 .friend-list {
     padding: 2rem;
     //height: 77rem;
@@ -17,21 +44,21 @@
        width: 0.5rem;
     }
     &::-webkit-scrollbar-track {
-       background: #f1f1f1;
+       background:$primary-blue-dark;
        border-radius: 2rem;
     }
     &::-webkit-scrollbar-thumb {
-       background:#F4ABC4;
+       background:#b37389;
        border-radius: 2rem;
     }
     &::-webkit-scrollbar-thumb:hover {
-       background:#b37389;
+       background:#F4ABC4;
     }
     
     li {
       padding-bottom: 2rem;
     }
-    img {
+    .suggestion-dp {
         float: left;
         width: 6rem;
         height: 6rem;
@@ -47,6 +74,11 @@
       
       .name{
           font-size: 1.4rem;
+
+          .follow-button{
+            font-size: 1rem;
+            margin: 1rem 1rem 1rem 3rem;
+          }
       }
   }
   
