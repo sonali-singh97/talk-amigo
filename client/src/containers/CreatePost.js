@@ -11,12 +11,12 @@ function CreatePost() {
         <div className="container-fluid stardust-bg">
             <Navbar />
             <div className="container">
-                <div class="row "> <div class="col-md-4 offset-md-4">
-                    <div class="card text-white bg-transparent create-post-card"  >
-                        <div class="card-header">
+                <div className="row "> <div class="col-md-4 offset-md-4">
+                    <div className="card text-white bg-transparent create-post-card"  >
+                        <div className="card-header">
                             Create Post
                     </div>
-                        <div class="card-body">
+                        <div className="card-body">
                             <form>
 
                                 <div className="form-group text-left  ">
@@ -35,7 +35,7 @@ function CreatePost() {
                                 </div>
 
                                 <button type="submit" className="btn btn-lg  login-register-button">
-                                    SUBMIT POST
+                                    POST
                     </button>
 
                             </form>
