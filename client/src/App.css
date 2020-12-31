@@ -280,6 +280,10 @@ body {
   .post__name {
     color: #fff;
     font-size: 1.8rem; }
+  .post__details {
+    color: #fff; }
+    .post__details p {
+      font-size: 1.6rem; }
   .post .icons__box {
     margin-right: 2rem;
     margin-bottom: 1rem;

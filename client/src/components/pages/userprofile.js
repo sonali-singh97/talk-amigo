@@ -1,10 +1,29 @@
-import React from 'react';
-
+import React, {useState, useContext, useEffect} from 'react';
 import GalleryImage from '../GalleryImage';
 import Navbar from '../Navbar';
+import {UserContext} from "../../App";
+
 
 
 function UserProfile() {
+
+  const {state,dispatch} = useContext(UserContext)
+  const [myposts, setPosts] = useState([]);
+
+  useEffect(()=>{
+  fetch("http://localhost:5000/posts/myposts", {
+    headers : {
+      "authorization": "Bearer "+ localStorage.getItem("jwt")
+    }
+
+  })
+  .then(res => res.json())
+  .then(result => {
+  
+    setPosts(result.myposts)})
+  .catch(err => console.log(err));
+  }, [])
+
   return (
     <div className="fluid-container   stardust-bg">
       <Navbar />
@@ -24,7 +43,7 @@ function UserProfile() {
           />
         </div>
         <div  className="user-detail-box">
-          <h3 style={{ color: "white" }}>User Name</h3>
+          <h3 style={{ color: "white" }}>{state? state.username : "loading"}</h3>
           <div style={{
             display: "flex",
             justifyContent: "space-between",
@@ -44,25 +63,8 @@ function UserProfile() {
 
       <div className="Gallery  background-texture-gallery">
 
-
-        <GalleryImage />
-
-        <GalleryImage />
-
-        <GalleryImage />
-
-        <GalleryImage />
-
-        <GalleryImage />
-
-        <GalleryImage />
-
-        <GalleryImage />
-
-        <GalleryImage />
-
-
-
+   { myposts.map(item => <GalleryImage key={item._id} src={item.photo} /> )}
+      
       </div>
 
 

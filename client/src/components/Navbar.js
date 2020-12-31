@@ -1,53 +1,96 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, { useContext } from "react";
+import { Link, useHistory } from "react-router-dom";
+import{ UserContext} from "../App";
 
 function Navbar() {
+    const {state, dispatch} = useContext(UserContext);
+    const history = useHistory("");
 
+    const renderList = () =>{
+        if(state){
+            return [
+                <li class="nav-item">
+                <a className="nav-link" href="">
+                  <Link to="/">
+                    <i class="fas fa-home fa-3x  navbar-icons"></i>
+                  </Link>
+                </a>
+              </li> ,
+              <li className="nav-item">
+                <a className="nav-link" href="">
+                  <Link to="/user_profile">
+                    <i class="fas fa-user-circle fa-3x navbar-icons"></i>
+                  </Link>
+                </a>
+              </li> ,
+              <li className="nav-item">
+                <a className="nav-link" href="">
+                  <Link to="/feed">
+                    <i class="fas fa-comments fa-3x navbar-icons"></i>
+                  </Link>
+                </a>
+              </li> ,
+              <li className="nav-item">
+                <a className="nav-link" href="">
+                  <Link to="/create_post">
+                    <i class="fas fa-plus fa-3x navbar-icons"></i>
+                  </Link>
+                </a>
+              </li>,
+              <li className="nav-item">
+                 <button onClick={()=>{
+                   localStorage.clear();
+                   dispatch({type :"CLEAR"});
+                   history.push("/login");
+                 }}>
+                 LOGOUT
+                </button>
+              </li>
+            ]
+        }
+        else return [
+            <li class="nav-item">
+            <a className="nav-link" href="">
+              <Link to="/signup">
+                SIGNUP
+              </Link>
+            </a>
+          </li> ,
+           <li class="nav-item">
+           <a className="nav-link" href="">
+             <Link to="/login">
+               SIGNIN
+             </Link>
+           </a>
+         </li>
+        ]
+    }
 
-
-    return (
-        <div className="container-fluid">
-            <nav className="navbar  navbar-expand-lg ">
-                <Link className="navbar-brand" to="/feed"> <img src="images/logo.png" alt="logo" className="logo" /> </Link>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <ul className="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a className="nav-link" href="">
-                                <Link to="/feed">
-                                    <i class="fas fa-home fa-3x  navbar-icons"></i>
-                                </Link>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="">
-                                <Link to="/user_profile">
-                                    <i class="fas fa-user-circle fa-3x navbar-icons"></i>
-                                </Link>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="">
-                                <Link to="/feed">
-                                    <i class="fas fa-comments fa-3x navbar-icons"></i>
-                                </Link>
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="">
-                                <Link to="/create_post">
-                                    <i class="fas fa-plus fa-3x navbar-icons"></i>
-                                </Link>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                
-            </nav>
-            {/* <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  return (
+    <div className="container-fluid">
+      <nav className="navbar  navbar-expand-lg ">
+        <Link className="navbar-brand" to={state ? "/feed": "/signup"}>
+          {" "}
+          <img src="images/logo.png" alt="logo" className="logo" />{" "}
+        </Link>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <ul className="navbar-nav ml-auto">
+            {renderList()}
+          </ul>
+        </div>
+      </nav>
+      {/* <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,8 +106,8 @@ function Navbar() {
     </div>
   </div>
 </nav> */}
-        </div>
-    );
+    </div>
+  );
 }
 
 export default Navbar;

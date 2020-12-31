@@ -1,11 +1,64 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
+import {useHistory} from 'react-router-dom';
 import Navbar from "../components/Navbar";
 
-function CreatePost() {
 
+function CreatePost() {
+  const history = useHistory("");
   const [title, setTitle] = useState("");
   const [body , setBody] = useState("");
   const [img , setImg] = useState("");
+  const [url, setUrl] = useState("");
+  let [error , setError]= useState("");
+
+
+  useEffect(() => {
+if(url){
+    fetch("http://localhost:5000/posts/createpost", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "authorization": "Bearer "+ localStorage.getItem("jwt")
+        },
+        body: JSON.stringify({
+        title,
+        body,
+        photo : url
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.error) {
+              console.log(data.error);
+          setError(data.error);
+          } else {
+            console.log(data.message);
+            history.push("/");
+          }
+        })
+        .catch((err) => {
+            setError(err);
+          console.log(err);
+        });
+}
+  }, [url])
+  const post = () => {
+      const data = new FormData;
+      data.append("file", img);
+      data.append("upload_preset", "insta-clone");
+      data.append("cloud_name", "talk-amigo")
+
+      fetch("https://api.cloudinary.com/v1_1/talk-amigo/image/upload", {
+          method : "post",
+          body : data
+      })
+      .then(res =>res.json())
+      .then(data => setUrl(data.url))
+      .catch(err => console.log(err));
+
+  
+
+  }
 
     return (
         <div className="container-fluid stardust-bg">
@@ -17,7 +70,7 @@ function CreatePost() {
                             Create Post
                     </div>
                         <div class="card-body">
-                            <form>
+                            
 
                                 <div className="form-group text-left  ">
                                     <input type="text" className="form-control create-post-input" id="title"
@@ -31,14 +84,14 @@ function CreatePost() {
 
                                 <div className="form-group text-left  ">
                                     <label>Upload Image: </label>
-                                    <input type="file"  value={img} onChange={(e)=>console.log(e.target.files[0])} />
+                                    <input type="file"   onChange={(e)=>setImg(e.target.files[0])} />
                                 </div>
 
-                                <button type="submit" className="btn btn-lg  login-register-button">
+                                <button   onClick={() => post()} className="btn btn-lg  login-register-button">
                                     SUBMIT POST
                     </button>
 
-                            </form>
+                            
 
 
                         </div>

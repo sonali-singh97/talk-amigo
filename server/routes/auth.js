@@ -73,8 +73,8 @@ User.findOne({email: email})
      if(doMatch){
        // res.json({ "status" : "user signed in successfully " , user: user});
        const token = jwt.sign({_id :user._id }, process.env.JWT_SECRET);
-       const {_id ,name, email}= user;
-       res.json({token , user: {_id,name, email}});
+       const {_id ,username, email}= user;
+       res.json({token , user : {_id, username ,email}});
      }
    
      else{

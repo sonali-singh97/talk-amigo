@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-function GalleryImage() {
+function GalleryImage(props) {
     const [isMouseOver, setMouseOver] = useState(false);
 
   function handleMouseOver() {
@@ -13,7 +13,7 @@ function GalleryImage() {
 
     return(
 <div className="img" onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
-            <img src="https://i1.wp.com/coolpictures.in/wp-content/uploads/2020/03/Cool-and-Stylish-DP-for-Girls.jpg?fit=586%2C586&ssl=1" />
+            <img src={props.src} />
 
             {isMouseOver && (
               <div className="like-comment" >
