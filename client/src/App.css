@@ -268,7 +268,7 @@ body {
 
 .post {
   padding: 0.5rem;
-  margin: 2rem auto;
+  margin: 1rem auto;
   border: 2px solid #333456;
   background-color: #060930;
   backdrop-filter: blur(1.5rem);
@@ -288,7 +288,7 @@ body {
     font-size: 1.6rem;
     color: #fff;
     background: linear-gradient(145deg, #060930, #595b83);
-    box-shadow: inset -0.5rem -0.5rem 0.75rem #060930, -0.25rem -0.25rem 0.25rem #3c417a, 0.25rem 0.25rem 0.75rem #060930, inset 0.25rem 0.25rem 0.25rem #7073a3, 0.25rem 0.25rem 0.5rem #7073a3; }
+    box-shadow: inset -0.5rem -0.5rem 0.75rem #060930, -0.15rem -0.15rem 0.25rem #3c417a, 0.25rem 0.25rem 0.75rem #060930, inset 0.25rem 0.25rem 0.25rem #7073a3, 0.25rem 0.05rem 0.5rem #7073a3; }
     .post .icons__box .icon {
       height: 2rem;
       width: 2rem;
@@ -306,12 +306,18 @@ body {
     .post__comment .round-box {
       width: 100%;
       background: #e48dab;
-      box-shadow: -.25rem -.25rem .25rem #7073a3, inset -.25rem -.25rem .25rem #b37389, .25rem .15rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
+      box-shadow: inset -.25rem -.25rem .25rem #b37389, .25rem .15rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
     .post__comment-input {
       border: none; }
       .post__comment-input:focus {
         outline: none;
         color: #000; }
+
+@media (min-width: 801px) {
+  .post-container .row {
+    height: 50rem; }
+  .post {
+    height: 50%; } }
 
 .navbar-icons {
   color: #ffffff;
@@ -320,7 +326,12 @@ body {
     color: #f4abc4; }
 
 .navbar-toggler {
-  color: #fff; }
+  color: #fff;
+  background-color: #b37389; }
+
+@media (max-width: 768px) {
+  .navbar-icons {
+    font-size: 2rem; } }
 
 /* Create four equal columns that sits next to each other */
 .Gallery {

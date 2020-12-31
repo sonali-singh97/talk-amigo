@@ -9,7 +9,7 @@ class Feed extends Component {
         return (
             <div className="container-fluid" >
                 {/* <Navbar /> */}
-                <div className="container ">
+                <div className="container " style={{marginTop:"4rem"}}>
                     <div className="row">
 
                         <div className="container stardust-bg col-md-9" >
