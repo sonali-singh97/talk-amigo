@@ -11,7 +11,16 @@
 
  .navbar-toggler{
    color: #fff;
+   background-color: #b37389;
  }
+
+ @media (max-width: 768px) {
+
+  .navbar-icons{
+    font-size: 2rem;
+  }
+}
+
 
  
  

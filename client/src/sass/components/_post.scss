@@ -1,7 +1,8 @@
 
 .post{
     padding:0.5rem;
-    margin: 2rem auto;
+    margin: 1rem auto;
+    //height: 50%;
     border: 2px solid $primary-blue-light;
     background-color: $primary-blue-dark;
     backdrop-filter: blur(1.5rem);
@@ -58,10 +59,10 @@
 
       background: linear-gradient(145deg, #060930, #595b83); 
       box-shadow: inset -.5rem -.5rem .75rem #060930,   //inner bottom-right  
-       -.25rem -.25rem .25rem #3c417a,                   //outer top-left
+       -.15rem -.15rem .25rem #3c417a,                   //outer top-left
        .25rem .25rem .75rem #060930,                //outer bottom-right
       inset .25rem .25rem .25rem #7073a3,             //inner top-left
-      .25rem .25rem .50rem  #7073a3;                        //outer bottom-right
+      .25rem .05rem .50rem  #7073a3;                        //outer bottom-right
       
 
     .icon{
@@ -95,7 +96,7 @@
     //          -20px -20px 60px #393a5f;
 
     background: #e48dab;
-    box-shadow: -.25rem -.25rem .25rem #7073a3,
+    box-shadow: //-.25rem -.25rem .25rem #7073a3,
     inset -.25rem -.25rem .25rem #b37389,
     .25rem .15rem .5rem #7073a3,
     inset .25rem .15rem .25rem #f4abc4;
@@ -114,4 +115,15 @@
 }
 
 
+}
+
+@media (min-width:801px){
+  .post-container{
+    .row{
+      height: 50rem;
+    }
+  }
+  .post{
+    height: 50%;
+  }
 }

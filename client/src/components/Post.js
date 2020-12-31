@@ -3,9 +3,10 @@ import React from 'react';
 
 function Post() {
   return (
-    <div className="row">
+    <div className="container post-container">
+    <div className="row" >
       <div className="col-sm-10">
-        <div className='card post'>
+        <div className="card post">
 
           <div className="card-header" >
             <img src="images/photo.jpg" className="post__avatar" />
@@ -43,7 +44,7 @@ function Post() {
 
 
       </div>
-    </div>
+    </div></div>
 
   )
 }
