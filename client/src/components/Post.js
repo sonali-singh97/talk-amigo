@@ -1,4 +1,5 @@
 import React from 'react';
+import{Link} from 'react-router-dom';
 
 
 function Post(props){
@@ -10,7 +11,7 @@ function Post(props){
 
 <div className="card-header" >
  <img src="images/photo.jpg" className="post__avatar" />  
-    <span className="post__name">{props.post.postedBy.username} </span>
+    <span className="post__name"><Link to = {props.post.postedBy._id!== props.state._id ?`/user/${props.post.postedBy._id}` : `/user_profile`}>{props.post.postedBy.username}</Link> </span>
 
     {props.post.postedBy._id === props.state._id && <i class="fas fa-trash-alt" style={{color: "white" ,float:"right"}}
     onClick={props.delete}></i>}
