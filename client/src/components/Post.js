@@ -10,7 +10,7 @@ function Post(props){
 <div className='card post'>
 
 <div className="card-header" >
- <img src="images/photo.jpg" className="post__avatar" />  
+ <img src={props.post.postedBy.image} className="post__avatar" />  
     <span className="post__name"><Link to = {props.post.postedBy._id!== props.state._id ?`/user/${props.post.postedBy._id}` : `/user_profile`}>{props.post.postedBy.username}</Link> </span>
 
     {props.post.postedBy._id === props.state._id && <i class="fas fa-trash-alt" style={{color: "white" ,float:"right"}}

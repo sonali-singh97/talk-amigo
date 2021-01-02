@@ -6,7 +6,7 @@ const  express = require("express"),
 
   router.get("/allposts",requireLogin, (req,res)=>{
   Post.find()
-  .populate("postedBy","_id username")
+  .populate("postedBy","_id username image")
   .populate("comments.postedBy", "_id username")
   .then(posts =>
     {res.json({posts})})
@@ -15,6 +15,18 @@ const  express = require("express"),
         console.log(err);
     })
   })
+
+  router.get("/getfollowingposts",requireLogin, (req,res)=>{
+    Post.find({postedBy:{$in:req.user.following}})
+    .populate("postedBy","_id username image")
+    .populate("comments.postedBy", "_id username")
+    .then(posts =>
+      {res.json({posts})})
+  
+      .catch(err => {
+          console.log(err);
+      })
+    })
 
   router.get("/myposts",requireLogin, (req,res) => {
     Post.find({postedBy: req.user._id})

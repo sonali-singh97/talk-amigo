@@ -5,6 +5,7 @@ import {Route} from "react-router";
 import Loginpage from './components/pages/Loginpage';
 import SignupPage from './components/pages/SignupPage';
 import FeedPage from './containers/FeedPage';
+import FollowingPosts from "./containers/followingPosts";
 import Navbar from './components/Navbar';
 import UserProfile from './components/pages/userprofile';
 import Profile from './components/Profile';
@@ -33,7 +34,8 @@ return(
   <Switch>
   <Route path="/signup"  exact component ={SignupPage} />
   <Route path="/login" exact component= {Loginpage} />
-  <Route path="/" exact component= {FeedPage} />
+  <Route path="/" exact component= {FollowingPosts} />
+  <Route path="/explore" exact component= {FeedPage} />
   <Route path="/user/:userId" exact component= {Profile} />
     <Route path="/user_profile" exact component= {UserProfile} />
   <Route path="/create_post" exact component= {CreatePost} />

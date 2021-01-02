@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 function SignupPage() {
@@ -6,12 +6,37 @@ function SignupPage() {
   const [username, setName] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
- let [error , setError]= useState("");
+  const [img, setImg] = useState("");
+  const [url, setUrl] = useState(undefined);
+  let [error, setError] = useState("");
 
-  const postData = () => {
-    if(!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)){
-        setError("Invalid email")
-        return
+  useEffect(() => {
+    uploadFields();
+  }, [url]);
+
+  const uploadImg = () => {
+    const data = new FormData();
+    data.append("file", img);
+    data.append("upload_preset", "insta-clone");
+    data.append("cloud_name", "talk-amigo");
+
+    fetch("https://api.cloudinary.com/v1_1/talk-amigo/image/upload", {
+      method: "post",
+      body: data,
+    })
+      .then((res) => res.json())
+      .then((data) => setUrl(data.url))
+      .catch((err) => console.log(err));
+  };
+
+  const uploadFields = () => {
+    if (
+      !/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+        email
+      )
+    ) {
+      setError("Invalid email");
+      return;
     }
     fetch("http://localhost:5000/signup", {
       method: "POST",
@@ -22,22 +47,32 @@ function SignupPage() {
         username,
         password,
         email,
+        image : url
       }),
     })
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {
-            console.log(data.error);
-        setError(data.error);
+          console.log(data.error);
+          setError(data.error);
         } else {
           console.log(data.message);
           history.push("/login");
         }
       })
       .catch((err) => {
-          setError(err);
+        setError(err);
         console.log(err);
       });
+  }
+
+  const postData = () => {
+  if(img){
+ uploadImg()
+  }
+  else {
+ uploadFields()
+  }
   };
 
   return (
@@ -71,9 +106,13 @@ function SignupPage() {
 
           <div className=" offset-md-3 col-md-3 col-sm-12 login-register-box ">
             <div>
-              {error!==""? <div className='alert alert-danger' role='alert'>
-                {error}
-              </div> : "" }
+              {error !== "" ? (
+                <div className="alert alert-danger" role="alert">
+                  {error}
+                </div>
+              ) : (
+                ""
+              )}
               <div className="form-group text-left  input-group">
                 <div className="input-group-prepend">
                   <span className="input-group-text">
@@ -129,6 +168,14 @@ function SignupPage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
+                />
+              </div>
+
+              <div className="form-group text-left  ">
+                <label>Upload Image: </label>
+                <input
+                  type="file"
+                  onChange={(e) => setImg(e.target.files[0])}
                 />
               </div>
               {/* <div className="form-group text-left  input-group">

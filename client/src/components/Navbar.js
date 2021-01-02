@@ -11,11 +11,18 @@ function Navbar() {
             return [
                 <li class="nav-item">
                 <a className="nav-link" href="">
-                  <Link to="/">
-                    <i class="fas fa-home fa-3x  navbar-icons"></i>
+                  <Link to="/explore">
+                    <button>Explore</button>
                   </Link>
                 </a>
               </li> ,
+                 <li class="nav-item">
+                 <a className="nav-link" href="">
+                   <Link to="/">
+                   <i class="fas fa-home fa-3x  navbar-icons"></i>
+                   </Link>
+                 </a>
+               </li> ,
               <li className="nav-item">
                 <a className="nav-link" href="">
                   <Link to="/user_profile">
