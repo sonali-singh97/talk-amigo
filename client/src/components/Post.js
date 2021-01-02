@@ -5,6 +5,7 @@ import{Link} from 'react-router-dom';
 function Post(props){
     console.log(props.post)
     return(
+      <div className="container post-container">
   <div className="row">
   <div className="col-sm-10">
 <div className='card post'>
@@ -59,10 +60,12 @@ function Post(props){
       props.comment(e.target[0].value);
     }
   }>
-  <input type="text" className=" round-box"  placeholder=" Comment Something"/>
+  <input type="text" className="post__comment-input round-box"  placeholder=" Comment Something"/>
   </form>
 
 </div>
+
+
 
 </div>
 
@@ -71,7 +74,8 @@ function Post(props){
 
 
   </div>  
-  </div>    
+  </div>  
+  </div>  
 
     )
 }

@@ -35,7 +35,7 @@ function UserProfile() {
         justifyContent: "start",
         maxWidth: "700px",
         margin: "18px auto",
-        borderBottom: "1px solid grey"
+      //  borderBottom: "1px solid grey"
       }}>
         <div>
           <img style={{ width: "160px", height: "160px", borderRadius: "80px", paddingBottom: "10px " }}
@@ -61,7 +61,7 @@ function UserProfile() {
         </div>
       </div>
 
-      <div className="Gallery  background-texture-gallery">
+      <div className="Gallery  background-texture-gallery"  style={{borderTop: "0.15rem solid grey"}}>
 
    { myposts.map(item => <GalleryImage key={item._id} src={item.photo} /> )}
       
