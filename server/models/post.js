@@ -12,7 +12,7 @@ const mongoose = require('mongoose'),
      },
      photo: {
        type:String,
-      // required: true
+       required: true
      },
      likes:[{type:ObjectId , ref:"User"}],
      comments:[{

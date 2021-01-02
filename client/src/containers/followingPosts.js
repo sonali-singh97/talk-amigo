@@ -8,7 +8,7 @@ const Feed = () => {
   const { state, dispatch } = useContext(UserContext);
 
   useEffect(() => {
-    fetch("http://localhost:5000/posts/allposts", {
+    fetch("http://localhost:5000/posts/getfollowingposts", {
       headers: {
         authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -133,7 +133,7 @@ const Feed = () => {
   return (
     <div className="container-fluid">
       {/* <Navbar /> */}
-      <div className="container "  style={{marginTop:"4rem"}}>
+      <div className="container ">
         <div className="row">
           <div className="container stardust-bg col-md-9">
             {data.map((item) => {
@@ -151,19 +151,8 @@ const Feed = () => {
             })}
           </div>
 
-          <div className="container col-md-3" style={{position:"sticky"}}>
-                            <div className="friend-list-heading" >
-                                <img className="" src="https://i1.wp.com/coolpictures.in/wp-content/uploads/2020/03/Cool-and-Stylish-DP-for-Girls.jpg?fit=586%2C586&ssl=1" alt="avatar" />
-                                <div className="about-me">
-                                    <div className="my-name"> ME </div>
-                                    <div > About me  </div>
-
-                                </div></div>
-
-                                <div className="suggestions">
-
-<div className="suggestion-heading"> Suggestions for you </div>
-
+          <div class="container col-md-3">
+            <div class="friend-list-heading">Friends</div>
 
             <ul className="friend-list">
               <Friend />
@@ -175,7 +164,6 @@ const Feed = () => {
               <Friend />
               <Friend />
             </ul>
-          </div>
           </div>
         </div>
       </div>

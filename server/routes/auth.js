@@ -21,7 +21,7 @@ router.route("/").get((req, res) => {
 });
 
 router.post("/signup", (req, res, next) => {
-  const { username, email, password } = req.body;
+  const { username, email, password ,image} = req.body;
 
   if (!username || !email || !password) {
     res.status(422).json({ error: "please fill all the details" });
@@ -37,6 +37,8 @@ router.post("/signup", (req, res, next) => {
             username: username,
             password: hashedPassword,
             email: email,
+            image : image
+            
           });
           user.save().then(
             (user) => {
@@ -73,8 +75,8 @@ User.findOne({email: email})
      if(doMatch){
        // res.json({ "status" : "user signed in successfully " , user: user});
        const token = jwt.sign({_id :user._id }, process.env.JWT_SECRET);
-       const {_id ,name, email}= user;
-       res.json({token , user: {_id,name, email}});
+       const {_id ,username, email , followers , following, image}= user;
+       res.json({token , user : {_id, username ,email, followers, following, image}});
      }
    
      else{
