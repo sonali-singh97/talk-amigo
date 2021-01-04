@@ -26,8 +26,8 @@ function Loginpage() {
       },
       body: JSON.stringify({
         password,
-        email,
-      }),
+        email
+      })
     })
       .then((res) => res.json())
       .then((data) => {
@@ -40,7 +40,7 @@ function Loginpage() {
           localStorage.setItem("user",JSON.stringify(data.user));
 
           dispatch({type:"USER", payload : data.user});
-          console.log(data.message);
+        //  console.log(data.message);
           history.push("/");
         }
       })
