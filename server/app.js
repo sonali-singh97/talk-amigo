@@ -13,7 +13,6 @@ dotenv.config();
 var authRouter = require("./routes/auth");
 var userRouter = require('./routes/user');
 var postsRouter = require('./routes/post');
-var testAPIRouter = require("./routes/testRoute");
 var app = express();
 
 const User = require("./models/user");
@@ -50,7 +49,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', authRouter);
 app.use('/posts', postsRouter);
 app.use('/user', userRouter);
-app.use("/testAPI", testAPIRouter);
 
 
 
