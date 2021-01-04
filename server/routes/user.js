@@ -5,7 +5,7 @@ const express = require("express"),
   Post = require("../models/post"),
   User = require("../models/user");
 
-router.get("/:userId", requireLogin, (req, res) => {
+router.get("/user/:userId", requireLogin, (req, res) => {
   User.findOne({ _id: req.params.userId })
     .select("-password")
     .then((user) => {
@@ -23,7 +23,7 @@ router.get("/:userId", requireLogin, (req, res) => {
     });
 });
 
-router.put("/follow", requireLogin, (req, res) => {
+router.put("/user/follow", requireLogin, (req, res) => {
   User.findByIdAndUpdate(
     req.body.followId,
     {
@@ -50,7 +50,7 @@ router.put("/follow", requireLogin, (req, res) => {
   );
 });
 
-router.put("/unfollow", requireLogin, (req, res) => {
+router.put("/user/unfollow", requireLogin, (req, res) => {
     User.findByIdAndUpdate(
       req.body.unfollowId,
       {
@@ -79,7 +79,7 @@ router.put("/unfollow", requireLogin, (req, res) => {
     );
   });
 
-  router.put("/updateImg" , requireLogin , (req, res) => {
+  router.put("/user/updateImg" , requireLogin , (req, res) => {
     User.findByIdAndUpdate(req.user._id ,{ $set : { image : req.body.image}} , {new : true}
       , (err, result) => {
         if(err)

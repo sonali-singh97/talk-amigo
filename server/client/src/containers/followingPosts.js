@@ -4,7 +4,7 @@ import Post from "../components/Post";
 import Friend from "../components/Friend";
 import { UserContext } from "../App";
 const Feed = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null);
   const { state, dispatch } = useContext(UserContext);
 
   useEffect(() => {
@@ -131,12 +131,13 @@ const Feed = () => {
   }
 
   return (
+    
     <div className="container-fluid">
       {/* <Navbar /> */}
       <div className="container ">
         <div className="row">
           <div className="container stardust-bg col-md-9">
-            {data.map((item) => {
+            {data && data.map((item) => {
               return (
                 <Post
                   key={item._id}
