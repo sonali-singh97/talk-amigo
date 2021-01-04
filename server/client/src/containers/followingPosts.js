@@ -8,7 +8,7 @@ const Feed = () => {
   const { state, dispatch } = useContext(UserContext);
 
   useEffect(() => {
-    fetch("http://localhost:5000/posts/getfollowingposts", {
+    fetch("/posts/getfollowingposts", {
       headers: {
         authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -25,7 +25,7 @@ const Feed = () => {
 
 
   const likepost = (id) => {
-    fetch("http://localhost:5000/posts/like", {
+    fetch("/posts/like", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -54,7 +54,7 @@ const Feed = () => {
 
 
   const unlikepost = (id) => {
-    fetch("http://localhost:5000/posts/unlike", {
+    fetch("/posts/unlike", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -82,7 +82,7 @@ const Feed = () => {
   };
 
   const makeComment = (text, postId) => {
-  fetch("http://localhost:5000/posts/comment", {
+  fetch("/posts/comment", {
     method : "put",
     headers : {
       "Content-Type" : "application/json",
@@ -112,7 +112,7 @@ const Feed = () => {
   }
 
   const deletePost =(postId) =>{
-    fetch(`http://localhost:5000/posts/delete/${postId}` , {
+    fetch(`/posts/delete/${postId}` , {
       method : "delete",
       headers : {
                "authorization": "Bearer " + localStorage.getItem("jwt")

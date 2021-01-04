@@ -67,7 +67,7 @@ return(
 // }
 
 // callAPI() {
-//     fetch("http://localhost:5000/testAPI")
+//     fetch("/testAPI")
 //         .then(res => res.text())
 //         .then(res => this.setState({ apiResponse: res }));
 // }

@@ -12,7 +12,7 @@ function UserProfile() {
   const [image,setImage] = useState("");
 
   useEffect(()=>{
-  fetch("http://localhost:5000/posts/myposts", {
+  fetch("/posts/myposts", {
     headers : {
       "authorization": "Bearer "+ localStorage.getItem("jwt")
     }
@@ -41,7 +41,7 @@ function UserProfile() {
           console.log(data)
         
 
-          fetch("http://localhost:5000/user/updateImg", {
+          fetch("/user/updateImg", {
             method : "put",
             headers :{
               "Content-Type": "application/json",

@@ -2,6 +2,7 @@
   "name": "server",
   "version": "0.0.0",
   "private": true,
+ 
   "scripts": {
     "client": "cd client && npm start",
     "start": "node ./bin/www",

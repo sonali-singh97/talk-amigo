@@ -19,7 +19,7 @@ function Loginpage() {
       setError("Invalid email");
       return;
     }
-    fetch("http://localhost:5000/signin", {
+    fetch("/signin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
