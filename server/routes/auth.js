@@ -12,13 +12,13 @@ const User = require("../models/user");
 //router.use(bodyParser.json());
 
 dotenv.config();
-router.get("/protected", requireLogin , (req,res)=>{
-res.send("hello user");
-})
+// router.get("/protected", requireLogin , (req,res)=>{
+// res.send("hello user");
+// })
 
-router.route("/").get((req, res) => {
-  res.send("hello");
-});
+// router.route("/").get((req, res) => {
+//   res.send("hello");
+// });
 
 router.post("/signup", (req, res, next) => {
   const { username, email, password ,image} = req.body;
