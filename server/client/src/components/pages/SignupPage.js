@@ -11,7 +11,9 @@ function SignupPage() {
   let [error, setError] = useState("");
 
   useEffect(() => {
+    if(url) {
     uploadFields();
+    }
   }, [url]);
 
   const uploadImg = () => {

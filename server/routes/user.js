@@ -79,4 +79,16 @@ router.put("/unfollow", requireLogin, (req, res) => {
     );
   });
 
+  router.put("/updateImg" , requireLogin , (req, res) => {
+    User.findByIdAndUpdate(req.user._id ,{ $set : { image : req.body.image}} , {new : true}
+      , (err, result) => {
+        if(err)
+        {
+          return res.status(422).json({error : err})
+        }
+        res.json(result)
+      })
+    
+  })
+
 module.exports = router;

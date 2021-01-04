@@ -7,8 +7,9 @@ import {UserContext} from "../../App";
 
 function UserProfile() {
 
-  const {state,dispatch} = useContext(UserContext)
+  const {state,dispatch} = useContext(UserContext);
   const [myposts, setPosts] = useState([]);
+  const [image,setImage] = useState("");
 
   useEffect(()=>{
   fetch("http://localhost:5000/posts/myposts", {
@@ -23,6 +24,49 @@ function UserProfile() {
     setPosts(result.myposts)})
   .catch(err => console.log(err));
   }, [])
+
+  useEffect(() => {
+    if(image){
+      const data = new FormData();
+      data.append("file", image);
+      data.append("upload_preset", "insta-clone");
+      data.append("cloud_name", "talk-amigo");
+  
+      fetch("https://api.cloudinary.com/v1_1/talk-amigo/image/upload", {
+        method: "post",
+        body: data,
+      })
+        .then((res) => res.json())
+        .then((data) =>{
+          console.log(data)
+        
+
+          fetch("http://localhost:5000/user/updateImg", {
+            method : "put",
+            headers :{
+              "Content-Type": "application/json",
+              "authorization": "Bearer " + localStorage.getItem("jwt"),
+            },
+            body : JSON.stringify({
+              image : data.url
+            })
+          }).then (res => res.json())
+          .then(res => {
+            console.log(res);
+            localStorage.setItem("user",JSON.stringify({...state, image : res.image}));
+         dispatch({type : "UPDATEPIC", payload : res.image})
+          })
+          .catch(err => console.log(err))
+        } )
+        .catch((err) => console.log(err));
+    }
+  },
+   [image])
+
+  const updateImg = (file) => {
+    setImage(file);
+   
+  };
 
   return (
     <div className="fluid-container   stardust-bg">
@@ -41,6 +85,14 @@ function UserProfile() {
           <img style={{ width: "160px", height: "160px", borderRadius: "80px", paddingBottom: "10px " }}
             src={state? state.image : null}
           />
+
+<div className="form-group text-left  ">
+                <label>Upload Image: </label>
+                <input
+                  type="file"
+                  onChange={(e) => updateImg(e.target.files[0])}
+                />
+              </div>
         </div>
         <div  className="user-detail-box">
           <h3 style={{ color: "white" }}>{state? state.username : "loading"}</h3>

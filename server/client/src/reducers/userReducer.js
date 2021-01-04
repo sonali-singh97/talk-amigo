@@ -16,5 +16,14 @@ return {
     following : action.payload.following
 }
 }
+
+
+else if (action.type ==="UPDATEPIC"){
+    return {
+        ...state,
+        image : action.payload
+    }
+    }
+
 return state;
 }
