@@ -130,7 +130,7 @@ crypto.randomBytes(32, (err,buffer)=> {
         from:"sendmail676@gmail.com",
         subject:"password reset",
         html:`<p>You requested for password reset </p>
-           <h5>Click on this <a href="http://localhost:3000/reset/${token}">link </a>to reset password </h5>`
+           <h5>Click on this <a href="{process.env.EMAIL}/reset/${token}">link </a>to reset password </h5>`
       })
 
       res.json({message:"check your email"})

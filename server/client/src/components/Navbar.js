@@ -1,7 +1,7 @@
 import React, { useContext, useState, useRef } from "react";
 import { Link, useHistory } from "react-router-dom";
 import{ UserContext} from "../App";
-import $ from "jquery";
+
 import "bootstrap";
 
 function Navbar() {
@@ -160,9 +160,9 @@ function Navbar() {
               <ul className="list-group">
  {users && users.map((user) => {
     
- return   <Link  key ={user._id} to={user._id!== state._id ?`/user/${user._id}` : `/user_profile`} data-bs-dismiss="modal"
+ return   <Link  key ={user._id} to={user._id!== state._id ?`/user/${user._id}` : `/user_profile`} 
  onClick={()=>{ 
-    $("#staticBackdrop").modal("hide")
+   
    setSearch("")}} >
    <li className="list-group-item" >
    <img alt="profile pic" src={user.image} style={{width: 20, height : 20 ,borderRdius: "50%" , marginRight: 5}}/>
