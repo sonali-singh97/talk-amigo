@@ -8,6 +8,7 @@ const  express = require("express"),
   Post.find()
   .populate("postedBy","_id username image")
   .populate("comments.postedBy", "_id username")
+  .sort("-createdAt")
   .then(posts =>
     {res.json({posts})})
 
@@ -20,6 +21,7 @@ const  express = require("express"),
     Post.find({postedBy:{$in:req.user.following}})
     .populate("postedBy","_id username image")
     .populate("comments.postedBy", "_id username")
+    .sort("-createdAt")
     .then(posts =>
       {res.json({posts})})
   
