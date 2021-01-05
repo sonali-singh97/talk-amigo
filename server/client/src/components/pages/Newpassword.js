@@ -1,32 +1,24 @@
 import React, { useState, useContext } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 import {UserContext} from "../../App";
 
-function Loginpage() {
-  const {state, dispatch} = useContext(UserContext);
+function Newpassword() {
+ 
   const history = useHistory();
-  const [username, setName] = useState("");
   const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
+  const {token} = useParams();
   let [error, setError] = useState("");
 
   const postData = () => {
-    if (
-      !/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-        email
-      )
-    ) {
-      setError("Invalid email");
-      return;
-    }
-    fetch("/signin", {
+  
+    fetch("/new-password", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
         password,
-        email
+        token
       })
     })
       .then((res) => res.json())
@@ -36,12 +28,9 @@ function Loginpage() {
           console.log(data.error);
           setError(data.error);
         } else {
-          localStorage.setItem("jwt", data.token);
-          localStorage.setItem("user",JSON.stringify(data.user));
-
-          dispatch({type:"USER", payload : data.user});
-        //  console.log(data.message);
-          history.push("/");
+         
+         console.log(data.message);
+          history.push("/login");
         }
       })
       .catch((err) => {
@@ -85,27 +74,7 @@ function Loginpage() {
             {error!==""? <div className='alert alert-danger' role='alert'>
                 {error}
               </div> : "" }
-            <div className="form-group text-left  input-group">
-                <div className="input-group-prepend">
-                  <span className="input-group-text">
-                    <i className="fas fa-envelope fa-2x input icon"></i>
-                  </span>
-                </div>
-
-                <input
-                  type="email"
-                  className="form-control login-register-input"
-                  id="email"
-                  pattern=".+@gmail.com"
-                  aria-describedby="emailHelp"
-                  placeholder="Email"
-                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                  name="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-              </div>
+           
               <div className="form-group text-left  input-group">
                 <div className="input-group-prepend">
                   <span className="input-group-text">
@@ -117,7 +86,7 @@ function Loginpage() {
                   type="password"
                   className="form-control login-register-input"
                   id="password"
-                  placeholder="Password"
+                  placeholder="Enter new password"
                   name="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -129,13 +98,10 @@ function Loginpage() {
                 onClick={() => postData()}
                 className="btn btn-lg btn-block login-register-button"
               >
-                LOGIN
+            UPDATE PASSWORD
               </button>
 
-              <div className="forgot-password">
-                {" "}
-                <Link to="/reset"> Forgot Password </Link>
-              </div>
+              
               <p className="signupLink">
                 Don't have an account? <Link to="/signup"> SignUp </Link>
               </p>
@@ -147,4 +113,4 @@ function Loginpage() {
   );
 }
 
-export default Loginpage;
+export default Newpassword;

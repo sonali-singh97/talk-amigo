@@ -10,6 +10,8 @@ import Navbar from './components/Navbar';
 import UserProfile from './components/pages/userprofile';
 import Profile from './components/Profile';
 import CreatePost from "./containers/CreatePost";
+import Resetpage from "./components/pages/Reset";
+import Newpassword from "./components/pages/Newpassword";
 import {reducer, initialState} from "./reducers/userReducer";
 import './App.css';
 
@@ -26,7 +28,8 @@ const Routes=() => {
     
     }
     else{
-      history.push("/signup");
+      if(!history.location.pathname.startsWith('/reset'))
+      history.push("/login");
     }
   }, []);
 
@@ -39,6 +42,8 @@ return(
   <Route path="/user/:userId" exact component= {Profile} />
     <Route path="/user_profile" exact component= {UserProfile} />
   <Route path="/create_post" exact component= {CreatePost} />
+  <Route path ="/reset" exact component = {Resetpage} />
+  <Route path = "/reset/:token" component={Newpassword}></Route>
   </Switch>
 )
 }

@@ -2,7 +2,10 @@ const dotenv = require("dotenv"),
   express = require("express"),
   router = express.Router(),
   bcrypt = require("bcryptjs"),
+  nodemailer = require("nodemailer"),
+  sendgridTransport = require("nodemailer-sendgrid-transport"),
   mongoose = require("mongoose"),
+  crypto = require('crypto'),
   jwt = require('jsonwebtoken'),
   requireLogin = require("../middleware/requireLogin");
 //const bodyParser= require("body-parser");
@@ -19,6 +22,14 @@ dotenv.config();
 // router.route("/").get((req, res) => {
 //   res.send("hello");
 // });
+
+//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
+
+const transporter = nodemailer.createTransport(sendgridTransport({
+  auth:{
+    api_key:process.env.API_KEY
+}
+}))
 
 router.post("/signup", (req, res, next) => {
   const { username, email, password ,image} = req.body;
@@ -45,6 +56,13 @@ router.post("/signup", (req, res, next) => {
               res.statusCode = 200;
               res.setHeader("Content-Type", "application/json");
               res.json({ message: "Registeration Successful", user: user });
+
+              transporter.sendMail({
+                to:user.email,
+                from:"sendmail676@gmail.com",
+                subject:"signed up successfully",
+                html : "<h1>Welcome to Talk Amigo</h1>"
+              })
             },
             (err) => next(err)
           );
@@ -90,4 +108,61 @@ User.findOne({email: email})
 
 })
 
+
+router.post("/reset-password", (req,res)=>{
+crypto.randomBytes(32, (err,buffer)=> {
+  if(err){
+    console.log(err)
+  }
+  const token = buffer.toString("hex");
+  User.findOne({email : req.body.email})
+  .then(user => {
+    if(!user){
+     return res.status(422).json({error : "user doesn't exist with this mail id"})
+    }
+
+    user.resetToken = token;
+    user.expireToken = Date.now() + 3600000;
+
+    user.save().then((result)=>{
+      transporter.sendMail({
+        to:user.email,
+        from:"sendmail676@gmail.com",
+        subject:"password reset",
+        html:`<p>You requested for password reset </p>
+           <h5>Click on this <a href="http://localhost:3000/reset/${token}">link </a>to reset password </h5>`
+      })
+
+      res.json({message:"check your email"})
+    })
+  })
+})
+})
+
+router.post("/new-password", (req,res)=>{
+  const newPassword = req.body.password;
+  const sentToken = req.body.token;
+
+  User.findOne({resetToken : sentToken , expireToken : {$gt : Date.now()}} )
+  .then(user => 
+    {
+      if(!user){
+        return res.status(422).json({error : "Try again session expired!"})
+      }
+
+      bcrypt.hash(newPassword, 12 ).then((hashedPassword) => {
+        user.password= hashedPassword;
+        user.resetToken = undefined;
+        user.expireToken=undefined;
+
+        user.save((user)=>{
+          res.json({message : "Password updated successfully"})
+        })
+      })
+    })
+
+    .catch(err => {
+      console.log(err);
+    })
+})
 module.exports = router;

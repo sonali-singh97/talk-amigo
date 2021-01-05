@@ -4,8 +4,10 @@ import{Link} from 'react-router-dom';
 
 function Post(props){
     console.log(props.post)
+    const feedPost = props.post;
     return(
-      <div className="container post-container">
+ 
+     ( <div className="container post-container">
   <div className="row">
   <div className="col-sm-10">
 <div className='card post'>
@@ -76,6 +78,8 @@ function Post(props){
   </div>  
   </div>  
   </div>  
+     )
+
 
     )
 }

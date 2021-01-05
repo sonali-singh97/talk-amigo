@@ -2,11 +2,9 @@ import React, { useState, useContext } from "react";
 import { Link, useHistory } from "react-router-dom";
 import {UserContext} from "../../App";
 
-function Loginpage() {
-  const {state, dispatch} = useContext(UserContext);
+function Resetpage() {
+  
   const history = useHistory();
-  const [username, setName] = useState("");
-  const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   let [error, setError] = useState("");
 
@@ -19,13 +17,12 @@ function Loginpage() {
       setError("Invalid email");
       return;
     }
-    fetch("/signin", {
+    fetch("/reset-password", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        password,
         email
       })
     })
@@ -36,12 +33,9 @@ function Loginpage() {
           console.log(data.error);
           setError(data.error);
         } else {
-          localStorage.setItem("jwt", data.token);
-          localStorage.setItem("user",JSON.stringify(data.user));
-
-          dispatch({type:"USER", payload : data.user});
-        //  console.log(data.message);
-          history.push("/");
+            
+         console.log(data.message);
+          history.push("/login");
         }
       })
       .catch((err) => {
@@ -51,7 +45,7 @@ function Loginpage() {
   };
   return (
     <div className="container-fluid stardust-bg">
-      {/* <div  >  <img src="images/logo.png" alt="logo" className="logo" /> </div> */}
+  
       <img src="images/star1.png" alt="star" className="star1" />
       <img src="images/star1.png" alt="star" className="star2" />
 
@@ -85,7 +79,7 @@ function Loginpage() {
             {error!==""? <div className='alert alert-danger' role='alert'>
                 {error}
               </div> : "" }
-            <div className="form-group text-left  input-group">
+             <div className="form-group text-left  input-group">
                 <div className="input-group-prepend">
                   <span className="input-group-text">
                     <i className="fas fa-envelope fa-2x input icon"></i>
@@ -106,45 +100,32 @@ function Loginpage() {
                   required
                 />
               </div>
-              <div className="form-group text-left  input-group">
-                <div className="input-group-prepend">
-                  <span className="input-group-text">
-                    <i className="fas fa-key fa-2x input icon"></i>
-                  </span>
-                </div>
+         
+              
 
-                <input
-                  type="password"
-                  className="form-control login-register-input"
-                  id="password"
-                  placeholder="Password"
-                  name="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  required
-                />
+               
               </div>
 
               <button
                 onClick={() => postData()}
                 className="btn btn-lg btn-block login-register-button"
               >
-                LOGIN
+                RESET PASSWORD
               </button>
 
               <div className="forgot-password">
                 {" "}
-                <Link to="/reset"> Forgot Password </Link>
+                <a href="#"> Forgot Password </a>{" "}
               </div>
               <p className="signupLink">
-                Don't have an account? <Link to="/signup"> SignUp </Link>
+                Don't have an account? <Link to=""> SignUp </Link>{" "}
               </p>
             </div>
           </div>
         </div>
       </div>
-    </div>
+   
   );
 }
 
-export default Loginpage;
+export default Resetpage;
