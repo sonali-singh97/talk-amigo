@@ -2,7 +2,7 @@ import React, { useContext, useState, useRef } from "react";
 import { Link, useHistory } from "react-router-dom";
 import{ UserContext} from "../App";
 
-import "bootstrap";
+
 
 function Navbar() {
    const searchModal = useRef();
