@@ -43,12 +43,12 @@ function Post(props){
 
 
   <div class="post__details">
-    <h3>{props.post.title}</h3>
+    <h2>{props.post.title}</h2>
     <p>{props.post.body}</p>
   </div>
     {
      props.post.comments.map(
-       comment => (<h6 key={comment._id} style={{color : "#fff"}}>
+       comment => (<h6 key={comment._id} style={{color : "#fff", fontSize: "1.2rem"}}>
          <span><b>{comment.postedBy.username}</b></span>
            {"    " + comment.text}
        </h6>)

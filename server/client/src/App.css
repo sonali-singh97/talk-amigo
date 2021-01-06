@@ -258,6 +258,10 @@ body {
 .stardust-bg {
   background-image: url("https://www.transparenttextures.com/patterns/stardust.png"); }
 
+@media (max-width: 992px) {
+  .hide-it {
+    display: none; } }
+
 body {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
@@ -282,13 +286,16 @@ body {
   .post__name {
     color: #fff;
     font-size: 1.8rem; }
+  .post__details {
+    font-size: 1.6rem;
+    color: #b37389; }
   .post .icons__box {
     margin-right: 2rem;
     margin-bottom: 1rem;
     font-size: 1.6rem;
     color: #fff;
     background: linear-gradient(145deg, #060930, #595b83);
-    box-shadow: inset -0.5rem -0.5rem 0.75rem #060930, -0.15rem -0.15rem 0.25rem #3c417a, 0.25rem 0.25rem 0.75rem #060930, inset 0.25rem 0.25rem 0.25rem #7073a3, 0.25rem 0.05rem 0.5rem #7073a3; }
+    box-shadow: inset -0.5rem -0.5rem 0.75rem #060930, 0.25rem 0.25rem 0.75rem #060930, inset 0.25rem 0.25rem 0.25rem #7073a3, 0.05rem 0.05rem 0.25rem #7073a3; }
     .post .icons__box .icon {
       height: 2rem;
       width: 2rem;
@@ -308,7 +315,8 @@ body {
       background: #e48dab;
       box-shadow: inset -.25rem -.25rem .25rem #b37389, .25rem .15rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
     .post__comment-input {
-      border: none; }
+      border: none;
+      width: 100%; }
       .post__comment-input:focus {
         outline: none;
         color: #000; }
@@ -318,6 +326,24 @@ body {
     height: 50rem; }
   .post {
     height: 50%; } }
+
+a.nav-link {
+  text-decoration: none; }
+
+.navbar-button {
+  background: linear-gradient(90deg, #b37389 35%, #cc88a0 68%, #e1a4b9 95%);
+  box-shadow: inset -.25rem -.25rem .25rem #b37389, .15rem .15rem .25rem #7073a3, inset .25rem .15rem .25rem #f4abc4;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bolder;
+  border-radius: 3rem;
+  margin-left: 3rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.6rem; }
+  .navbar-button:hover {
+    background: #b37389;
+    background: linear-gradient(90deg, #b37389 0%, #b37389 100%, #f1d6df 100%);
+    box-shadow: -.05rem -.05rem .25rem #7073a3, inset -.25rem -.25rem .25rem #b37389, .05rem .05rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
 
 .navbar-icons {
   color: #ffffff;
