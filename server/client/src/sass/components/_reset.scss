@@ -1,0 +1,80 @@
+@import "../base/base";
+
+.reset-illustration-div{
+    position: relative;
+
+    .planet-image{
+        position: absolute;;
+        width: 30%;
+    height: 50%;
+    left: 0.5rem;
+    top: 0.5rem;
+    
+    transform: rotate(-21.05deg);
+    }
+    
+    .rocket-image{
+        position: absolute;
+    width: 15%;
+    height: 50%;
+    left: 35rem;
+    top: 4rem;
+    margin-top: -7vw;
+    transform: rotate(51.39deg);
+    }
+    
+    .camera-image{
+        position: absolute;
+        width: 17%;
+    height: 35%;
+    left: 40rem;
+    top: 25rem;
+    transform: rotate(20.53deg);
+    }
+    
+}
+
+.reset-box{
+    padding-top: 7rem;
+}
+
+@media(max-width:992px){
+
+    .reset-illustration-div{
+    
+        .planet-image{
+            width: 35%;
+            height: 45%;
+            left: 0.5rem;
+            top: 0.5rem;
+        }
+        
+        .rocket-image{
+              width: 20%;
+              height: 50%;
+              left: 25rem;
+              top: 4rem;
+        }
+        
+        .camera-image{
+            width: 25%;
+            height: 30%;
+            left: 40rem;
+            top: 25rem;
+        }
+        
+    }
+
+    .reset-button{
+        font-size: 1.3rem;
+        padding: 0.5rem 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .reset-button{
+      font-size: 1.1rem;
+      padding: 0.25rem 0.2rem;
+    }
+  }

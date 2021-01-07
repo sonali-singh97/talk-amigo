@@ -44,24 +44,24 @@ function Resetpage() {
       });
   };
   return (
-    <div className="container-fluid stardust-bg">
+    <div className="container-fluid stardust-bg  below-navbar">
   
       <img src="images/star1.png" alt="star" className="star1" />
       <img src="images/star1.png" alt="star" className="star2" />
 
       <div className="container-fluid  ">
         <div className="row">
-          <div className="mt-0 pt-0 col-md-6  d-flex justify-content-start  illustration-div">
-            <img
+          <div className="mt-0 pt-0 col-md-4  d-flex justify-content-start  reset-illustration-div">
+            {/* <img
               src="images/planet.png"
               alt="planet"
               className="planet-image"
-            />
-            <img
+            /> */}
+            {/* <img
               src="images/Saly-6.png"
               alt="person"
               className="person-image img-fluid"
-            />
+            /> */}
             <img
               src="images/rocket.png"
               alt="rocket"
@@ -74,7 +74,7 @@ function Resetpage() {
             />
           </div>
 
-          <div className=" mt-0 pt-0 offset-md-3 col-md-3 col-sm-12 login-register-box">
+          <div className=" mt-0 pt-8 col-lg-3 col-md-4 offset-sm-4 col-sm-4 login-register-box">
             <div className="">
             {error!==""? <div className='alert alert-danger' role='alert'>
                 {error}
@@ -108,19 +108,30 @@ function Resetpage() {
 
               <button
                 onClick={() => postData()}
-                className="btn btn-lg btn-block login-register-button"
+                className="btn btn-lg btn-block login-register-button  reset-button"
               >
                 RESET PASSWORD
               </button>
 
               <div className="forgot-password">
                 {" "}
-                <a href="#"> Forgot Password </a>{" "}
+                <a href="#" style={{color:" #b37389", fontWeight: "bolder"}}> Forgot Password </a>{" "}
               </div>
               <p className="signupLink">
-                Don't have an account? <Link to=""> SignUp </Link>{" "}
+                Don't have an account? <Link to="/signup" style={{color:" #b37389", fontWeight: "bolder"}}> SignUp </Link>{" "}
               </p>
             </div>
+
+
+            <div className="mt-0 pt-0 col-md-4  d-flex justify-content-start  reset-illustration-div">
+            <img
+              src="images/planet.png"
+              alt="planet"
+              className="planet-image"
+            />
+            </div>
+
+
           </div>
         </div>
       </div>

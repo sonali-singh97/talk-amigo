@@ -21,7 +21,7 @@ function Friend() {
                                 <div className="about">
                                     <div className="name">
                                         <span>Who?</span>
-                                        <button type="button" className="btn follow-button login-register-button" onClick={isFollowed ? unfollow : follow }>
+                                        <button type="button" className="btn follow-button" onClick={isFollowed ? unfollow : follow }>
                                              {followtext}
                                         </button>
                                     </div>

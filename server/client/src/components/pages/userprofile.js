@@ -69,8 +69,8 @@ function UserProfile() {
   };
 
   return (
-    <div className="fluid-container   stardust-bg">
-      <Navbar />
+    <div className="fluid-container   stardust-bg  below-navbar">
+      {/* <Navbar /> */}
     <div className="container ">
       <div
       className="user-detail"

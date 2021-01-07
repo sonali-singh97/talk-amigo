@@ -24,8 +24,8 @@ body{
 
 .logo{
     display: block;
-  max-width:45%;
-  max-height:45%;
+  max-width:60%;
+  max-height:60%;
   width: auto;
   height: auto;
     
@@ -110,4 +110,22 @@ body{
 .login-register-box p{
    text-align: center;
    margin: 0 auto;
+}
+
+@media(max-width:768px){
+    .logo{
+        display: inline;
+        max-width:55%;
+        max-height:55%;
+    }
+}
+@media(max-width:480px){
+    .logo{
+        max-width:85%;
+        max-height:85%;
+    }
+
+    .login-register-button{
+        font-size: 1rem;
+    }
 }

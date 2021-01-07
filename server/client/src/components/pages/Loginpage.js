@@ -50,14 +50,14 @@ function Loginpage() {
       });
   };
   return (
-    <div className="container-fluid stardust-bg">
+    <div className="container-fluid stardust-bg  below-navbar">
       {/* <div  >  <img src="images/logo.png" alt="logo" className="logo" /> </div> */}
-      <img src="images/star1.png" alt="star" className="star1" />
-      <img src="images/star1.png" alt="star" className="star2" />
+      <img src="images/star1.png" alt="star" className="star1  hide-it" />
+      <img src="images/star1.png" alt="star" className="star2  hide-it" />
 
       <div className="container-fluid  ">
         <div className="row">
-          <div className="mt-0 pt-0 col-md-6  d-flex justify-content-start  illustration-div">
+          <div className="mt-0 pt-0  col-lg-6 col-md-6  d-flex justify-content-start  illustration-div">
             <img
               src="images/planet.png"
               alt="planet"
@@ -80,7 +80,7 @@ function Loginpage() {
             />
           </div>
 
-          <div className=" mt-0 pt-0 offset-md-3 col-md-3 col-sm-12 login-register-box">
+          <div className=" mt-0 pt-0 col-lg-3 col-md-4 offset-sm-3 col-sm-6 login-register-box">
             <div className="">
             {error!==""? <div className='alert alert-danger' role='alert'>
                 {error}
@@ -134,10 +134,10 @@ function Loginpage() {
 
               <div className="forgot-password">
                 {" "}
-                <Link to="/reset"> Forgot Password </Link>
+                <Link to="/reset" style={{color:" #b37389", fontWeight: "bolder"}}> Forgot Password </Link>
               </div>
               <p className="signupLink">
-                Don't have an account? <Link to="/signup"> SignUp </Link>
+                Don't have an account? <Link to="/signup" style={{color:" #b37389", fontWeight: "bolder"}}> SignUp </Link>
               </p>
             </div>
           </div>

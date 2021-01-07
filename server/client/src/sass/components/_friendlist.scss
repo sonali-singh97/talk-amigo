@@ -35,25 +35,14 @@
 
 .friend-list {
     padding: 2rem;
-    //height: 77rem;
-    overflow-y: scroll;
-    height: 50rem;
+    overflow: hidden;
+    //height: 50rem;
+    
+    .clearfix:focus-within{
+      margin-bottom: 1rem;
+      border-bottom: solid 0.1rem #f4abc4;
+    }
 
-    &::-webkit-scrollbar {
-        padding-top: 1rem;
-       width: 0.5rem;
-    }
-    &::-webkit-scrollbar-track {
-       background:$primary-blue-dark;
-       border-radius: 2rem;
-    }
-    &::-webkit-scrollbar-thumb {
-       background:#b37389;
-       border-radius: 2rem;
-    }
-    &::-webkit-scrollbar-thumb:hover {
-       background:#F4ABC4;
-    }
     
     li {
       padding-bottom: 2rem;
@@ -77,9 +66,58 @@
 
           .follow-button{
             font-size: 1rem;
-            margin: 1rem 1rem 1rem 3rem;
+            margin: 1.5rem 1rem 1rem 3rem;
+            color: #000000;
+            font-weight: bolder;
+            border-radius: 2.5rem;
+            background: linear-gradient(90deg, rgba(179,115,137,1) 35%, rgba(204,136,160,1) 68%, rgba(225,164,185,1) 95%);   
+            box-shadow: inset -.15rem -.15rem .25rem #b37389,
+                 .15rem .15rem .25rem #7073a3,
+                  inset .25rem .15rem .25rem #f4abc4;
+
+            &:hover {
+                 background: rgb(179,115,137);
+                 background: linear-gradient(90deg, rgba(179,115,137,1) 0%, rgba(179,115,137,1) 100%, rgba(241,214,223,1) 100%);
+                 box-shadow: -.15rem -.05rem .25rem #7073a3,
+                        inset -.25rem -.25rem .25rem #b37389,
+                        .15rem .15rem .25rem #7073a3,
+                        inset .25rem .15rem .25rem #f4abc4;
+             }
           }
       }
   }
   
   
+@media(max-width:992px){
+
+  .friend-list-heading{
+
+    img {
+      width: 8rem;
+      height: 8rem;
+    }
+    
+    .about-me{ 
+      font-size: 1.5rem;
+    }
+}
+
+  .friend-list{
+    padding: 1rem;
+
+    .suggestion-dp {
+      width: 4rem;
+      height: 4rem;
+    }
+    
+    .name{
+        font-size: 1.3rem;
+
+        .follow-button{
+          font-size: 0.9rem;
+          margin: 0.5rem 05rem 1rem 1.2rem;
+        }
+      }
+
+  }
+} 
