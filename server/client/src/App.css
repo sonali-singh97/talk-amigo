@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap");
 *,
 *::after,
 *::before {
@@ -74,6 +74,14 @@ body {
 .login-register-box p {
   text-align: center;
   margin: 0 auto; }
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 56.25%; } }
+
+@media only screen and (max-width: 760px) {
+  html {
+    font-size: 50%; } }
 
 .illustration-div {
   position: relative; }
@@ -202,6 +210,14 @@ body {
   text-align: center;
   margin: 0 auto; }
 
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 56.25%; } }
+
+@media only screen and (max-width: 760px) {
+  html {
+    font-size: 50%; } }
+
 .illustration-div {
   position: relative; }
 
@@ -265,7 +281,7 @@ body {
     display: none; } }
 
 body {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   line-height: 1.7; }
 
@@ -515,6 +531,14 @@ body {
   text-align: center;
   margin: 0 auto; }
 
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 56.25%; } }
+
+@media only screen and (max-width: 760px) {
+  html {
+    font-size: 50%; } }
+
 .friend-list-heading {
   text-align: center;
   color: #ffffff;
@@ -644,6 +668,14 @@ body {
 .login-register-box p {
   text-align: center;
   margin: 0 auto; }
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 56.25%; } }
+
+@media only screen and (max-width: 760px) {
+  html {
+    font-size: 50%; } }
 
 .create-post-card {
   position: relative;
