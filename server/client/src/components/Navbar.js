@@ -45,7 +45,7 @@ function Navbar() {
                 <li className="nav-item">
                 <a className="nav-link" href="#">
                   <Link to="/explore">
-                    <button>Explore</button>
+                    <button className="btn btn-lg navbar-button mr-2">Explore</button>
                   </Link>
                 </a>
               </li> ,
@@ -82,8 +82,9 @@ function Navbar() {
                    localStorage.clear();
                    dispatch({type :"CLEAR"});
                    history.push("/login");
-                 }}>
-                 LOGOUT
+                 }} 
+                 className="bg-transparent border-0 mt-2">
+                 <i className="fas fa-sign-out-alt fa-3x navbar-icons"></i>
                 </button>
               </li>
             ]
@@ -92,14 +93,14 @@ function Navbar() {
             <li className="nav-item">
             <a className="nav-link" href="#">
               <Link to="/signup">
-                SIGNUP
+                <span className="navbar-button">SIGNUP</span>
               </Link>
             </a>
           </li> ,
            <li className="nav-item">
            <a className="nav-link" href="#">
              <Link to="/login">
-               SIGNIN
+             <span className="navbar-button">LOGIN</span>
              </Link>
            </a>
          </li>

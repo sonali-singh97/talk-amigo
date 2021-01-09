@@ -1,5 +1,33 @@
 @import "../abstracts/variables";
 
+a.nav-link{
+  //color: #ffffff;
+  text-decoration: none;
+}
+.navbar-button{
+  background: linear-gradient(90deg, rgba(179,115,137,1) 35%, rgba(204,136,160,1) 68%, rgba(225,164,185,1) 95%);   
+    box-shadow: inset -.25rem -.25rem .25rem #b37389,
+          .15rem .15rem .25rem #7073a3,
+          inset .25rem .15rem .25rem #f4abc4;
+    
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bolder;
+    border-radius: 3rem;
+    margin-left: 3rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.6rem;
+    
+    &:hover {
+        background: rgb(179,115,137);
+      background: linear-gradient(90deg, rgba(179,115,137,1) 0%, rgba(179,115,137,1) 100%, rgba(241,214,223,1) 100%);
+      box-shadow: -.05rem -.05rem .25rem #7073a3,
+           inset -.25rem -.25rem .25rem #b37389,
+           .05rem .05rem .5rem #7073a3,
+           inset .25rem .15rem .25rem #f4abc4;
+    }
+    
+}
 
  .navbar-icons{
      color: #ffffff;

@@ -135,7 +135,7 @@ const Feed = () => {
       {/* <Navbar /> */}
       <div className="container "  style={{marginTop:"4rem"}}>
         <div className="row">
-          <div className="container stardust-bg col-md-9">
+          <div className="container stardust-bg col-lg-9 col-md-12">
             {data.map((item) => {
               return (
                 <Post
@@ -151,7 +151,7 @@ const Feed = () => {
             })}
           </div>
 
-          <div className="container col-md-3" style={{position:"sticky"}}>
+          <div className="container col-lg-3 hide-it" style={{position:"sticky"}}>
                             <div className="friend-list-heading" >
                                 <img className="" src="https://i1.wp.com/coolpictures.in/wp-content/uploads/2020/03/Cool-and-Stylish-DP-for-Girls.jpg?fit=586%2C586&ssl=1" alt="avatar" />
                                 <div className="about-me">
