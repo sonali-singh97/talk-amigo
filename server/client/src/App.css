@@ -12,6 +12,7 @@ html {
 body {
   background-color: #060930;
   box-sizing: border-box;
+  background-attachment: fixed;
   padding: 3rem;
   /* padding-left: 0; */ }
 
@@ -138,6 +139,7 @@ html {
 body {
   background-color: #060930;
   box-sizing: border-box;
+  background-attachment: fixed;
   padding: 3rem;
   /* padding-left: 0; */ }
 
@@ -267,26 +269,40 @@ body {
   font-size: 1.6rem; }
 
 .post {
+  position: relative;
   padding: 0.5rem;
   margin: 1rem auto;
-  border: 2px solid #333456;
-  background-color: #060930;
-  backdrop-filter: blur(1.5rem);
-  box-shadow: -0.25rem -0.25rem 0.5rem rgba(255, 255, 255, 0.07), 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.12), -0.75rem -0.75rem 1.75rem rgba(255, 255, 255, 0.07), 0.75rem 0.75rem 1.75rem rgba(0, 0, 0, 0.12), inset 8rem 8rem 8rem rgba(0, 0, 0, 0.05), inset -8rem -8rem 8rem rgba(255, 255, 255, 0.05); }
+  color: #fff;
+  font-size: 1.6rem;
+  border-radius: 5px;
+  background: inherit;
+  overflow: hidden; }
+  .post .bold-text {
+    display: inline-block;
+    font-weight: 500; }
+  .post__comment {
+    margin-bottom: 0.5rem; }
+    .post__comment-name {
+      margin-right: 1rem; }
+  .post hr {
+    border: 1px solid rgba(255, 255, 255, 0.15); }
+  .post__user a {
+    color: #fff; }
   .post__avatar {
-    height: 3rem;
-    width: 3rem;
+    height: 3.5rem;
+    width: 3.5rem;
     border-radius: 100%;
-    margin-right: 1rem;
-    box-shadow: inset 2px 2px 5px #595b83, inset -5px -5px 10px rgba(6, 9, 48, 0.5); }
-  .post__name {
-    color: #fff;
-    font-size: 1.8rem; }
+    margin-right: 1rem; }
+  .post .card-body {
+    margin: 0;
+    height: 50rem; }
+    .post .card-body .post__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
   .post .icons__box {
     margin-right: 2rem;
     margin-bottom: 1rem;
-    font-size: 1.6rem;
-    color: #fff;
     background: linear-gradient(145deg, #060930, #595b83);
     box-shadow: inset -0.5rem -0.5rem 0.75rem #060930, -0.15rem -0.15rem 0.25rem #3c417a, 0.25rem 0.25rem 0.75rem #060930, inset 0.25rem 0.25rem 0.25rem #7073a3, 0.25rem 0.05rem 0.5rem #7073a3; }
     .post .icons__box .icon {
@@ -295,29 +311,25 @@ body {
       margin-right: 1rem; }
     .post .icons__box:hover {
       box-shadow: -0.25rem -0.25rem 0.25rem #3c417a, inset -4px -4px 10px rgba(255, 255, 255, 0.05), inset 4px 4px 10px rgba(0, 0, 0, 0.1); }
-  .post__image {
-    height: 100%;
-    width: 100%;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
-  .post__comment {
-    margin-top: 1rem;
-    margin-left: 0.5rem;
-    font-size: 1.6rem; }
-    .post__comment .round-box {
-      width: 100%;
-      background: #e48dab;
-      box-shadow: inset -.25rem -.25rem .25rem #b37389, .25rem .15rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
-    .post__comment-input {
-      border: none; }
-      .post__comment-input:focus {
+  .post form {
+    width: 90%; }
+    .post form .post-input {
+      border: none;
+      background: inherit; }
+      .post form .post-input:focus {
         outline: none;
-        color: #000; }
-
-@media (min-width: 801px) {
-  .post-container .row {
-    height: 50rem; }
-  .post {
-    height: 50%; } }
+        color: #fff; }
+  .post::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.3);
+    filter: blur(10px);
+    background: inherit; }
 
 .navbar-icons {
   color: #ffffff;
@@ -418,6 +430,7 @@ html {
 body {
   background-color: #060930;
   box-sizing: border-box;
+  background-attachment: fixed;
   padding: 3rem;
   /* padding-left: 0; */ }
 
@@ -547,6 +560,7 @@ html {
 body {
   background-color: #060930;
   box-sizing: border-box;
+  background-attachment: fixed;
   padding: 3rem;
   /* padding-left: 0; */ }
 
@@ -610,13 +624,14 @@ body {
   margin: 0 auto; }
 
 .create-post-card {
+  position: relative;
   text-align: center;
   font-size: 1.4rem;
   margin-top: 2rem;
   padding-top: 2rem;
-  border-radius: 2rem;
-  background: #060930;
-  box-shadow: inset -.25rem -.25rem .5rem #434674, .5rem .5rem .75rem #7073a3, inset .5rem .5rem .75rem #434674; }
+  border-radius: 0.5rem;
+  background: inherit;
+  overflow: hidden; }
   .create-post-card .card-header {
     font-size: 2rem;
     color: #F4ABC4; }
@@ -638,3 +653,14 @@ body {
     padding-top: 1rem; }
   .create-post-card button {
     padding: 0.5rem 2rem; }
+  .create-post-card::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.3);
+    filter: blur(10px);
+    background: inherit; }

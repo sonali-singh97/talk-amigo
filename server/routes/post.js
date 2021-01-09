@@ -7,7 +7,7 @@ const  express = require("express"),
   router.get("/posts/allposts",requireLogin, (req,res)=>{
   Post.find()
   .populate("postedBy","_id username image")
-  .populate("comments.postedBy", "_id username")
+  .populate("comments.postedBy", "_id username image")
   .sort("-createdAt")
   .then(posts =>
     {res.json({posts})})
@@ -20,7 +20,7 @@ const  express = require("express"),
   router.get("/posts/getfollowingposts",requireLogin, (req,res)=>{
     Post.find({postedBy:{$in:req.user.following}})
     .populate("postedBy","_id username image")
-    .populate("comments.postedBy", "_id username")
+    .populate("comments.postedBy", "_id username image")
     .sort("-createdAt")
     .then(posts =>
       {res.json({posts})})
