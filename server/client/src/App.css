@@ -17,8 +17,8 @@ body {
 
 .logo {
   display: block;
-  max-width: 60%;
-  max-height: 60%;
+  max-width: 45%;
+  max-height: 45%;
   width: auto;
   height: auto; }
 
@@ -76,14 +76,13 @@ body {
 
 @media (max-width: 768px) {
   .logo {
-    display: inline;
-    max-width: 55%;
-    max-height: 55%; } }
+    max-width: 35%;
+    max-height: 35%; } }
 
 @media (max-width: 480px) {
   .logo {
-    max-width: 85%;
-    max-height: 85%; }
+    max-width: 50%;
+    max-height: 50%; }
   .login-register-button {
     font-size: 1rem; } }
 
@@ -176,8 +175,8 @@ body {
 
 .logo {
   display: block;
-  max-width: 60%;
-  max-height: 60%;
+  max-width: 45%;
+  max-height: 45%;
   width: auto;
   height: auto; }
 
@@ -235,14 +234,13 @@ body {
 
 @media (max-width: 768px) {
   .logo {
-    display: inline;
-    max-width: 55%;
-    max-height: 55%; } }
+    max-width: 35%;
+    max-height: 35%; } }
 
 @media (max-width: 480px) {
   .logo {
-    max-width: 85%;
-    max-height: 85%; }
+    max-width: 50%;
+    max-height: 50%; }
   .login-register-button {
     font-size: 1rem; } }
 
@@ -420,6 +418,15 @@ a.nav-link {
     background: linear-gradient(90deg, #b37389 0%, #b37389 100%, #f1d6df 100%);
     box-shadow: -.05rem -.05rem .25rem #7073a3, inset -.25rem -.25rem .25rem #b37389, .05rem .05rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
 
+.navbar-login-link {
+  margin-right: 3rem; }
+  .navbar-login-link:hover > span {
+    color: #f4abc4; }
+  .navbar-login-link .navbar-login-text {
+    font-size: 1.4rem;
+    font-weight: bolder;
+    color: #f0d2dc; }
+
 .navbar-icons {
   color: #f0d2dc;
   margin-right: 2rem; }
@@ -432,13 +439,15 @@ a.nav-link {
 
 @media (max-width: 768px) {
   .navbar-icons {
-    font-size: 2rem; }
+    font-size: 1.6rem; }
   .navbar-button {
     font-size: 1.2rem;
     margin-top: 3rem;
     padding: 0.45rem 1rem; } }
 
 @media (max-width: 480px) {
+  .navbar-icons {
+    font-size: 1.4rem; }
   .navbar-button {
     font-size: 1rem;
     margin-top: 1.5rem;
@@ -534,8 +543,8 @@ body {
 
 .logo {
   display: block;
-  max-width: 60%;
-  max-height: 60%;
+  max-width: 45%;
+  max-height: 45%;
   width: auto;
   height: auto; }
 
@@ -593,23 +602,34 @@ body {
 
 @media (max-width: 768px) {
   .logo {
-    display: inline;
-    max-width: 55%;
-    max-height: 55%; } }
+    max-width: 35%;
+    max-height: 35%; } }
 
 @media (max-width: 480px) {
   .logo {
-    max-width: 85%;
-    max-height: 85%; }
+    max-width: 50%;
+    max-height: 50%; }
   .login-register-button {
     font-size: 1rem; } }
 
 .friend-list-heading {
   text-align: center;
   color: #ffffff;
-  border-bottom: 0.1rem solid #ffffff;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   overflow: auto; }
+  .friend-list-heading:after {
+    content: "";
+    /* This is necessary for the pseudo element to work. */
+    display: block;
+    /* This will put the pseudo element on its own line. */
+    margin: 0 auto;
+    /* This will center the border. */
+    width: 100%;
+    /* Change this to whatever width you want. */
+    margin-top: 5rem;
+    /* This creates some space between the element and the border. */
+    border-bottom: 0.1rem solid #ffffff;
+    /* This creates the border. Replace black with whatever color you want. */ }
   .friend-list-heading img {
     float: left;
     width: 10rem;
@@ -620,10 +640,17 @@ body {
     font-size: 1.5rem; }
 
 .suggestions {
-  padding-top: 2rem; }
+  padding-top: 1.4rem; }
   .suggestions .suggestion-heading {
     font-size: 2rem;
-    color: #b37389; }
+    color: #b37389;
+    padding-left: 1.2rem; }
+    .suggestions .suggestion-heading .suggestion-page-link {
+      font-size: 1.6rem;
+      padding-left: 2rem;
+      color: #ffffff; }
+      .suggestions .suggestion-heading .suggestion-page-link:hover {
+        color: #f4abc4; }
 
 .friend-list {
   padding: 2rem;
@@ -659,6 +686,13 @@ body {
         box-shadow: -.15rem -.05rem .25rem #7073a3, inset -.25rem -.25rem .25rem #b37389, .15rem .15rem .25rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
 
 @media (max-width: 992px) {
+  .friend-list-heading:after {
+    margin-top: 3rem;
+    /* This creates some space between the element and the border. */ }
+  .suggestion-heading {
+    font-size: 1.6rem; }
+    .suggestion-heading .suggestion-page-link {
+      font-size: 1.4rem; }
   .friend-list-heading img {
     width: 8rem;
     height: 8rem; }
@@ -673,7 +707,22 @@ body {
       font-size: 1.3rem; }
       .friend-list .name .follow-button {
         font-size: 0.9rem;
-        margin: 0.5rem 05rem 1rem 1.2rem; } }
+        margin: 0.5rem 0.5rem 1rem 6rem; }
+  .post-box-wrapper {
+    margin-left: 1rem;
+    margin-top: 3rem; }
+  .suggestion-box-wrapper {
+    margin-left: 65rem !important;
+    margin-top: 15rem !important; } }
+
+.feedpage {
+  position: relative; }
+  .feedpage .post-box-wrapper {
+    position: absolute;
+    margin-left: 2rem; }
+  .feedpage .suggestion-box-wrapper {
+    margin-top: 10rem;
+    margin-left: 90rem; }
 
 *,
 *::after,
@@ -693,8 +742,8 @@ body {
 
 .logo {
   display: block;
-  max-width: 60%;
-  max-height: 60%;
+  max-width: 45%;
+  max-height: 45%;
   width: auto;
   height: auto; }
 
@@ -752,14 +801,13 @@ body {
 
 @media (max-width: 768px) {
   .logo {
-    display: inline;
-    max-width: 55%;
-    max-height: 55%; } }
+    max-width: 35%;
+    max-height: 35%; } }
 
 @media (max-width: 480px) {
   .logo {
-    max-width: 85%;
-    max-height: 85%; }
+    max-width: 50%;
+    max-height: 50%; }
   .login-register-button {
     font-size: 1rem; } }
 
@@ -811,8 +859,8 @@ body {
 
 .logo {
   display: block;
-  max-width: 60%;
-  max-height: 60%;
+  max-width: 45%;
+  max-height: 45%;
   width: auto;
   height: auto; }
 
@@ -870,14 +918,13 @@ body {
 
 @media (max-width: 768px) {
   .logo {
-    display: inline;
-    max-width: 55%;
-    max-height: 55%; } }
+    max-width: 35%;
+    max-height: 35%; } }
 
 @media (max-width: 480px) {
   .logo {
-    max-width: 85%;
-    max-height: 85%; }
+    max-width: 50%;
+    max-height: 50%; }
   .login-register-button {
     font-size: 1rem; } }
 
@@ -933,3 +980,154 @@ body {
   .reset-button {
     font-size: 1.1rem;
     padding: 0.25rem 0.2rem; } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background-color: #060930;
+  box-sizing: border-box;
+  padding: 3rem;
+  /* padding-left: 0; */ }
+
+.logo {
+  display: block;
+  max-width: 45%;
+  max-height: 45%;
+  width: auto;
+  height: auto; }
+
+.login-register-box {
+  color: #ffffff;
+  padding: 3rem;
+  margin: 1.5rem  auto; }
+
+.input-group {
+  border-bottom: 0.24rem solid #595B83;
+  border-radius: 0.5rem; }
+  .input-group:focus-within {
+    border-color: #ffffff; }
+
+.input-group-text {
+  background-color: transparent;
+  border: none;
+  margin: 2.5rem auto 1rem;
+  color: #ffffff; }
+
+.login-register-input {
+  background-color: transparent;
+  border-style: none;
+  color: #ffffff;
+  margin: 2.5rem auto;
+  font-size: 1.4rem; }
+
+.login-register-box .form-control:focus {
+  background-color: transparent;
+  color: #ffffff;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.login-register-button {
+  background: linear-gradient(90deg, #b37389 35%, #cc88a0 68%, #e1a4b9 95%);
+  box-shadow: inset -.25rem -.25rem .25rem #b37389, .25rem .15rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4;
+  color: #000000;
+  font-weight: bolder;
+  border-radius: 3.75rem;
+  margin-top: 3rem;
+  font-size: 1.6rem; }
+  .login-register-button:hover {
+    background: #b37389;
+    background: linear-gradient(90deg, #b37389 0%, #b37389 100%, #f1d6df 100%);
+    box-shadow: -.25rem -.15rem .25rem #7073a3, inset -.25rem -.25rem .25rem #b37389, .25rem .25rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
+
+.forgot-password {
+  text-align: end;
+  margin: 1rem auto 2rem;
+  font-size: 1.2rem; }
+
+.login-register-box p {
+  text-align: center;
+  margin: 0 auto; }
+
+@media (max-width: 768px) {
+  .logo {
+    max-width: 35%;
+    max-height: 35%; } }
+
+@media (max-width: 480px) {
+  .logo {
+    max-width: 50%;
+    max-height: 50%; }
+  .login-register-button {
+    font-size: 1rem; } }
+
+.suggestion-page-list {
+  position: relative;
+  overflow: hidden; }
+  .suggestion-page-list:before {
+    content: '';
+    background: inherit;
+    position: absolute;
+    left: -25px;
+    right: 0;
+    top: -25px;
+    bottom: 0;
+    box-shadow: inset 0 0 0 25rem #7073a3;
+    filter: blur(40rem); }
+  .suggestion-page-list .clearfix:focus-within {
+    margin-bottom: 1rem;
+    border-bottom: solid 0.1rem #f4abc4; }
+  .suggestion-page-list li {
+    padding: 2rem 0 1rem 3rem; }
+  .suggestion-page-list .suggestion-dp {
+    float: left;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%; }
+  .suggestion-page-list .about {
+    float: left;
+    margin-top: 1.5rem;
+    color: #ffffff;
+    padding-left: 0.8rem; }
+  .suggestion-page-list .name {
+    font-size: 1.6rem;
+    padding-left: 2rem; }
+    .suggestion-page-list .name .follow-button {
+      font-size: 1.4rem;
+      margin: 1.5rem 0.5rem 1rem 18rem;
+      color: #000000;
+      font-weight: bolder;
+      border-radius: 2.5rem;
+      background: linear-gradient(90deg, #b37389 35%, #cc88a0 68%, #e1a4b9 95%);
+      box-shadow: inset -.15rem -.15rem .25rem #b37389, .15rem .15rem .25rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
+      .suggestion-page-list .name .follow-button:hover {
+        background: #b37389;
+        background: linear-gradient(90deg, #b37389 0%, #b37389 100%, #f1d6df 100%);
+        box-shadow: -.15rem -.05rem .25rem #7073a3, inset -.25rem -.25rem .25rem #b37389, .15rem .15rem .25rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
+
+@media (max-width: 992px) {
+  .suggestion-page-list .suggestion-dp {
+    width: 6rem;
+    height: 6rem; }
+  .suggestion-page-list .name {
+    font-size: 1.3rem; }
+    .suggestion-page-list .name .follow-button {
+      font-size: 1rem; } }
+
+@media (max-width: 760px) {
+  .suggestion-page-list .about {
+    margin-top: 0.8rem; }
+  .suggestion-page-list .name .follow-button {
+    margin-top: 1rem; } }
+
+@media (max-width: 480px) {
+  .suggestion-page-list .name .follow-button {
+    font-size: 1rem;
+    margin: 0.5rem 0.5rem 1rem 6rem; } }

@@ -36,6 +36,20 @@ a.nav-link{
     
 }
 
+.navbar-login-link{
+  margin-right: 3rem;
+
+  &:hover > span{
+    color: $primary-pink;
+  }
+
+  .navbar-login-text{
+    font-size: 1.4rem;
+    font-weight: bolder;
+    color: #f0d2dc;
+  }
+}
+
  .navbar-icons{
      color: #f0d2dc;
      margin-right: 2rem;
@@ -52,7 +66,7 @@ a.nav-link{
  @media (max-width: 768px) {
 
   .navbar-icons{
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .navbar-button{
@@ -63,6 +77,10 @@ a.nav-link{
 }
 
 @media (max-width: 480px) {
+
+  .navbar-icons{
+    font-size: 1.4rem;
+  }
 
   .navbar-button{
     font-size: 1rem;

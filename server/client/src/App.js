@@ -12,6 +12,7 @@ import Profile from './components/Profile';
 import CreatePost from "./containers/CreatePost";
 import Resetpage from "./components/pages/Reset";
 import Newpassword from "./components/pages/Newpassword";
+import SuggestionPage from './containers/SuggestionPage';
 import {reducer, initialState} from "./reducers/userReducer";
 import './App.css';
 
@@ -44,6 +45,7 @@ return(
   <Route path="/create_post" exact component= {CreatePost} />
   <Route path ="/reset" exact component = {Resetpage} />
   <Route path = "/reset/:token" component={Newpassword}></Route>
+  <Route path="/suggestion_page" exact component= {SuggestionPage} />
   </Switch>
 )
 }

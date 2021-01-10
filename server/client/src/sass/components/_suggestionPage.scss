@@ -1,0 +1,129 @@
+@import "../base/base";
+
+.suggestion-page-list {
+    position: relative;
+    overflow: hidden;
+    
+    &:before{
+        content: '';
+        background: inherit; 
+        position: absolute;
+        left: -25px;
+        right: 0;
+        top: -25px;  
+        bottom: 0;
+        box-shadow: inset 0 0 0 25rem #7073a3;
+        filter: blur(40rem);
+       }
+
+    .clearfix:focus-within{
+      margin-bottom: 1rem;
+      border-bottom: solid 0.1rem #f4abc4;
+
+    //   &:after {
+    //     content: ""; /* This is necessary for the pseudo element to work. */ 
+    //     display: block; /* This will put the pseudo element on its own line. */
+    //     margin: 3rem 1rem 1rem -2rem ; 
+    //     width: 90%; /* Change this to whatever width you want. */
+    //     margin-top: 5rem; /* This creates some space between the element and the border. */
+    //     border-bottom: 0.1rem solid #ffffff; /* This creates the border. Replace black with whatever color you want. */
+    //  }
+    }
+
+    
+    li {
+     padding: 2rem 0 1rem 3rem;
+    }
+    .suggestion-dp {
+        float: left;
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+      }
+      
+      .about {
+        float: left;
+        margin-top: 1.5rem;
+        color: #ffffff;
+        padding-left: 0.8rem;
+      }
+      
+      .name{
+          font-size: 1.6rem;
+          padding-left: 2rem;
+
+          .follow-button{
+            font-size: 1.4rem;
+            margin: 1.5rem 0.5rem 1rem 18rem;
+            color: #000000;
+            font-weight: bolder;
+            border-radius: 2.5rem;
+            background: linear-gradient(90deg, rgba(179,115,137,1) 35%, rgba(204,136,160,1) 68%, rgba(225,164,185,1) 95%);   
+            box-shadow: inset -.15rem -.15rem .25rem #b37389,
+                 .15rem .15rem .25rem #7073a3,
+                  inset .25rem .15rem .25rem #f4abc4;
+
+            &:hover {
+                 background: rgb(179,115,137);
+                 background: linear-gradient(90deg, rgba(179,115,137,1) 0%, rgba(179,115,137,1) 100%, rgba(241,214,223,1) 100%);
+                 box-shadow: -.15rem -.05rem .25rem #7073a3,
+                        inset -.25rem -.25rem .25rem #b37389,
+                        .15rem .15rem .25rem #7073a3,
+                        inset .25rem .15rem .25rem #f4abc4;
+             }
+          }
+      }
+  }
+  
+  
+@media(max-width:992px){
+
+  .suggestion-page-list{
+
+    .suggestion-dp {
+      width: 6rem;
+      height: 6rem;
+    }
+    
+    .name{
+        font-size: 1.3rem;
+
+        .follow-button{
+          font-size: 1rem;
+          //margin: 0.5rem 05rem 1rem 1.2rem;
+        }
+      }
+  }
+
+} 
+
+@media(max-width:760px){
+
+    .suggestion-page-list{
+
+        .about {
+            margin-top: 0.8rem;
+        }
+      
+        .name{
+    
+            .follow-button{
+             margin-top: 1rem;
+            }
+          }
+
+    }
+    
+}
+
+@media(max-width:480px){
+
+    .suggestion-page-list{
+        .name{
+    
+            .follow-button{
+              font-size: 1rem;
+              margin: 0.5rem 0.5rem 1rem 6rem;
+            }
+          }
+    }}
