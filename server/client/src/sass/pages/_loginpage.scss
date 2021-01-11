@@ -45,7 +45,7 @@ transform: rotate(20.53deg);
 
 .star1{
     margin-left: 75vw;
-    margin-top: -5vw;
+    margin-top: -2vw;
     width: 2%;
 height:3%
 }
@@ -59,4 +59,37 @@ height:3%
 .signupLink{
     font-size: 1.2rem;
     color: #ffffff;
+}
+
+
+@media(max-width:992px){
+
+    .planet-image{
+    height: 35%;
+    left: 0.5rem;
+    top: -4rem;
+    }
+    
+    .person-image{
+    height: 100%;
+    top: 2rem;
+    }
+    
+    .rocket-image{
+    height: 35%;
+    left: 45rem;
+    }
+    
+    .camera-image{
+    height: 25%;
+    left: 45rem;
+    }
+
+    .star1{
+        margin-top: 1vw;
+        width: 3%;
+    }
+    .star2{
+        width: 3%;
+    }
 }

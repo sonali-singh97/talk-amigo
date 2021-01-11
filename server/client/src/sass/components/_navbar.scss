@@ -1,7 +1,14 @@
 @import "../abstracts/variables";
 
+
+.navbar{
+  z-index: 2;
+  background-color: #060930;
+  box-shadow: //inset 0 -.25rem .25rem #b37389,
+      .0 .05rem .5rem #7073a3,;
+}
+
 a.nav-link{
-  //color: #ffffff;
   text-decoration: none;
 }
 .navbar-button{
@@ -29,8 +36,22 @@ a.nav-link{
     
 }
 
+.navbar-login-link{
+  margin-right: 3rem;
+
+  &:hover > span{
+    color: $primary-pink;
+  }
+
+  .navbar-login-text{
+    font-size: 1.4rem;
+    font-weight: bolder;
+    color: #f0d2dc;
+  }
+}
+
  .navbar-icons{
-     color: #ffffff;
+     color: #f0d2dc;
      margin-right: 2rem;
      &:hover{
        color: $primary-pink;
@@ -45,6 +66,26 @@ a.nav-link{
  @media (max-width: 768px) {
 
   .navbar-icons{
-    font-size: 2rem;
+    font-size: 1.6rem;
+  }
+
+  .navbar-button{
+    font-size: 1.2rem;
+    margin-top: 3rem;
+    padding: 0.45rem 1rem;
   }
 }
+
+@media (max-width: 480px) {
+
+  .navbar-icons{
+    font-size: 1.4rem;
+  }
+
+  .navbar-button{
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    padding: 0.25rem 1rem;
+  }
+}
+

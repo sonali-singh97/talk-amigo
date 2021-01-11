@@ -40,40 +40,41 @@ function Navbar() {
         if(state){
             return [
               <li className="nav-item">
-           <i className="fas fa-search fa-3x  navbar-icons" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></i>
+           <i className="fas fa-search fa-2x  navbar-icons  mt-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></i>
               </li>,
                 <li className="nav-item">
                 <a className="nav-link" href="#">
                   <Link to="/explore">
-                    <button className="btn btn-lg navbar-button mr-2">Explore</button>
+                    {/* <button className="btn btn-lg navbar-button mr-2">Explore</button> */}
+                    <i className="fas fa-compass fa-2x  navbar-icons"></i>
                   </Link>
                 </a>
               </li> ,
                  <li className="nav-item">
                  <a className="nav-link" href="#">
                    <Link to="/">
-                   <i className="fas fa-home fa-3x  navbar-icons"></i>
+                   <i className="fas fa-home fa-2x  navbar-icons"></i>
                    </Link>
                  </a>
                </li> ,
               <li className="nav-item">
                 <a className="nav-link" href="#">
                   <Link to="/user_profile">
-                    <i className="fas fa-user-circle fa-3x navbar-icons"></i>
+                    <i className="fas fa-user-circle fa-2x navbar-icons"></i>
                   </Link>
                 </a>
               </li> ,
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  <Link to="/feed">
-                    <i className="fas fa-comments fa-3x navbar-icons"></i>
-                  </Link>
-                </a>
-              </li> ,
+              // <li className="nav-item">
+              //   <a className="nav-link" href="#">
+              //     <Link to="/feed">
+              //       <i className="fas fa-comments fa-2x navbar-icons"></i>
+              //     </Link>
+              //   </a>
+              // </li> ,
               <li className="nav-item">
                 <a className="nav-link" href="#">
                   <Link to="/create_post">
-                    <i className="fas fa-plus fa-3x navbar-icons"></i>
+                    <i className="fas fa-plus fa-2x navbar-icons"></i>
                   </Link>
                 </a>
               </li>,
@@ -84,23 +85,24 @@ function Navbar() {
                    history.push("/login");
                  }} 
                  className="bg-transparent border-0 mt-2">
-                 <i className="fas fa-sign-out-alt fa-3x navbar-icons"></i>
+                 <i className="fas fa-sign-out-alt fa-2x navbar-icons"></i>
                 </button>
               </li>
             ]
         }
         else return [
-            <li className="nav-item">
-            <a className="nav-link" href="#">
-              <Link to="/signup">
-                <span className="navbar-button">SIGNUP</span>
-              </Link>
-            </a>
-          </li> ,
+          //   <li className="nav-item">
+          //   <a className="nav-link" href="#">
+          //     <Link to="/signup" style={{textDecoration: "none"}}>
+          //       <span className="navbar-button">SIGNUP</span>
+          //     </Link>
+          //   </a>
+          // </li> ,
            <li className="nav-item">
            <a className="nav-link" href="#">
-             <Link to="/login">
-             <span className="navbar-button">LOGIN</span>
+             <Link to="/login" style={{textDecoration: "none"}}  className="navbar-login-link">
+              <i className="fas fa-sign-in-alt fa-2x navbar-icons mr-3"></i> 
+              <span className="navbar-login-text">LOGIN</span>
              </Link>
            </a>
          </li>
@@ -109,7 +111,7 @@ function Navbar() {
 
   return (
     <div className="container-fluid">
-      <nav className="navbar  navbar-expand-lg  navbar-light">
+      <nav className="navbar  navbar-expand  navbar-light fixed-top pt-0 pb-0 stardust-bg">
        <div className="container-fluid">
         <Link className="navbar-brand" to={state ? "/feed": "/signup"}>
           {" "}

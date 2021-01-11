@@ -11,7 +11,11 @@
     background-image: url("https://www.transparenttextures.com/patterns/stardust.png"); 
 }
 
-@media(max-width:992px){
+.below-navbar{
+    margin-top: 10rem;
+}
+
+@media(max-width:768px){
     .hide-it{
         display: none;
     }

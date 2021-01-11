@@ -78,12 +78,12 @@ function SignupPage() {
   };
 
   return (
-    <div className="container-fluid stardust-bg">
+    <div className="container-fluid stardust-bg  below-navbar">
       {/* <div> <img src="images/logo.png" alt="logo" className="logo" /> </div> */}
 
       <div className="container-fluid doodle-dots-bg">
         <div className="row ">
-          <div className="col-md-6  d-flex justify-content-start  illustration-div">
+          <div className="col-lg-6 col-md-6 d-flex justify-content-start  illustration-div">
             <img
               src="images/treeperson.png"
               alt="planet-image"
@@ -106,7 +106,7 @@ function SignupPage() {
             />
           </div>
 
-          <div className=" offset-md-3 col-md-3 col-sm-12 login-register-box ">
+          <div className=" col-lg-3  col-md-4 offset-sm-4 col-sm-6 login-register-box ">
             <div>
               {error !== "" ? (
                 <div className="alert alert-danger" role="alert">
@@ -197,7 +197,7 @@ function SignupPage() {
               </button>
 
               <p className="loginLink">
-                Already have an account? <Link to="/login"> Login </Link>{" "}
+                Already have an account? <Link to="/login" style={{color:" #b37389", fontWeight: "bolder"}}> Login </Link>{" "}
               </p>
             </div>
           </div>

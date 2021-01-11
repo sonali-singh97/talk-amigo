@@ -12,8 +12,9 @@ import Profile from "./components/Profile";
 import CreatePost from "./containers/CreatePost";
 import Resetpage from "./components/pages/Reset";
 import Newpassword from "./components/pages/Newpassword";
-import { reducer, initialState } from "./reducers/userReducer";
-import "./App.css";
+import SuggestionPage from './containers/SuggestionPage';
+import {reducer, initialState} from "./reducers/userReducer";
+import './App.css';
 
 export const UserContext = createContext();
 
@@ -31,20 +32,21 @@ const Routes = () => {
     }
   }, []);
 
-  return (
-    <Switch>
-      <Route path="/signup" exact component={SignupPage} />
-      <Route path="/login" exact component={Loginpage} />
-      <Route path="/" exact component={FollowingPosts} />
-      <Route path="/explore" exact component={FeedPage} />
-      <Route path="/user/:userId" exact component={Profile} />
-      <Route path="/user_profile" exact component={UserProfile} />
-      <Route path="/create_post" exact component={CreatePost} />
-      <Route path="/reset" exact component={Resetpage} />
-      <Route path="/reset/:token" component={Newpassword}></Route>
-    </Switch>
-  );
-};
+return(
+  <Switch>
+  <Route path="/signup"  exact component ={SignupPage} />
+  <Route path="/login" exact component= {Loginpage} />
+  <Route path="/" exact component= {FollowingPosts} />
+  <Route path="/explore" exact component= {FeedPage} />
+  <Route path="/user/:userId" exact component= {Profile} />
+    <Route path="/user_profile" exact component= {UserProfile} />
+  <Route path="/create_post" exact component= {CreatePost} />
+  <Route path ="/reset" exact component = {Resetpage} />
+  <Route path = "/reset/:token" component={Newpassword}></Route>
+  <Route path="/suggestion_page" exact component= {SuggestionPage} />
+  </Switch>
+)
+}
 
 const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);

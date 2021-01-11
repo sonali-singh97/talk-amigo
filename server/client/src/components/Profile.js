@@ -98,7 +98,7 @@ function UserProfile() {
 
   return (
     <div className="fluid-container   stardust-bg">
-      <Navbar />
+      {/* <Navbar /> */}
 
       {userProfile ? (
         <div className="container ">
