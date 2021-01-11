@@ -25,11 +25,13 @@ function Post(props) {
               </span>
 
               {props.post.postedBy._id === props.state._id && (
-                <i
-                  class="fas fa-trash-alt"
-                  style={{ color: "white", float: "right" }}
+               <div 
+                  style={{padding:2 ,backgroundColor : "#f4abc4" ,position: "absolute", right: "0.5rem", top: "2rem" }} ><i
+                  class="fas fa-trash-alt icon"
+                
                   onClick={props.delete}
                 ></i>
+                </div>
               )}
             </div>
 
@@ -53,7 +55,7 @@ function Post(props) {
                 <span className="no">{props.post.likes.length}</span>
               </span>
               <span className="icons__box round-box">
-                <img className="icon" src="images/speech-bubble.svg" />
+              <i class="fas fa-comments icon"></i>
                 <span>{props.post.likes.length}</span>
               </span>
 

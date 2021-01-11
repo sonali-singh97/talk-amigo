@@ -325,12 +325,15 @@ body {
     margin-bottom: 1rem;
     background: linear-gradient(145deg, #060930, #595b83);
     box-shadow: inset -0.5rem -0.5rem 0.75rem #060930, -0.15rem -0.15rem 0.25rem #3c417a, 0.25rem 0.25rem 0.75rem #060930, inset 0.25rem 0.25rem 0.25rem #7073a3, 0.25rem 0.05rem 0.5rem #7073a3; }
-    .post .icons__box .icon {
-      height: 2rem;
-      width: 2rem;
-      margin-right: 1rem; }
     .post .icons__box:hover {
       box-shadow: -0.25rem -0.25rem 0.25rem #3c417a, inset -4px -4px 10px rgba(255, 255, 255, 0.05), inset 4px 4px 10px rgba(0, 0, 0, 0.1); }
+  .post .icon {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1rem;
+    cursor: pointer; }
+    .post .icon:hover {
+      color: #f4abc4; }
   .post form {
     width: 90%; }
     .post form .post-input {

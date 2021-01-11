@@ -69,18 +69,26 @@
       //inner top-left
       0.25rem 0.05rem 0.5rem #7073a3; //outer bottom-right
 
-    .icon {
-      height: 2rem;
-      width: 2rem;
-      margin-right: 1rem;
-    }
-
+  
     &:hover {
       box-shadow: -0.25rem -0.25rem 0.25rem #3c417a,
         inset -4px -4px 10px rgba(#fff, 0.05),
         inset 4px 4px 10px rgba(0, 0, 0, 0.1);
     }
   }
+
+  .icon {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1rem;
+   cursor: pointer;
+   
+
+   &:hover{
+    color: $primary-pink;
+   }
+  }
+
 
   form {
     width: 90%;
