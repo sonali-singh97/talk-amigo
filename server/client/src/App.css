@@ -75,13 +75,7 @@ body {
   text-align: center;
   margin: 0 auto; }
 
-@media only screen and (max-width: 1200px) {
-  html {
-    font-size: 56.25%; } }
-
 @media only screen and (max-width: 768x) {
-  html {
-    font-size: 50%; }
   .logo {
     max-width: 35%;
     max-height: 35%; } }
@@ -240,13 +234,7 @@ body {
   text-align: center;
   margin: 0 auto; }
 
-@media only screen and (max-width: 1200px) {
-  html {
-    font-size: 56.25%; } }
-
 @media only screen and (max-width: 768x) {
-  html {
-    font-size: 50%; }
   .logo {
     max-width: 35%;
     max-height: 35%; } }
@@ -335,7 +323,8 @@ body {
   padding: 0.5rem 1rem; }
 
 .stardust-bg {
-  background-image: url("https://www.transparenttextures.com/patterns/stardust.png"); }
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+  background-attachment: fixed; }
 
 .below-navbar {
   margin-top: 10rem; }
@@ -355,7 +344,8 @@ body {
 .post {
   position: relative;
   padding: 0.5rem;
-  margin: 1rem auto;
+  margin-right: 3rem;
+  margin-bottom: 5rem;
   color: #fff;
   font-size: 1.6rem;
   border-radius: 5px;
@@ -365,9 +355,17 @@ body {
     display: inline-block;
     font-weight: 500; }
   .post__comment {
-    margin-bottom: 0.5rem; }
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .post__comment:not(:last-child) {
+      margin-bottom: 0.5rem; }
     .post__comment-name {
       margin-right: 1rem; }
+  .post .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
   .post hr {
     border: 1px solid rgba(255, 255, 255, 0.15); }
   .post__user a {
@@ -379,11 +377,16 @@ body {
     margin-right: 1rem; }
   .post .card-body {
     margin: 0;
-    height: 50rem; }
+    height: 60rem; }
     .post .card-body .post__image {
       width: 100%;
       height: 100%;
       object-fit: cover; }
+  .post .text-button {
+    color: #f4abc4; }
+  .post .comments-box {
+    max-height: 8rem;
+    overflow-y: auto; }
   .post .icons__box {
     margin-right: 2rem;
     margin-bottom: 1rem;
@@ -391,13 +394,23 @@ body {
     box-shadow: inset -0.5rem -0.5rem 0.75rem #060930, -0.15rem -0.15rem 0.25rem #3c417a, 0.25rem 0.25rem 0.75rem #060930, inset 0.25rem 0.25rem 0.25rem #7073a3, 0.25rem 0.05rem 0.5rem #7073a3; }
     .post .icons__box:hover {
       box-shadow: -0.25rem -0.25rem 0.25rem #3c417a, inset -4px -4px 10px rgba(255, 255, 255, 0.05), inset 4px 4px 10px rgba(0, 0, 0, 0.1); }
+  .post .icon-box {
+    height: 2.8rem;
+    width: 2.8rem;
+    padding: 0 4px;
+    display: inline-block;
+    border: 1px solid  #f4abc4;
+    border-radius: 3px;
+    box-shadow: -1px -1px 2px rgba(250, 200, 217, 0.5); }
+    .post .icon-box .icon {
+      margin: auto;
+      cursor: pointer; }
+    .post .icon-box:hover {
+      box-shadow: -2px -2px 4px rgba(244, 171, 196, 0.5);
+      transform: translateY(1px); }
   .post .icon {
-    height: 2rem;
-    width: 2rem;
     margin-right: 1rem;
-    cursor: pointer; }
-    .post .icon:hover {
-      color: #f4abc4; }
+    color: #f4abc4; }
   .post form {
     width: 90%; }
     .post form .post-input {
@@ -421,7 +434,7 @@ body {
 .navbar {
   z-index: 2;
   background-color: #060930;
-  box-shadow: 0 0.05rem 0.5rem #7073a3; }
+  box-shadow: .0 .05rem .5rem #7073a3; }
 
 a.nav-link {
   text-decoration: none; }
@@ -624,13 +637,7 @@ body {
   text-align: center;
   margin: 0 auto; }
 
-@media only screen and (max-width: 1200px) {
-  html {
-    font-size: 56.25%; } }
-
 @media only screen and (max-width: 768x) {
-  html {
-    font-size: 50%; }
   .logo {
     max-width: 35%;
     max-height: 35%; } }
@@ -643,23 +650,11 @@ body {
     font-size: 1rem; } }
 
 .friend-list-heading {
-  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
   color: #ffffff;
   padding: 2rem 1rem;
   overflow: auto; }
-  .friend-list-heading:after {
-    content: "";
-    /* This is necessary for the pseudo element to work. */
-    display: block;
-    /* This will put the pseudo element on its own line. */
-    margin: 0 auto;
-    /* This will center the border. */
-    width: 100%;
-    /* Change this to whatever width you want. */
-    margin-top: 5rem;
-    /* This creates some space between the element and the border. */
-    border-bottom: 0.1rem solid #ffffff;
-    /* This creates the border. Replace black with whatever color you want. */ }
   .friend-list-heading img {
     float: left;
     width: 10rem;
@@ -694,26 +689,32 @@ body {
     float: left;
     width: 6rem;
     height: 6rem;
-    border-radius: 50%; }
-  .friend-list .about {
-    float: left;
-    margin-top: 1rem;
-    color: #ffffff;
-    padding-left: 0.8rem; }
+    border-radius: 50%;
+    margin-right: 1rem; }
   .friend-list .name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
     font-size: 1.4rem; }
+    .friend-list .name .friend__details span {
+      display: block; }
+    .friend-list .name a {
+      color: #fff; }
     .friend-list .name .follow-button {
       font-size: 1rem;
-      margin: 1.5rem 1rem 1rem 3rem;
-      color: #000000;
+      color: #060930;
       font-weight: bolder;
       border-radius: 2.5rem;
       background: linear-gradient(90deg, #b37389 35%, #cc88a0 68%, #e1a4b9 95%);
-      box-shadow: inset -.15rem -.15rem .25rem #b37389, .15rem .15rem .25rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
+      box-shadow: inset -0.15rem -0.15rem 0.25rem #b37389, 0.15rem 0.15rem 0.25rem #7073a3, inset 0.25rem 0.15rem 0.25rem #f4abc4; }
       .friend-list .name .follow-button:hover {
         background: #b37389;
         background: linear-gradient(90deg, #b37389 0%, #b37389 100%, #f1d6df 100%);
-        box-shadow: -.15rem -.05rem .25rem #7073a3, inset -.25rem -.25rem .25rem #b37389, .15rem .15rem .25rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
+        box-shadow: -0.15rem -0.05rem 0.25rem #7073a3, inset -0.25rem -0.25rem 0.25rem #b37389, 0.15rem 0.15rem 0.25rem #7073a3, inset 0.25rem 0.15rem 0.25rem #f4abc4; }
+
+.suggestion-box-wrapper hr hr {
+  border: 1px solid white; }
 
 @media (max-width: 992px) {
   .friend-list-heading:after {
@@ -748,8 +749,7 @@ body {
 .feedpage {
   position: relative; }
   .feedpage .post-box-wrapper {
-    position: absolute;
-    margin-left: 2rem; }
+    padding: 0 8rem; }
   .feedpage .suggestion-box-wrapper {
     margin-top: 10rem;
     margin-left: 90rem; }
@@ -830,13 +830,7 @@ body {
   text-align: center;
   margin: 0 auto; }
 
-@media only screen and (max-width: 1200px) {
-  html {
-    font-size: 56.25%; } }
-
 @media only screen and (max-width: 768x) {
-  html {
-    font-size: 50%; }
   .logo {
     max-width: 35%;
     max-height: 35%; } }
@@ -966,13 +960,7 @@ body {
   text-align: center;
   margin: 0 auto; }
 
-@media only screen and (max-width: 1200px) {
-  html {
-    font-size: 56.25%; } }
-
 @media only screen and (max-width: 768x) {
-  html {
-    font-size: 50%; }
   .logo {
     max-width: 35%;
     max-height: 35%; } }
@@ -1113,13 +1101,7 @@ body {
   text-align: center;
   margin: 0 auto; }
 
-@media only screen and (max-width: 1200px) {
-  html {
-    font-size: 56.25%; } }
-
 @media only screen and (max-width: 768x) {
-  html {
-    font-size: 50%; }
   .logo {
     max-width: 35%;
     max-height: 35%; } }
@@ -1133,17 +1115,20 @@ body {
 
 .suggestion-page-list {
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  border-radius: 5px;
+  background: inherit; }
   .suggestion-page-list:before {
-    content: '';
-    background: inherit;
+    content: "";
     position: absolute;
-    left: -25px;
+    z-index: -1;
+    top: 0;
+    left: 0;
     right: 0;
-    top: -25px;
     bottom: 0;
-    box-shadow: inset 0 0 0 25rem #7073a3;
-    filter: blur(40rem); }
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.3);
+    filter: blur(10px);
+    background: inherit; }
   .suggestion-page-list .clearfix:focus-within {
     margin-bottom: 1rem;
     border-bottom: solid 0.1rem #f4abc4; }
@@ -1154,18 +1139,20 @@ body {
     width: 8rem;
     height: 8rem;
     border-radius: 50%; }
-  .suggestion-page-list .about {
-    float: left;
-    margin-top: 1.5rem;
-    color: #ffffff;
-    padding-left: 0.8rem; }
   .suggestion-page-list .name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
     font-size: 1.6rem;
     padding-left: 2rem; }
+    .suggestion-page-list .name .friend__details span {
+      display: block; }
+    .suggestion-page-list .name a {
+      color: #fff; }
     .suggestion-page-list .name .follow-button {
       font-size: 1.4rem;
-      margin: 1.5rem 0.5rem 1rem 18rem;
-      color: #000000;
+      color: #060930;
       font-weight: bolder;
       border-radius: 2.5rem;
       background: linear-gradient(90deg, #b37389 35%, #cc88a0 68%, #e1a4b9 95%);

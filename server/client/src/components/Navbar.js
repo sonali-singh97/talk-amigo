@@ -111,7 +111,7 @@ function Navbar() {
 
   return (
     <div className="container-fluid">
-      <nav className="navbar  navbar-expand  navbar-light fixed-top pt-0 pb-0 stardust-bg">
+      <nav className="navbar  navbar-expand  navbar-light fixed-top pt-0 pb-0">
        <div className="container-fluid">
         <Link className="navbar-brand" to={state ? "/feed": "/signup"}>
           {" "}

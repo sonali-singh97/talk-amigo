@@ -1,7 +1,9 @@
 .post {
   position: relative;
   padding: 0.5rem;
-  margin: 1rem auto;
+ // width: 50rem;
+  margin-right: 3rem;
+  margin-bottom: 5rem;
   color: #fff;
   font-size: $default-font-size;
   border-radius: 5px;
@@ -13,20 +15,37 @@
   .bold-text {
     display: inline-block; // refactor code
     font-weight: 500;
+    
   }
   &__comment {
-    margin-bottom: 0.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:not(:last-child){
+      margin-bottom: 0.5rem;
+    }
+   
+
     &-name {
       margin-right: 1rem;
     }
   }
 
+  .card-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
   hr {
     border: 1px solid rgba(255, 255, 255, 0.15);
   }
   &__user {
     a {
       color: #fff;
+     
     }
   }
   &__avatar {
@@ -38,7 +57,7 @@
 
   .card-body {
     margin: 0;
-    height: 50rem;
+    height: 60rem;
 
     .post__image {
       width: 100%;
@@ -47,15 +66,18 @@
     }
   }
 
+  .text-button {
+    color:#f4abc4 ;
+  }
+
+  .comments-box{
+  max-height: 8rem;
+    overflow-y: auto;
+   
+  }
   .icons__box {
     margin-right: 2rem;
     margin-bottom: 1rem;
-
-    // background: linear-gradient(145deg, #060930, #595b83);   //nice
-    // box-shadow: 2px 2px 100px #2D3560, inset -2px -2px 5px #7F95FF;
-
-    // background: linear-gradient(145deg, #060930, #595b83);   //nice
-    // box-shadow:inset 2px 2px 100px #2D3560,  -2px -2px 5px #7F95FF;
 
     background: linear-gradient(145deg, #060930, #595b83);
 
@@ -76,17 +98,37 @@
         inset 4px 4px 10px rgba(0, 0, 0, 0.1);
     }
   }
+.icon-box{
+  height:2.8rem;
+  width: 2.8rem;
+ padding: 0 4px;
+ //float : right;
+  display: inline-block;
+  border: 1px solid  #f4abc4 ;
+  border-radius: 3px;
+  box-shadow:  -1px -1px 2px rgba(#fac8d9, 0.5);
+ 
+.icon{
+  margin : auto;
+  cursor: pointer;
+}
+&:hover{
+  
+  box-shadow:  -2px -2px 4px rgba(#f4abc4, 0.5);
+  transform: translateY(1px);
+
+
+}
+ 
+}
 
   .icon {
-    height: 2rem;
-    width: 2rem;
+   // height: 2rem;
+   // width: 2rem;
     margin-right: 1rem;
-   cursor: pointer;
-   
+   color: $primary-pink;
 
-   &:hover{
-    color: $primary-pink;
-   }
+ 
   }
 
 

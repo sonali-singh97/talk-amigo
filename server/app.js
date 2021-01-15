@@ -15,8 +15,7 @@ var userRouter = require('./routes/user');
 var postsRouter = require('./routes/post');
 var app = express();
 
-const User = require("./models/user");
-const Post = require("./models/post");
+
 
 
 const url= process.env.MONGOURL;

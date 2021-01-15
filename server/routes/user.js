@@ -40,65 +40,77 @@ router.put("/user/follow", requireLogin, (req, res) => {
         {
           $push: { following: req.body.followId },
         },
-        { new: true })
+        { new: true }
+      )
         .select("-password")
-        .then(result =>  res.json(result) )
-        .catch(err =>{return res.status(422).json({ error: err });} )
-    
-      
+        .then((result) => res.json(result))
+        .catch((err) => {
+          return res.status(422).json({ error: err });
+        });
     }
   );
 });
 
 router.put("/user/unfollow", requireLogin, (req, res) => {
-    User.findByIdAndUpdate(
-      req.body.unfollowId,
-      {
-        $pull: { followers: req.user._id },
-      },
-      { new: true },
-      (err, result) => {
-        if (err) {
-          return res.status(422).json({ error: err });
-        }
-  
-        User.findByIdAndUpdate(
-          req.user._id,
-          {
-            $pull: { following: req.body.unfollowId },
-          },
-          { new: true },
-          (err, result) => {
-            if (err) {
-              return res.status(422).json({ error: err });
-            }
-            return res.json(result);
-          }
-        );
+  User.findByIdAndUpdate(
+    req.body.unfollowId,
+    {
+      $pull: { followers: req.user._id },
+    },
+    { new: true },
+    (err, result) => {
+      if (err) {
+        return res.status(422).json({ error: err });
       }
-    );
-  });
 
-  router.put("/user/updateImg" , requireLogin , (req, res) => {
-    User.findByIdAndUpdate(req.user._id ,{ $set : { image : req.body.image}} , {new : true}
-      , (err, result) => {
-        if(err)
+      User.findByIdAndUpdate(
+        req.user._id,
         {
-          return res.status(422).json({error : err})
+          $pull: { following: req.body.unfollowId },
+        },
+        { new: true },
+        (err, result) => {
+          if (err) {
+            return res.status(422).json({ error: err });
+          }
+          return res.json(result);
         }
-        res.json(result)
-      })
-    
-  })
+      );
+    }
+  );
+});
 
-  router.post("/search-users",(req,res)=>{
-    let userPattern = new RegExp("^"+req.body.query)
-    User.find({email : {$regex: userPattern}})
+router.put("/user/updateImg", requireLogin, (req, res) => {
+  User.findByIdAndUpdate(
+    req.user._id,
+    { $set: { image: req.body.image } },
+    { new: true },
+    (err, result) => {
+      if (err) {
+        return res.status(422).json({ error: err });
+      }
+      res.json(result);
+    }
+  );
+});
+
+router.post("/search-users", (req, res) => {
+  let userPattern = new RegExp("^" + req.body.query);
+  User.find({ email: { $regex: userPattern } })
     .select("_id username email image")
-    .then(user=>{
-      res.json({user})
+    .then((user) => {
+      res.json({ user });
     })
-    .catch(err => console.log(err))
-  })
+    .catch((err) => console.log(err));
+});
+
+router.get("/suggested-users", requireLogin, (req, res) => {
+  User.find({ _id: { $nin: req.user.following } })
+    .select("_id username email image")
+    .then((user) => {
+      res.json({ user });
+    })
+    .catch((err) => console.log(err));
+});
 
 module.exports = router;

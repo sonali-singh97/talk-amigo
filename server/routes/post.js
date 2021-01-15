@@ -127,4 +127,15 @@ router.put("/posts/unlike" , requireLogin , (req,res)=> {
 
   })
 
+  router.put("/post/:postId/comment/:commentId" , requireLogin , (req,res)=> {
+   Post.findByIdAndUpdate(req.params.postId , {$pull : {comments : {_id : req.params.commentId} }},
+     {new : true} , (err,result)=> {
+        if (err) {
+            return res.status(422).json({ error: err });
+          }
+          return res.json(result);
+     })
+
+  })
+
   module.exports = router;

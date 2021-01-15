@@ -74,12 +74,12 @@ if(url){
 
                                 <div className="form-group text-left  ">
                                     <input type="text" className="form-control create-post-input" id="title"
-                                        placeholder="title" value= {title} onChange={(e)=>setTitle(e.target.value)} />
+                                      autocomplete="off"  placeholder="title" value= {title} onChange={(e)=>setTitle(e.target.value)} />
                                 </div>
 
                                 <div className="form-group text-left  ">
                                     <input type="textarea" className="form-control create-post-input" id="body"
-                                        placeholder="body" value={body} onChange={(e)=> setBody(e.target.value)} />
+                                       autocomplete="off" placeholder="body" value={body} onChange={(e)=> setBody(e.target.value)} />
                                 </div>
 
                                 <div className="form-group text-left  ">

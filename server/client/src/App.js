@@ -53,8 +53,9 @@ const App = () => {
   return (
     <UserContext.Provider value={{ state, dispatch }}>
       <BrowserRouter>
-        <div className="App">
-          <Navbar />
+     
+        <div className=" stardust-bg container-fluid">
+        <Navbar />
 
           <Routes />
         </div>

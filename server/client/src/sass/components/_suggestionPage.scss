@@ -3,17 +3,20 @@
 .suggestion-page-list {
     position: relative;
     overflow: hidden;
+    border-radius: 5px;
+    background: inherit;
     
     &:before{
-        content: '';
-        background: inherit; 
-        position: absolute;
-        left: -25px;
-        right: 0;
-        top: -25px;  
-        bottom: 0;
-        box-shadow: inset 0 0 0 25rem #7073a3;
-        filter: blur(40rem);
+      content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.3);
+    filter: blur(10px);
+    background: inherit;
        }
 
     .clearfix:focus-within{
@@ -41,21 +44,31 @@
         border-radius: 50%;
       }
       
-      .about {
-        float: left;
-        margin-top: 1.5rem;
-        color: #ffffff;
-        padding-left: 0.8rem;
-      }
+  
       
       .name{
+        display: flex;
+        align-items: center;
+       justify-content: space-between;
+      color: #ffffff;
           font-size: 1.6rem;
           padding-left: 2rem;
 
+          & .friend__details{
+          
+            span{
+              display: block;
+            }
+           }
+ 
+          a{
+            color : #fff;
+          }
+
           .follow-button{
             font-size: 1.4rem;
-            margin: 1.5rem 0.5rem 1rem 18rem;
-            color: #000000;
+           // margin: 1.5rem 0.5rem 1rem 18rem;
+            color: $primary-blue-dark;
             font-weight: bolder;
             border-radius: 2.5rem;
             background: linear-gradient(90deg, rgba(179,115,137,1) 35%, rgba(204,136,160,1) 68%, rgba(225,164,185,1) 95%);   
