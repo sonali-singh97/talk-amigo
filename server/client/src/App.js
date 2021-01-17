@@ -1,14 +1,14 @@
 // import logo from './logo.svg';
-import React, {useEffect, createContext, useReducer, useContext} from "react";
-import {BrowserRouter, useHistory,Switch } from 'react-router-dom';
-import {Route} from "react-router";
-import Loginpage from './components/pages/Loginpage';
-import SignupPage from './components/pages/SignupPage';
-import FeedPage from './containers/FeedPage';
+import React, { useEffect, createContext, useReducer, useContext } from "react";
+import { BrowserRouter, useHistory, Switch } from "react-router-dom";
+import { Route } from "react-router";
+import Loginpage from "./components/pages/Loginpage";
+import SignupPage from "./components/pages/SignupPage";
+import FeedPage from "./containers/FeedPage";
 import FollowingPosts from "./containers/followingPosts";
-import Navbar from './components/Navbar';
-import UserProfile from './components/pages/userprofile';
-import Profile from './components/Profile';
+import Navbar from "./components/Navbar";
+import UserProfile from "./components/pages/userprofile";
+import Profile from "./components/Profile";
 import CreatePost from "./containers/CreatePost";
 import Resetpage from "./components/pages/Reset";
 import Newpassword from "./components/pages/Newpassword";
@@ -18,19 +18,17 @@ import './App.css';
 
 export const UserContext = createContext();
 
-const Routes=() => {
-  const {state, dispatch} = useContext(UserContext);
+const Routes = () => {
+  const { state, dispatch } = useContext(UserContext);
   const history = useHistory();
-  useEffect(()=>{
+  useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"));
-   
-    if(user){
-      dispatch({type:"USER", payload : user});
-    
-    }
-    else{
-      if(!history.location.pathname.startsWith('/reset'))
-      history.push("/login");
+
+    if (user) {
+      dispatch({ type: "USER", payload: user });
+    } else {
+      if (!history.location.pathname.startsWith("/reset"))
+        history.push("/login");
     }
   }, []);
 
@@ -50,22 +48,21 @@ return(
 )
 }
 
-const App =()=> {
+const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
-return(
-   <UserContext.Provider value={{state, dispatch}}>
-    <BrowserRouter>
-    <div className="App">
-   <Navbar />
-  
-    <Routes />
-  
-    </div>
-    </BrowserRouter>
+  return (
+    <UserContext.Provider value={{ state, dispatch }}>
+      <BrowserRouter>
+     
+        <div className=" stardust-bg container-fluid">
+        <Navbar />
+
+          <Routes />
+        </div>
+      </BrowserRouter>
     </UserContext.Provider>
-  
-)
-}
+  );
+};
 
 // class App extends React.Component {
 //   constructor(props) {
@@ -88,7 +85,7 @@ return(
 //     <BrowserRouter>
 //     <div className="App">
 //    <Navbar />
-  
+
 //     <Routes />
 //    <p className="App-intro">;{this.state.apiResponse}</p>
 //     </div>
@@ -96,8 +93,5 @@ return(
 //   );
 // }
 // }
-
-
-
 
 export default App;

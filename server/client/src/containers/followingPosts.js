@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Post from "../components/Post";
 // import Navbar from "../components/Navbar";
 import Friend from "../components/Friend";
@@ -7,6 +7,7 @@ import { UserContext } from "../App";
 const Feed = () => {
   const [data, setData] = useState(null);
   const { state, dispatch } = useContext(UserContext);
+  const [userList, setList] = useState(null);
 
   useEffect(() => {
     fetch("/posts/getfollowingposts", {
@@ -24,13 +25,27 @@ const Feed = () => {
       });
   }, []);
 
+  useEffect(() => {
+    fetch("/suggested-users", {
+      headers: {
+        authorization: "Bearer " + localStorage.getItem("jwt"),
+      },
+    })
+      .then((res) => res.json())
+      .then((list) => {
+        setList(list.user);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   const likepost = (id) => {
     fetch("/posts/like", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
-        "authorization": "Bearer " + localStorage.getItem("jwt")
+        authorization: "Bearer " + localStorage.getItem("jwt"),
       },
       body: JSON.stringify({
         postId: id,
@@ -41,11 +56,7 @@ const Feed = () => {
         const newData = data.map((item) => {
           if (item._id === result._id) {
             return result;
-
-          }
-          else
-            return item;
-
+          } else return item;
         });
 
         setData(newData);
@@ -53,28 +64,23 @@ const Feed = () => {
       .catch((err) => console.log(err));
   };
 
-
   const unlikepost = (id) => {
     fetch("/posts/unlike", {
       method: "put",
       headers: {
         "Content-Type": "application/json",
-        "authorization": "Bearer " + localStorage.getItem("jwt")
+        authorization: "Bearer " + localStorage.getItem("jwt"),
       },
       body: JSON.stringify({
         postId: id,
-      })
+      }),
     })
       .then((res) => res.json())
       .then((result) => {
         const newData = data.map((item) => {
           if (item._id === result._id) {
             return result;
-
-          }
-          else
-            return item;
-
+          } else return item;
         });
 
         setData(newData);
@@ -87,94 +93,120 @@ const Feed = () => {
       method: "put",
       headers: {
         "Content-Type": "application/json",
-        "authorization": "Bearer " + localStorage.getItem("jwt")
+        authorization: "Bearer " + localStorage.getItem("jwt"),
       },
       body: JSON.stringify({
         text,
-        postId
-      })
+        postId,
+      }),
     })
-      .then(res => res.json())
-      .then(result => {
+      .then((res) => res.json())
+      .then((result) => {
         console.log(result);
         const newData = data.map((item) => {
           if (item._id === result._id) {
             return result;
-
-          }
-          else
-            return item;
-
+          } else return item;
         });
 
         setData(newData);
       })
-      .catch(err => console.log(err));
-  }
+      .catch((err) => console.log(err));
+  };
 
   const deletePost = (postId) => {
     fetch(`/posts/delete/${postId}`, {
       method: "delete",
       headers: {
-        "authorization": "Bearer " + localStorage.getItem("jwt")
-      }
+        authorization: "Bearer " + localStorage.getItem("jwt"),
+      },
     })
-      .then(res => res.json())
-      .then(result => {
+      .then((res) => res.json())
+      .then((result) => {
         console.log(result);
         const newData = data.filter((item) => {
-          return item._id !== result._id
+          return item._id !== result._id;
         });
-        console.log("post deleted successfully")
+        console.log("post deleted successfully");
         setData(newData);
       })
-      .catch(err => console.log(err));
-  }
+      .catch((err) => console.log(err));
+  };
 
+  const deleteComment = (postId, commentId) => {
+    fetch(`/post/${postId}/comment/${commentId}`, {
+      method: "put",
+      headers: {
+        authorization: "Bearer " + localStorage.getItem("jwt"),
+      },
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        console.log(result);
+        const newData = data.map((item) => {
+          if (item._id !== result._id) {
+            const comments = item.comments.filter(
+              (comment) => comment._id != commentId
+            );
+            item.comments = comments;
+          }
+          return item;
+        });
+        console.log("comment deleted successfully");
+        setData(newData);
+      })
+      .catch((err) => console.log(err));
+  };
   return (
-
-    <div className="container-fluid below-navbar feedpage">
+    <div className=" below-navbar feedpage">
       {/* <Navbar /> */}
-      <div className="container ">
+      <div>
         <div className="row">
-        <div className="container stardust-bg col-lg-8 col-md-8 post-box-wrapper">
-            {data && data.map((item) => {
-              return (
-                <Post
-                  key={item._id}
-                  post={item}
-                  state={state}
-                  like={() => likepost(item._id)}
-                  unlike={() => unlikepost(item._id)}
-                  comment={(text) => makeComment(text, item._id)}
-                  delete={() => deletePost(item._id)}
-                />
-              );
-            })}
+          <div className=" col-lg-8 col-md-8 post-box-wrapper">
+            {data &&
+              data.map((item) => {
+                return (
+                  <Post
+                    key={item._id}
+                    post={item}
+                    state={state}
+                    like={() => likepost(item._id)}
+                    unlike={() => unlikepost(item._id)}
+                    comment={(text) => makeComment(text, item._id)}
+                    delete={() => deletePost(item._id)}
+                    deleteComment={(commentId) =>
+                      deleteComment(item._id, commentId)
+                    }
+                  />
+                );
+              })}
           </div>
 
-          <div className="container col-lg-3 col-md-4 hide-it suggestion-box-wrapper fixed-top" >
-            <div className="friend-list-heading" >
-              <img className="" src="https://i1.wp.com/coolpictures.in/wp-content/uploads/2020/03/Cool-and-Stylish-DP-for-Girls.jpg?fit=586%2C586&ssl=1" alt="avatar" />
-              <div className="about-me">
-                <div className="my-name"> ME </div>
-                <div > About me  </div>
-
-              </div></div>
+          <div className=" col-lg-4 col-md-4 hide-it suggestion-box-wrapper fixed-top">
+            {state && (
+              <div className="friend-list-heading">
+                <img className="" src={state.image} alt="avatar" />
+                <div className="about-me">
+                  <div className="my-name"> {state.username} </div>
+                  <div> {state.email} </div>
+                </div>
+              </div>
+            )}
+            <hr />
 
             <div className="suggestions">
-
               <div className="suggestion-heading">
-                 Suggestions for you
-                 <Link to="/suggestion_page" className="suggestion-page-link">See all</Link> 
+                Suggestions for you
+                <Link to="/suggestion_page" className="suggestion-page-link">
+                  See all
+                </Link>
               </div>
 
-
               <ul className="friend-list">
-                <Friend />
-                <Friend />
-                <Friend />
-                
+                {userList &&
+                  userList.map((user) => {
+                    return <Friend key={user._id} user={user} />;
+                  })}
               </ul>
             </div>
           </div>

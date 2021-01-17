@@ -3,9 +3,9 @@
 
 .navbar{
   z-index: 2;
-  background-color: #060930;
-  box-shadow: //inset 0 -.25rem .25rem #b37389,
-      .0 .05rem .5rem #7073a3,;
+  background-color: $primary-blue-dark;
+  box-shadow: .0 .05rem .5rem #7073a3;                             //inset 0 -.25rem .25rem #b37389,
+     
 }
 
 a.nav-link{

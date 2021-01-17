@@ -18,6 +18,7 @@ html {
 body{
     background-color: #060930;
     box-sizing: border-box;
+    background-attachment: fixed;
     padding: 3rem;
     /* padding-left: 0; */
 }
@@ -112,12 +113,24 @@ body{
    margin: 0 auto;
 }
 
-@media(max-width:768px){
+// @media only screen and (max-width : 1200px){
+//     html {
+//         font-size: 56.25%;
+       
+//     }
+// }
+
+@media only screen and ( max-width : 768x){
+    // html {
+    //     font-size: 50%;
+       
+    // }
     .logo{
         max-width:35%;
         max-height:35%;
     }
 }
+
 @media(max-width:480px){
     .logo{
         max-width:50%;

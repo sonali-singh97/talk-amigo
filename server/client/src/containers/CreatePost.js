@@ -5,8 +5,8 @@ import Navbar from "../components/Navbar";
 
 function CreatePost() {
   const history = useHistory("");
-  const [title, setTitle] = useState("");
-  const [body , setBody] = useState("");
+ // const [title, setTitle] = useState("");
+  const [caption , setCaption] = useState("");
   const [img , setImg] = useState("");
   const [url, setUrl] = useState("");
   let [error , setError]= useState("");
@@ -21,8 +21,7 @@ if(url){
           "authorization": "Bearer "+ localStorage.getItem("jwt")
         },
         body: JSON.stringify({
-        title,
-        body,
+       caption,
         photo : url
         }),
       })
@@ -70,22 +69,18 @@ if(url){
                             Create Post
                     </div>
                         <div className="card-body">
-                            
 
-                                <div className="form-group text-left  ">
-                                    <input type="text" className="form-control create-post-input" id="title"
-                                        placeholder="title" value= {title} onChange={(e)=>setTitle(e.target.value)} />
-                                </div>
-
-                                <div className="form-group text-left  ">
-                                    <input type="textarea" className="form-control create-post-input" id="body"
-                                        placeholder="body" value={body} onChange={(e)=> setBody(e.target.value)} />
-                                </div>
-
-                                <div className="form-group text-left  ">
+                        <div className="form-group text-left  ">
                                     <label>Upload Image: </label>
                                     <input type="file"   onChange={(e)=>setImg(e.target.files[0])} />
                                 </div>
+
+                              <div className="form-group text-left  ">
+                                    <input type="textarea" className="form-control create-post-input" id="caption"
+                                       autocomplete="off" placeholder="caption" value={caption} onChange={(e)=> setCaption(e.target.value)} />
+                                </div>
+
+                              
 
                                 <button   onClick={() => post()} className="btn btn-lg  login-register-button">
                                      POST

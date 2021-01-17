@@ -7,7 +7,7 @@ const  express = require("express"),
   router.get("/posts/allposts",requireLogin, (req,res)=>{
   Post.find()
   .populate("postedBy","_id username image")
-  .populate("comments.postedBy", "_id username")
+  .populate("comments.postedBy", "_id username image")
   .sort("-createdAt")
   .then(posts =>
     {res.json({posts})})
@@ -20,7 +20,7 @@ const  express = require("express"),
   router.get("/posts/getfollowingposts",requireLogin, (req,res)=>{
     Post.find({postedBy:{$in:req.user.following}})
     .populate("postedBy","_id username image")
-    .populate("comments.postedBy", "_id username")
+    .populate("comments.postedBy", "_id username image")
     .sort("-createdAt")
     .then(posts =>
       {res.json({posts})})
@@ -39,14 +39,13 @@ const  express = require("express"),
   })
 
   router.post("/posts/createpost" , requireLogin, (req,res)=> {
-      const{title, body, photo} = req.body;
-      if(!title || !body || !photo){
+      const{caption, photo} = req.body;
+      if(!caption || !photo){
           return res.status(422).json({error:"please add all the details"})
       }
       req.user.password = undefined;
       const post = new Post({
-      title,
-      body,
+     caption,
       photo,
       postedBy : req.user
       })
@@ -62,7 +61,7 @@ const  express = require("express"),
    router.put("/posts/like" , requireLogin , (req,res)=> {
   Post.findByIdAndUpdate(req.body.postId , {$push : { likes : req.user._id   }},
     { new : true}) 
-    .populate("postedBy", "_id username")
+    .populate("postedBy", "_id username image")
     .exec((err , result) => {
         if(err){
             return res.status(422).json({error : err});
@@ -75,7 +74,7 @@ const  express = require("express"),
 router.put("/posts/unlike" , requireLogin , (req,res)=> {
     Post.findByIdAndUpdate(req.body.postId , {$pull : { likes : req.user._id   }},
       { new : true}) 
-      .populate("postedBy", "_id username")
+      .populate("postedBy", "_id username image")
       .exec((err , result) => {
           if(err){
               return res.status(422).json({error : err});
@@ -93,8 +92,8 @@ router.put("/posts/unlike" , requireLogin , (req,res)=> {
       }
     Post.findByIdAndUpdate(req.body.postId , {$push : { comments : comment  }},
       { new : true}) 
-      .populate("comments.postedBy", "_id username")
-      .populate("postedBy", "_id username")
+      .populate("comments.postedBy", "_id username image")
+      .populate("postedBy", "_id username image")
       .exec((err , result) => {
           if(err){
               return res.status(422).json({error : err});
@@ -124,6 +123,17 @@ router.put("/posts/unlike" , requireLogin , (req,res)=> {
           .then(result => res.json(result))
           .catch(err => console.log(err));
       })
+
+  })
+
+  router.put("/post/:postId/comment/:commentId" , requireLogin , (req,res)=> {
+   Post.findByIdAndUpdate(req.params.postId , {$pull : {comments : {_id : req.params.commentId} }},
+     {new : true} , (err,result)=> {
+        if (err) {
+            return res.status(422).json({ error: err });
+          }
+          return res.json(result);
+     })
 
   })
 

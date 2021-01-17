@@ -70,7 +70,7 @@ function UserProfile() {
 
   return (
     <div className="fluid-container   stardust-bg  below-navbar">
-      {/* <Navbar /> */}
+    
     <div className="container ">
       <div
       className="user-detail"
@@ -106,10 +106,12 @@ function UserProfile() {
             <h5 className="details">{state ? state.followers.length : 0 } followers</h5>
             <h5 className="details">{state ? state.following.length : 0} following</h5>
           </div>
-          <div>
+          {/* <div>
             <button type="button" className="btn  user-detail-button">Follow</button>
             <button type="button" className="btn  user-detail-button">Message</button>
-          </div>
+          </div> */}
+
+          <button className="btn user-detail-button">Edit Profile</button>
         </div>
       </div>
 

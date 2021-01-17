@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap");
 *,
 *::after,
 *::before {
@@ -12,6 +12,7 @@ html {
 body {
   background-color: #060930;
   box-sizing: border-box;
+  background-attachment: fixed;
   padding: 3rem;
   /* padding-left: 0; */ }
 
@@ -74,7 +75,7 @@ body {
   text-align: center;
   margin: 0 auto; }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768x) {
   .logo {
     max-width: 35%;
     max-height: 35%; } }
@@ -170,6 +171,7 @@ html {
 body {
   background-color: #060930;
   box-sizing: border-box;
+  background-attachment: fixed;
   padding: 3rem;
   /* padding-left: 0; */ }
 
@@ -232,7 +234,7 @@ body {
   text-align: center;
   margin: 0 auto; }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768x) {
   .logo {
     max-width: 35%;
     max-height: 35%; } }
@@ -321,7 +323,8 @@ body {
   padding: 0.5rem 1rem; }
 
 .stardust-bg {
-  background-image: url("https://www.transparenttextures.com/patterns/stardust.png"); }
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+  background-attachment: fixed; }
 
 .below-navbar {
   margin-top: 10rem; }
@@ -331,7 +334,7 @@ body {
     display: none; } }
 
 body {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   line-height: 1.7; }
 
@@ -339,66 +342,102 @@ body {
   font-size: 1.6rem; }
 
 .post {
+  position: relative;
   padding: 0.5rem;
-  margin: 1rem auto;
-  border: 2px solid #333456;
-  background-color: #060930;
-  backdrop-filter: blur(1.5rem);
-  box-shadow: -0.25rem -0.25rem 0.5rem rgba(255, 255, 255, 0.07), 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.12), -0.75rem -0.75rem 1.75rem rgba(255, 255, 255, 0.07), 0.75rem 0.75rem 1.75rem rgba(0, 0, 0, 0.12), inset 8rem 8rem 8rem rgba(0, 0, 0, 0.05), inset -8rem -8rem 8rem rgba(255, 255, 255, 0.05); }
+  margin-right: 3rem;
+  margin-bottom: 5rem;
+  color: #fff;
+  font-size: 1.6rem;
+  border-radius: 5px;
+  background: inherit;
+  overflow: hidden; }
+  .post .bold-text {
+    display: inline-block;
+    font-weight: 500; }
+  .post__comment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .post__comment:not(:last-child) {
+      margin-bottom: 0.5rem; }
+    .post__comment-name {
+      margin-right: 1rem; }
+  .post .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .post hr {
+    border: 1px solid rgba(255, 255, 255, 0.15); }
+  .post__user a {
+    color: #fff; }
   .post__avatar {
-    height: 3rem;
-    width: 3rem;
+    height: 3.5rem;
+    width: 3.5rem;
     border-radius: 100%;
-    margin-right: 1rem;
-    box-shadow: inset 2px 2px 5px #595b83, inset -5px -5px 10px rgba(6, 9, 48, 0.5); }
-  .post__name {
-    color: #fff;
-    font-size: 1.8rem; }
-  .post__details {
-    font-size: 1.6rem;
-    color: #b37389; }
+    margin-right: 1rem; }
+  .post .card-body {
+    margin: 0;
+    height: 60rem; }
+    .post .card-body .post__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .post .text-button {
+    color: #f4abc4; }
+  .post .comments-box {
+    max-height: 8rem;
+    overflow-y: auto; }
   .post .icons__box {
     margin-right: 2rem;
     margin-bottom: 1rem;
-    font-size: 1.6rem;
-    color: #fff;
     background: linear-gradient(145deg, #060930, #595b83);
-    box-shadow: inset -0.5rem -0.5rem 0.75rem #060930, 0.25rem 0.25rem 0.75rem #060930, inset 0.25rem 0.25rem 0.25rem #7073a3, 0.05rem 0.05rem 0.25rem #7073a3; }
-    .post .icons__box .icon {
-      height: 2rem;
-      width: 2rem;
-      margin-right: 1rem; }
+    box-shadow: inset -0.5rem -0.5rem 0.75rem #060930, -0.15rem -0.15rem 0.25rem #3c417a, 0.25rem 0.25rem 0.75rem #060930, inset 0.25rem 0.25rem 0.25rem #7073a3, 0.25rem 0.05rem 0.5rem #7073a3; }
     .post .icons__box:hover {
       box-shadow: -0.25rem -0.25rem 0.25rem #3c417a, inset -4px -4px 10px rgba(255, 255, 255, 0.05), inset 4px 4px 10px rgba(0, 0, 0, 0.1); }
-  .post__image {
-    height: 100%;
-    width: 100%;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3); }
-  .post__comment {
-    margin-top: 1rem;
-    margin-left: 0.5rem;
-    font-size: 1.6rem; }
-    .post__comment .round-box {
-      width: 100%;
-      background: #e48dab;
-      box-shadow: inset -.25rem -.25rem .25rem #b37389, .25rem .15rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
-    .post__comment-input {
+  .post .icon-box {
+    height: 2.8rem;
+    width: 2.8rem;
+    padding: 0 4px;
+    display: inline-block;
+    border: 1px solid  #f4abc4;
+    border-radius: 3px;
+    box-shadow: -1px -1px 2px rgba(250, 200, 217, 0.5); }
+    .post .icon-box .icon {
+      margin: auto;
+      cursor: pointer; }
+    .post .icon-box:hover {
+      box-shadow: -2px -2px 4px rgba(244, 171, 196, 0.5);
+      transform: translateY(1px); }
+  .post .icon {
+    margin-right: 1rem;
+    color: #f4abc4; }
+  .post form {
+    width: 90%; }
+    .post form .post-input {
       border: none;
-      width: 100%; }
-      .post__comment-input:focus {
+      background: inherit; }
+      .post form .post-input:focus {
         outline: none;
-        color: #000; }
-
-@media (min-width: 801px) {
-  .post-container .row {
-    height: 50rem; }
-  .post {
-    height: 50%; } }
+        color: #fff; }
+  .post__content {
+    max-height: 50rem;
+    overflow-y: auto; }
+  .post::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.3);
+    filter: blur(10px);
+    background: inherit; }
 
 .navbar {
   z-index: 2;
   background-color: #060930;
-  box-shadow: 0 0.05rem 0.5rem #7073a3; }
+  box-shadow: .0 .05rem .5rem #7073a3; }
 
 a.nav-link {
   text-decoration: none; }
@@ -538,6 +577,7 @@ html {
 body {
   background-color: #060930;
   box-sizing: border-box;
+  background-attachment: fixed;
   padding: 3rem;
   /* padding-left: 0; */ }
 
@@ -600,7 +640,7 @@ body {
   text-align: center;
   margin: 0 auto; }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768x) {
   .logo {
     max-width: 35%;
     max-height: 35%; } }
@@ -613,23 +653,11 @@ body {
     font-size: 1rem; } }
 
 .friend-list-heading {
-  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
   color: #ffffff;
   padding: 2rem 1rem;
   overflow: auto; }
-  .friend-list-heading:after {
-    content: "";
-    /* This is necessary for the pseudo element to work. */
-    display: block;
-    /* This will put the pseudo element on its own line. */
-    margin: 0 auto;
-    /* This will center the border. */
-    width: 100%;
-    /* Change this to whatever width you want. */
-    margin-top: 5rem;
-    /* This creates some space between the element and the border. */
-    border-bottom: 0.1rem solid #ffffff;
-    /* This creates the border. Replace black with whatever color you want. */ }
   .friend-list-heading img {
     float: left;
     width: 10rem;
@@ -664,26 +692,33 @@ body {
     float: left;
     width: 6rem;
     height: 6rem;
-    border-radius: 50%; }
-  .friend-list .about {
-    float: left;
-    margin-top: 1rem;
-    color: #ffffff;
-    padding-left: 0.8rem; }
-  .friend-list .name {
-    font-size: 1.4rem; }
-    .friend-list .name .follow-button {
-      font-size: 1rem;
-      margin: 1.5rem 1rem 1rem 3rem;
-      color: #000000;
-      font-weight: bolder;
-      border-radius: 2.5rem;
-      background: linear-gradient(90deg, #b37389 35%, #cc88a0 68%, #e1a4b9 95%);
-      box-shadow: inset -.15rem -.15rem .25rem #b37389, .15rem .15rem .25rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
-      .friend-list .name .follow-button:hover {
-        background: #b37389;
-        background: linear-gradient(90deg, #b37389 0%, #b37389 100%, #f1d6df 100%);
-        box-shadow: -.15rem -.05rem .25rem #7073a3, inset -.25rem -.25rem .25rem #b37389, .15rem .15rem .25rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
+    border-radius: 50%;
+    margin-right: 1rem; }
+
+.name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+  font-size: 1.4rem; }
+  .name .friend__details span {
+    display: block; }
+  .name a {
+    color: #fff; }
+  .name .follow-button {
+    font-size: 1rem;
+    color: #060930;
+    font-weight: bolder;
+    border-radius: 2.5rem;
+    background: linear-gradient(90deg, #b37389 35%, #cc88a0 68%, #e1a4b9 95%);
+    box-shadow: inset -0.15rem -0.15rem 0.25rem #b37389, 0.15rem 0.15rem 0.25rem #7073a3, inset 0.25rem 0.15rem 0.25rem #f4abc4; }
+    .name .follow-button:hover {
+      background: #b37389;
+      background: linear-gradient(90deg, #b37389 0%, #b37389 100%, #f1d6df 100%);
+      box-shadow: -0.15rem -0.05rem 0.25rem #7073a3, inset -0.25rem -0.25rem 0.25rem #b37389, 0.15rem 0.15rem 0.25rem #7073a3, inset 0.25rem 0.15rem 0.25rem #f4abc4; }
+
+.suggestion-box-wrapper hr hr {
+  border: 1px solid white; }
 
 @media (max-width: 992px) {
   .friend-list-heading:after {
@@ -718,8 +753,7 @@ body {
 .feedpage {
   position: relative; }
   .feedpage .post-box-wrapper {
-    position: absolute;
-    margin-left: 2rem; }
+    padding: 0 8rem; }
   .feedpage .suggestion-box-wrapper {
     margin-top: 10rem;
     margin-left: 90rem; }
@@ -737,6 +771,7 @@ html {
 body {
   background-color: #060930;
   box-sizing: border-box;
+  background-attachment: fixed;
   padding: 3rem;
   /* padding-left: 0; */ }
 
@@ -799,7 +834,7 @@ body {
   text-align: center;
   margin: 0 auto; }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768x) {
   .logo {
     max-width: 35%;
     max-height: 35%; } }
@@ -812,13 +847,14 @@ body {
     font-size: 1rem; } }
 
 .create-post-card {
+  position: relative;
   text-align: center;
   font-size: 1.4rem;
   margin-top: 2rem;
   padding-top: 2rem;
-  border-radius: 2rem;
-  background: #060930;
-  box-shadow: inset -.25rem -.25rem .5rem #434674, .5rem .5rem .75rem #7073a3, inset .5rem .5rem .75rem #434674; }
+  border-radius: 0.5rem;
+  background: inherit;
+  overflow: hidden; }
   .create-post-card .card-header {
     font-size: 2rem;
     color: #F4ABC4; }
@@ -840,6 +876,17 @@ body {
     padding-top: 1rem; }
   .create-post-card button {
     padding: 0.5rem 2rem; }
+  .create-post-card::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.3);
+    filter: blur(10px);
+    background: inherit; }
 
 *,
 *::after,
@@ -854,6 +901,7 @@ html {
 body {
   background-color: #060930;
   box-sizing: border-box;
+  background-attachment: fixed;
   padding: 3rem;
   /* padding-left: 0; */ }
 
@@ -916,7 +964,7 @@ body {
   text-align: center;
   margin: 0 auto; }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768x) {
   .logo {
     max-width: 35%;
     max-height: 35%; } }
@@ -994,6 +1042,7 @@ html {
 body {
   background-color: #060930;
   box-sizing: border-box;
+  background-attachment: fixed;
   padding: 3rem;
   /* padding-left: 0; */ }
 
@@ -1056,7 +1105,7 @@ body {
   text-align: center;
   margin: 0 auto; }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768x) {
   .logo {
     max-width: 35%;
     max-height: 35%; } }
@@ -1070,18 +1119,20 @@ body {
 
 .suggestion-page-list {
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  border-radius: 5px;
+  background: inherit; }
   .suggestion-page-list:before {
-    content: '';
-    background: inherit;
+    content: "";
     position: absolute;
-    left: -25px;
-    right: 0;
-    top: -25px;
-    bottom: 0;
     z-index: -1;
-    box-shadow: inset 0 0 0 25rem #7073a3;
-    filter: blur(40rem); }
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.3);
+    filter: blur(10px);
+    background: inherit; }
   .suggestion-page-list .clearfix:focus-within {
     margin-bottom: 1rem;
     border-bottom: solid 0.1rem #f4abc4; }
@@ -1092,18 +1143,20 @@ body {
     width: 8rem;
     height: 8rem;
     border-radius: 50%; }
-  .suggestion-page-list .about {
-    float: left;
-    margin-top: 1.5rem;
-    color: #ffffff;
-    padding-left: 0.8rem; }
   .suggestion-page-list .name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
     font-size: 1.6rem;
     padding-left: 2rem; }
+    .suggestion-page-list .name .friend__details span {
+      display: block; }
+    .suggestion-page-list .name a {
+      color: #fff; }
     .suggestion-page-list .name .follow-button {
       font-size: 1.4rem;
-      margin: 1.5rem 0.5rem 1rem 18rem;
-      color: #000000;
+      color: #060930;
       font-weight: bolder;
       border-radius: 2.5rem;
       background: linear-gradient(90deg, #b37389 35%, #cc88a0 68%, #e1a4b9 95%);
@@ -1132,3 +1185,57 @@ body {
   .suggestion-page-list .name .follow-button {
     font-size: 1rem;
     margin: 0.5rem 0.5rem 1rem 6rem; } }
+
+.Modal {
+  position: fixed;
+  z-index: 500;
+  color: #fff;
+  font-size: 1.6rem;
+  border-radius: 5px;
+  background: inherit;
+  width: 70%;
+  padding: 1rem;
+  left: 15%;
+  top: 10%;
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+  overflow: hidden; }
+  .Modal__list {
+    padding: 1rem; }
+    .Modal__list img {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      margin-right: 1rem; }
+  .Modal .close-icon {
+    font-size: 2rem;
+    color: #f4abc4;
+    float: right;
+    cursor: pointer; }
+    .Modal .close-icon:hover {
+      transform: translateY(1px); }
+  .Modal::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.3);
+    filter: blur(50px);
+    background: inherit; }
+
+.Backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5); }
+
+@media (min-width: 600px) {
+  .Modal {
+    width: 500px;
+    left: calc(50% - 250px); } }

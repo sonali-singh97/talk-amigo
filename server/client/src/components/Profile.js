@@ -59,7 +59,7 @@ function UserProfile() {
       .catch((err) => console.log(err));
   };
 
-  const unfollowUser = () => {
+ const unfollowUser = () => {
     fetch(`/user/unfollow`, {
       method: "put",
       headers: {

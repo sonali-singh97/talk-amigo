@@ -40,6 +40,7 @@ function SignupPage() {
       setError("Invalid email");
       return;
     }
+    
     fetch("/signup", {
       method: "POST",
       headers: {

@@ -43,9 +43,10 @@ router.post("/signup", (req, res, next) => {
       if (user != null) {
         res.status(422).json({ error: "User already exists with this mail" });
       } else {
-        bcrypt.hash(password,12).then((hashedPassword) => {
+        bcrypt.hash(password,12)
+        .then((hashedPassword) => {
           const user = new User({
-            username: username,
+            username,
             password: hashedPassword,
             email: email,
             image : image
