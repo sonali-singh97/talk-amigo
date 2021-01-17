@@ -21,16 +21,6 @@
 
     .clearfix:focus-within{
       margin-bottom: 1rem;
-      border-bottom: solid 0.1rem #f4abc4;
-
-    //   &:after {
-    //     content: ""; /* This is necessary for the pseudo element to work. */ 
-    //     display: block; /* This will put the pseudo element on its own line. */
-    //     margin: 3rem 1rem 1rem -2rem ; 
-    //     width: 90%; /* Change this to whatever width you want. */
-    //     margin-top: 5rem; /* This creates some space between the element and the border. */
-    //     border-bottom: 0.1rem solid #ffffff; /* This creates the border. Replace black with whatever color you want. */
-    //  }
     }
 
     
@@ -69,7 +59,7 @@
             font-size: 1.4rem;
            // margin: 1.5rem 0.5rem 1rem 18rem;
             color: $primary-blue-dark;
-            font-weight: bolder;
+            font-weight: 600;
             border-radius: 2.5rem;
             background: linear-gradient(90deg, rgba(179,115,137,1) 35%, rgba(204,136,160,1) 68%, rgba(225,164,185,1) 95%);   
             box-shadow: inset -.15rem -.15rem .25rem #b37389,
@@ -118,12 +108,12 @@
             margin-top: 0.8rem;
         }
       
-        .name{
+        // .name{
     
-            .follow-button{
-             margin-top: 1rem;
-            }
-          }
+        //     .follow-button{
+        //      margin-top: 1rem;
+        //     }
+        //   }
 
     }
     
@@ -136,7 +126,7 @@
     
             .follow-button{
               font-size: 1rem;
-              margin: 0.5rem 0.5rem 1rem 6rem;
+              //margin: 0.5rem 0.5rem 1rem 6rem;
             }
           }
     }}
