@@ -70,7 +70,7 @@ function UserProfile() {
 
   return (
     <div className="fluid-container   stardust-bg  below-navbar">
-      {/* <Navbar /> */}
+    
     <div className="container ">
       <div
       className="user-detail"
@@ -110,6 +110,8 @@ function UserProfile() {
             <button type="button" className="btn  user-detail-button">Follow</button>
             <button type="button" className="btn  user-detail-button">Message</button>
           </div> */}
+
+          <button className="btn user-detail-button">Edit Profile</button>
         </div>
       </div>
 

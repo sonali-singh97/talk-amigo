@@ -39,14 +39,13 @@ const  express = require("express"),
   })
 
   router.post("/posts/createpost" , requireLogin, (req,res)=> {
-      const{title, body, photo} = req.body;
-      if(!title || !body || !photo){
+      const{caption, photo} = req.body;
+      if(!caption || !photo){
           return res.status(422).json({error:"please add all the details"})
       }
       req.user.password = undefined;
       const post = new Post({
-      title,
-      body,
+     caption,
       photo,
       postedBy : req.user
       })

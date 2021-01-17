@@ -58,8 +58,8 @@ function Post(props) {
           </span>
 
           <div class="post__details">
-            <span className="bold-text">{props.post.title}</span>
-            <p>{props.post.body}</p>
+            <span style={{marginRight:10 , color:"#f0d2dc"}} >{props.post.postedBy.username}</span>
+            <span> {props.post.caption} </span>
           </div>
 
           <hr />

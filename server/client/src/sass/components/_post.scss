@@ -15,7 +15,6 @@
   .bold-text {
     display: inline-block; // refactor code
     font-weight: 500;
-    
   }
   &__comment {
 
@@ -144,7 +143,10 @@
       }
     }
   }
-
+&__content{
+  max-height: 50rem;
+  overflow-y: auto;
+}
   &::after {
     content: "";
     position: absolute;
