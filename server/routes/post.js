@@ -32,7 +32,8 @@ const  express = require("express"),
 
   router.get("/posts/myposts",requireLogin, (req,res) => {
     Post.find({postedBy: req.user._id})
-      .populate("postedBy", "_id username")
+      .populate("postedBy", "_id username image")
+      .populate("comments.postedBy", "_id username image")
       .then(results => res.json({myposts : results}))
 
       .catch(err => console.log(err));

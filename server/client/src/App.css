@@ -377,7 +377,7 @@ body {
     margin-right: 1rem; }
   .post .card-body {
     margin: 0;
-    max-height: 60rem; }
+    height: 60rem; }
     .post .card-body .post__image {
       width: 100%;
       height: 100%;
@@ -1197,19 +1197,29 @@ body {
     margin: 0.5rem 0.5rem 1rem 6rem; } }
 
 .Modal {
+  background-color: white;
+  border: 1px solid #afafaf;
   position: fixed;
-  z-index: 500;
-  color: #fff;
+  z-index: 150;
+  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 10px 10px 20px -10px rgba(255, 255, 255, 0.3);
+  color: white;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1.5rem;
   font-size: 1.6rem;
-  border-radius: 5px;
-  background: inherit;
   width: 70%;
+  max-height: 50rem;
   padding: 1rem;
   left: 15%;
   top: 10%;
   box-sizing: border-box;
   transition: all 0.3s ease-out;
-  overflow: hidden; }
+  overflow: auto; }
+  @media only screen and (max-width: 50em) {
+    .Modal {
+      width: 35rem; } }
   .Modal__list {
     padding: 1rem; }
     .Modal__list img {
@@ -1224,17 +1234,6 @@ body {
     cursor: pointer; }
     .Modal .close-icon:hover {
       transform: translateY(1px); }
-  .Modal::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.3);
-    filter: blur(10px);
-    background: inherit; }
 
 .Backdrop {
   width: 100%;
@@ -1243,7 +1242,7 @@ body {
   z-index: 100;
   left: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.6); }
+  background-color: rgba(0, 0, 0, 0.7); }
 
 @media (min-width: 600px) {
   .Modal {
@@ -1251,7 +1250,16 @@ body {
     left: calc(50% - 250px); } }
 
 .edit-modal {
+  position: relative;
   text-align: center; }
+  .edit-modal .post {
+    width: 100%;
+    height: 55rem;
+    margin-bottom: 0; }
+    .edit-modal .post .card-body {
+      height: 40rem; }
+      .edit-modal .post .card-body img {
+        object-fit: fill; }
   .edit-modal__overlay {
     z-index: 99;
     background-color: rgba(0, 0, 0, 0.6);
@@ -1319,7 +1327,8 @@ body {
       font-size: 1.8rem;
       line-height: 0;
       padding: 1.5rem;
-      border-radius: 50%; }
+      border-radius: 50%;
+      cursor: pointer; }
     .edit-modal .edit-btn input {
       position: absolute;
       width: 0.1px;

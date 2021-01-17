@@ -128,9 +128,9 @@ const EditModal = (props) => {
               className="form-control create-post-input"
               id="edit-profile-name"
               autocomplete="off"
-              value={name}
+            
               onChange={(e) => setName(e.target.value)}
-              defaultValue={state ? state.username : null}
+              defaultValue={name}
               style={{ marginTop: 0 }}
             />
           </div>
@@ -144,7 +144,7 @@ const EditModal = (props) => {
               autocomplete="off"
               value={bio}
               onChange={(e) => setBio(e.target.value)}
-              defaultValue={state ? state.bio : null}
+              defaultValue={bio}
               placeholder="your bio"
               style={{ marginTop: 0 }}
             />

@@ -1,37 +1,34 @@
 
 .Modal {
-    position: fixed;
-    z-index: 500;
-    color: #fff;
-    font-size: $default-font-size;
-    border-radius: 5px;
-    background: inherit;
-   // background-color: white;
-    width: 70%;
-   // border: 1px solid #ccc;
-   // box-shadow: 1px 1px 1px black;
-    padding: 1rem;
- 
-    left: 15%;
-    top: 10%;
-    box-sizing: border-box;
-    transition: all 0.3s ease-out;
-    overflow: hidden;
-  
-    // .search-input{
-    //   background-color: inherit;
-    //   &:focus{
-    //     background-color: inherit;
-    //     outline: none;
-    //   }
-    // }
 
-//  .login-register-input{
-//    &:focus{
-//      outline:none;
-//      background-color: inherit;
-//    }
-//  }
+  background-color: white;
+  border: 1px solid rgb(175, 175, 175);
+  // padding: 1.5rem  2rem;
+  position: fixed;
+  z-index: 150;
+  backdrop-filter: blur(5px);
+  background: rgba(255,255,255,0.25);
+  box-shadow: 10px 10px 20px -10px rgba(255, 255, 255, 0.3);
+  color: white;
+  border-right: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  border-radius: 1.5rem;
+  @media only screen and (max-width:50em) {width: 35rem;}
+
+    // z-index: 500;
+     font-size: $default-font-size;
+    // border-radius: 5px;
+    // background: inherit;
+     width: 70%;
+     max-height:50rem;
+     padding: 1rem;
+     left: 15%;
+     top: 10%;
+     box-sizing: border-box;
+     transition: all 0.3s ease-out;
+    overflow: auto;
+  
+ 
    &__list{
      padding:1rem;
      img{
@@ -40,9 +37,7 @@
        border-radius:50%;
        margin-right: 1rem;;
      }
-    //  &:not(:last-child){
-    //    border-bottom: 1px solid rgb(182, 182, 182);
-    //  }
+ 
    }
 
    .close-icon{
@@ -54,20 +49,20 @@
      transform: translateY(1px);
      }
    }
-  &::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.3);
-  //  box-shadow: inset 0 0 2000px $primary-pink;
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   z-index: -1;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.3);
+  // //  box-shadow: inset 0 0 2000px $primary-pink;
 
-    filter: blur(10px);
-    background: inherit;
-  }
+  //   filter: blur(10px);
+  //   background: inherit;
+  // }
 }
 
 .Backdrop  {
@@ -78,7 +73,7 @@
     left : 0;
     top : 0;
  
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.7);
 }
 
 @media (min-width: 600px) {

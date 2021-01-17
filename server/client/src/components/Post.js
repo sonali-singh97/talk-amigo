@@ -66,8 +66,9 @@ function Post(props) {
           <div
             className={props.post.comments.length != 0 ? "comments-box" : ""}
           >
-            {props.post.comments.map((comment) => (
-              <div key={comment._id} className="post__comment">
+            {props.post.comments.map((comment) => {
+              console.log(comment) 
+             return( <div key={comment._id} className="post__comment">
                 <div>
                   <img src={comment.postedBy.image} className="post__avatar" />
                   <span className="post__comment-name ">
@@ -83,11 +84,11 @@ function Post(props) {
                     ></i>
                   </div>
                 )}
-              </div>
-            ))}
+              </div> )
+           })}
           </div>
           {props.post.comments.length != 0 && <hr />}
-          <div className="d-flex">
+          <div className="d-flex" style={{textAlign:"left"}}>
             <form
               onSubmit={(e) => {
                 e.preventDefault();
@@ -101,6 +102,7 @@ function Post(props) {
                 placeholder=" Comment Something"
                 value={comment}
                 onChange={(e) => setComment(e.target.value)}
+                
               />
             </form>
 

@@ -42,30 +42,39 @@ function GalleryImage(props) {
           )}
         </span>
       </a>
-     <div className='edit-modal'>
-      <dialog
-        open
-        className="edit-modal__content"
-        style={{
-          transform: show ? "" : "translateY(-100vh)",
-          opacity: show ? "1" : "0",
-         padding:0
-        }}
-      >
-        <Post
-          post={props.item}
-          state={props.state}
-          like={() => props.like(props.item._id)}
-          unlike={() => props.unlike(props.item._id)}
-          comment={(text) =>props.comment(text, props.item._id)}
-          delete={() => props.delete(props.item._id)}
-          deleteComment={(commentId) => props.deleteComment(props.item._id, commentId)}
-        />
-     
-      </dialog>
+      <div className="edit-modal">
       {show ? (
-        <div className="edit-modal__overlay" onClick={handleClose}></div>
-      ) : null}
+           <i
+           className="far fa-window-close close-icon"
+           onClick={handleClose}
+         ></i>
+        ) : null}
+        <dialog
+          open
+          className="edit-modal__content"
+          style={{
+            transform: show ? "" : "translateY(-100vh)",
+            display: show ? "block" : "none",
+            padding: 0,
+          }}
+        >
+          <Post
+            post={props.item}
+            state={props.state}
+            like={() => props.like(props.item._id)}
+            unlike={() => props.unlike(props.item._id)}
+            comment={(text) => props.comment(text, props.item._id)}
+            delete={() => props.delete(props.item._id)}
+            deleteComment={(commentId) =>
+              props.deleteComment(props.item._id, commentId)
+            }
+          />
+        </dialog>
+        {show ? (
+          <div className="edit-modal__overlay" onClick={handleClose}></div>
+        ) : null}
+
+      
       </div>
     </>
   );
