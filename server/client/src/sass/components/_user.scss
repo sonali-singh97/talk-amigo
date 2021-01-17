@@ -2,6 +2,7 @@
 
   .Gallery{
     display: flex;
+  
     //background-color: $secondary-blue;
     padding:2rem;
     border-radius:3px;
@@ -9,8 +10,8 @@
     flex-wrap: wrap;
    // justify-content: space-evenly;
   
-       
-    .img{
+
+    .post_img{
       position: relative;
       display: inline-block;
       width:30rem;
@@ -28,6 +29,15 @@
     
 
     }
+    .post__overlay{
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: rgba($color: #000, $alpha: 0.3);
+            } 
 
   }
   
@@ -52,18 +62,19 @@
     position: absolute;
     left: 5rem;
     bottom: 10rem;
-   
+    z-index: 50;
     .icons__box1 {
       margin-right: 2rem;
       margin-bottom: 1rem;
       font-size : $default-font-size;
+     
       //box-shadow: 0px -6px 10px rgba(#fff , 0.07), 0px 4px 15px rgba(0, 0, 0, 0.15);
       color: #fff;
       box-shadow:  inset 2px 2px 5px $secondary-blue, inset -5px -5px 10px rgba($primary-blue-dark , 0.5);
     
       .icon1{
-          height:2rem;
-          width: 2rem;
+         font-size: 2rem;
+         color:$primary-pink;
           margin-right: 1rem;
       }
   

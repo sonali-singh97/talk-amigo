@@ -94,6 +94,17 @@ router.put("/user/updateImg", requireLogin, (req, res) => {
   );
 });
 
+router.put("/user/updateInfo", requireLogin,(req,res)=>{
+  User.findByIdAndUpdate(req.user._id , {$set: {username: req.body.name, bio: req.body.bio}},
+    {new:true} , 
+    (err, result) => {
+      if (err) {
+        return res.status(422).json({ error: err });
+      }
+      res.json(result);
+    }
+    )
+})
 router.post("/search-users", (req, res) => {
   let userPattern = new RegExp("^" + req.body.query);
   User.find({ email: { $regex: userPattern } })
