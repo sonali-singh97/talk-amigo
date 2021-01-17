@@ -63,7 +63,7 @@ if(url){
         <div className="container-fluid stardust-bg below-navbar">
             {/* <Navbar /> */}
             <div className="container">
-                <div className="row "> <div className="col-md-4 offset-md-4">
+                <div className="row "> <div className="offset-lg-4 col-lg-4 offset-md-3 col-md-6 offset-sm-2 col-sm-8">
                     <div className="card text-white bg-transparent create-post-card"  >
                         <div className="card-header">
                             Create Post

@@ -1,5 +1,19 @@
 @import "../base/base";
 
+
+.feedpage {
+  position: relative;
+
+  .post-box-wrapper {
+    padding: 0 8rem;
+  }
+
+  .suggestion-box-wrapper {
+    margin-top: 10rem;
+    margin-left: 82rem;
+  }
+}
+
 .friend-list-heading {
  // text-align: center;
    display: flex;
@@ -7,6 +21,7 @@
   color: #ffffff;
   //border-bottom: 0.1rem solid #ffffff;
   padding: 2rem 1rem;
+  margin-right: 6rem;
   overflow: auto;
 
 
@@ -25,6 +40,7 @@
 
 .suggestions {
   padding-top: 1.4rem;
+  margin-right: 4rem;
 
   .suggestion-heading {
     font-size: 2rem;
@@ -54,7 +70,8 @@
   }
 
   li {
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
   }
   .suggestion-dp {
     float: left;
@@ -125,22 +142,31 @@
     margin-top: 3rem; /* This creates some space between the element and the border. */
   }
 
+
+  .friend-list-heading {
+    margin-right: 3rem;
+  }
+  .suggestions{
+    margin-right: 2rem;
+  }
+
+
   .suggestion-heading {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 
     .suggestion-page-link {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
   }
 
   .friend-list-heading {
     img {
-      width: 8rem;
-      height: 8rem;
+      width: 6rem;
+      height: 6rem;
     }
 
     .about-me {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
   }
 
@@ -148,16 +174,16 @@
     padding: 1rem;
 
     .suggestion-dp {
-      width: 4rem;
-      height: 4rem;
+      width: 3rem;
+      height: 3rem;
     }
 
     .name {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
 
       .follow-button {
         font-size: 0.9rem;
-        margin: 0.5rem 0.5rem 1rem 6rem;
+       // margin: 0.5rem 0.5rem 1rem 6rem;
       }
     }
   }
@@ -167,22 +193,27 @@
     margin-top: 3rem;
   }
   .suggestion-box-wrapper {
-    margin-left: 65rem !important;
+    margin-left: 60rem !important;
     margin-top: 15rem !important;
 
    
   }
 }
 
-.feedpage {
-  position: relative;
-
-  .post-box-wrapper {
-    padding: 0 8rem;
-  }
-
-  .suggestion-box-wrapper {
-    margin-top: 10rem;
-    margin-left: 90rem;
+@media (max-width: 760px) {
+  .feedpage{
+    .post-box-wrapper{
+      padding: 0 5rem;
+    }
   }
 }
+
+@media (max-width: 480px) {
+  .feedpage{
+    .post-box-wrapper{
+      padding: 0 1rem;
+    }
+  }
+}
+
+

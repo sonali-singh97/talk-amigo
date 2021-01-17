@@ -7,7 +7,7 @@
         position: absolute;;
         width: 30%;
     height: 50%;
-    left: 0.5rem;
+    left: 4rem;
     top: 0.5rem;
     
     transform: rotate(-21.05deg);
@@ -17,7 +17,7 @@
         position: absolute;
     width: 15%;
     height: 50%;
-    left: 35rem;
+    left: 25rem;
     top: 4rem;
     margin-top: -7vw;
     transform: rotate(51.39deg);
@@ -27,7 +27,7 @@
         position: absolute;
         width: 17%;
     height: 35%;
-    left: 40rem;
+    left: 35rem;
     top: 25rem;
     transform: rotate(20.53deg);
     }
@@ -45,14 +45,14 @@
         .planet-image{
             width: 35%;
             height: 45%;
-            left: 0.5rem;
+            left: 6rem;
             top: 0.5rem;
         }
         
         .rocket-image{
               width: 20%;
               height: 50%;
-              left: 25rem;
+              left: 15rem;
               top: 4rem;
         }
         
@@ -73,8 +73,12 @@
 
 @media (max-width: 480px) {
 
+    .reset-login-register-box{
+        margin: 0 4rem !important;
+    }
     .reset-button{
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       padding: 0.25rem 0.2rem;
+    //   width: 15rem;
     }
   }
