@@ -1,0 +1,113 @@
+.edit-modal {
+//	position: relative;
+  //  z-index: 200;
+    text-align: center;
+	&__overlay {
+		z-index: 99;
+		background-color: rgba(0, 0, 0, 0.6);
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+
+	&__content {
+        background-color: white;
+    width: 40rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+   // align-items: center;
+    border: 1px solid rgb(175, 175, 175);
+    padding: 1.5rem  2rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 150;
+    backdrop-filter: blur(5px);
+    background: rgba(255,255,255,0.25);
+    box-shadow: 10px 10px 20px -10px rgba(255, 255, 255, 0.3);
+    color: white;
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    border-radius: 1.5rem;
+    @media only screen and (max-width:50em) {width: 35rem;}
+	}
+
+
+    
+
+    &-img-box{
+        width: 18rem;
+        height: 18rem;
+        overflow: hidden;
+        border-radius: 50%;
+        margin: 1rem;
+        position: relative;
+      
+        img{ 
+            width: 100%;
+        }
+    }
+
+    &__upload-photo{ 
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    &-info-box{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    hr{
+        border-color:  #f0d2dc;
+    }
+    .edit-btn {
+        padding: 1rem;
+        position: absolute;
+        top: 13rem;
+        right: 20%;
+        z-index: 10;
+        display: flex;
+            justify-content: center;
+            align-items: center;
+        label{
+            background-color:$primary-blue-light ; 
+            color:white; border: none; 
+            font-size: 1.8rem;
+            line-height: 0; 
+            padding: 1.5rem;
+            border-radius: 50%;
+            
+        }
+        input{
+            position:absolute;
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            z-index: -1;
+        }
+    }
+
+&__btn{
+    background-color: $primary-blue-dark;
+    color: #f0d2dc;
+    font-size: 1.4rem;
+
+    &:hover{
+      background-color: rgba( $primary-blue-dark,  0.8);
+      color: #f0d2dc;
+    }
+}
+}
+
+
+

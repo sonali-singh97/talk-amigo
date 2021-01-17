@@ -2,6 +2,7 @@ import React, {useState, useContext, useEffect} from 'react';
 import GalleryImage from '../GalleryImage';
 import Navbar from '../Navbar';
 import {UserContext} from "../../App";
+import EditModal from "../EditProfile";
 
 
 
@@ -10,6 +11,11 @@ function UserProfile() {
   const {state,dispatch} = useContext(UserContext);
   const [myposts, setPosts] = useState([]);
   const [image,setImage] = useState("");
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
 
   useEffect(()=>{
   fetch("/posts/myposts", {
@@ -111,7 +117,10 @@ function UserProfile() {
             <button type="button" className="btn  user-detail-button">Message</button>
           </div> */}
 
-          <button className="btn user-detail-button">Edit Profile</button>
+          <button className="btn user-detail-button" onClick={handleShow}>Edit Profile</button>
+
+        
+          <EditModal show={show} clicked={handleClose} />
         </div>
       </div>
 

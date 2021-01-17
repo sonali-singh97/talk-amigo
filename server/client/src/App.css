@@ -858,20 +858,6 @@ body {
   .create-post-card .card-header {
     font-size: 2rem;
     color: #F4ABC4; }
-  .create-post-card .create-post-input {
-    background-color: transparent;
-    border-style: none none solid;
-    border-bottom-color: #595B83;
-    border-width: 0.24rem;
-    margin: 2.5rem auto;
-    font-size: 1.4rem;
-    color: #ffffff; }
-    .create-post-card .create-post-input:focus {
-      background-color: transparent;
-      color: #ffffff;
-      border-color: #ffffff;
-      -webkit-box-shadow: none;
-      box-shadow: none; }
   .create-post-card input[type="file"] {
     padding-top: 1rem; }
   .create-post-card button {
@@ -887,6 +873,21 @@ body {
     box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.3);
     filter: blur(10px);
     background: inherit; }
+
+.create-post-input {
+  background-color: transparent;
+  border-style: none none solid;
+  border-bottom-color: #595B83;
+  border-width: 0.24rem;
+  margin: 2.5rem auto;
+  font-size: 1.4rem;
+  color: #ffffff; }
+  .create-post-input:focus {
+    background-color: transparent;
+    color: #ffffff;
+    border-color: #f0d2dc;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
 
 *,
 *::after,
@@ -1223,7 +1224,7 @@ body {
     right: 0;
     bottom: 0;
     box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.3);
-    filter: blur(50px);
+    filter: blur(10px);
     background: inherit; }
 
 .Backdrop {
@@ -1233,9 +1234,95 @@ body {
   z-index: 100;
   left: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.5); }
+  background-color: rgba(0, 0, 0, 0.6); }
 
 @media (min-width: 600px) {
   .Modal {
     width: 500px;
     left: calc(50% - 250px); } }
+
+.edit-modal {
+  text-align: center; }
+  .edit-modal__overlay {
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; }
+  .edit-modal__content {
+    background-color: white;
+    width: 40rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #afafaf;
+    padding: 1.5rem  2rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 150;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 10px 10px 20px -10px rgba(255, 255, 255, 0.3);
+    color: white;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1.5rem; }
+    @media only screen and (max-width: 50em) {
+      .edit-modal__content {
+        width: 35rem; } }
+  .edit-modal-img-box {
+    width: 18rem;
+    height: 18rem;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 1rem;
+    position: relative; }
+    .edit-modal-img-box img {
+      width: 100%; }
+  .edit-modal__upload-photo {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; }
+  .edit-modal-info-box {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem; }
+  .edit-modal hr {
+    border-color: #f0d2dc; }
+  .edit-modal .edit-btn {
+    padding: 1rem;
+    position: absolute;
+    top: 13rem;
+    right: 20%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .edit-modal .edit-btn label {
+      background-color: #333456;
+      color: white;
+      border: none;
+      font-size: 1.8rem;
+      line-height: 0;
+      padding: 1.5rem;
+      border-radius: 50%; }
+    .edit-modal .edit-btn input {
+      position: absolute;
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      z-index: -1; }
+  .edit-modal__btn {
+    background-color: #060930;
+    color: #f0d2dc;
+    font-size: 1.4rem; }
+    .edit-modal__btn:hover {
+      background-color: rgba(6, 9, 48, 0.8);
+      color: #f0d2dc; }
