@@ -24,23 +24,7 @@
     }
 
 
-    .create-post-input{
-        background-color: transparent;
-        border-style: none none solid; 
-        border-bottom-color: #595B83;
-        border-width: 0.24rem;
-        margin: 2.5rem auto; 
-        font-size: 1.4rem;
-        color: #ffffff;
-
-        &:focus {
-            background-color:transparent;
-            color: #ffffff;
-            border-color: #ffffff;
-            -webkit-box-shadow: none;
-            box-shadow: none;
-          }
-    }
+ 
     input[type="file"]{
         padding-top: 1rem;
     }
@@ -60,5 +44,23 @@
         box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.3);
         filter: blur(10px);
         background: inherit;
+      }
+}
+
+.create-post-input{
+    background-color: transparent;
+    border-style: none none solid; 
+    border-bottom-color: #595B83;
+    border-width: 0.24rem;
+    margin: 2.5rem auto; 
+    font-size: 1.4rem;
+    color: #ffffff;
+
+    &:focus {
+        background-color:transparent;
+        color: #ffffff;
+        border-color:  #f0d2dc;
+        -webkit-box-shadow: none;
+        box-shadow: none;
       }
 }

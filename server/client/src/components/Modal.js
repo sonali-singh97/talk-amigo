@@ -1,14 +1,11 @@
 import React, { useState, useContext } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { UserContext } from "../App";
 
 const Modal = (props) => {
   const [search, setSearch] = useState(null);
-  // const [show, setShow] = useState(false);
   const [users, setUsers] = useState(null);
-  // const [show, setShow] = useState(false);
-  //   const handleClose = () => setShow(false);
-  //   const handleShow = () => setShow(true);
+
   const { state, dispatch } = useContext(UserContext);
 
   const fetchUsers = (query) => {
@@ -32,87 +29,8 @@ const Modal = (props) => {
   };
 
   return (
-    //   <div className="modal"  style={{
-    //     transform: this.props.show ? 'translateY(0)' : 'translateY(-100vh)',
-    //     opacity: this.props.show ? '1' : '0'
-    // }} >
-
-    //       <div className="modal-content">
-    //         <div className="modal-header">
-    //           <h5 className="modal-title">Search </h5>
-    //           <button
-    //             type="button"
-    //             style={{ height: 20, width: 20 }}
-    //             className="btn-close"
-    //           ></button>
-    //         </div>
-    //         <div className="modal-body">
-    //           <div className="form-group text-left  input-group">
-    //             <input
-    //               type="text"
-    //               className="form-control login-register-input"
-    //               placeholder="search users"
-    //               name="search"
-    //               value={search}
-    //               onChange={(e) => fetchUsers(e.target.value)}
-    //               required
-    //             />
-    //           </div>
-
-    //           <ul className="list-group">
-    //             {users &&
-    //               users.map((user) => {
-    //                 return (
-    //                   <Link
-    //                     key={user._id}
-    //                     to={
-    //                       user._id !== state._id
-    //                         ? `/user/${user._id}`
-    //                         : `/user_profile`
-    //                     }
-    //                     onClick={() => {
-    //                       setSearch("");
-    //                     }}
-    //                     data-bs-dismiss="modal"
-    //                   >
-    //                     <li className="list-group-item">
-    //                       <img
-    //                         alt="profile pic"
-    //                         src={user.image}
-    //                         style={{
-    //                           width: 20,
-    //                           height: 20,
-    //                           borderRdius: "50%",
-    //                           marginRight: 5,
-    //                         }}
-    //                       />
-    //                       {user.username}
-    //                       <p>{user.email}</p>
-    //                     </li>{" "}
-    //                   </Link>
-    //                 );
-    //               })}
-    //           </ul>
-    //         </div>
-    //         <div className="modal-footer">
-    //           <button
-    //             type="button"
-    //             className="btn btn-danger"
-    //             onClick={() => {
-    //               setSearch("");
-    //               handleClose();
-    //             }}
-    //           >
-    //             {" "}
-    //             Close
-    //           </button>
-    //         </div>
-    //       </div>
-
-    //   </div>
-    <>
-      {/* <Backdrop show={this.props.show} clicked={this.props.modalClosed} /> */}
-
+   
+<>
       {props.show ? (
         <div className="Backdrop" onClick={props.clicked}></div>
       ) : null}
