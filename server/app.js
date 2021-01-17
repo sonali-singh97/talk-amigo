@@ -9,6 +9,9 @@ var logger = require('morgan');
 var mongoose = require('mongoose');
 dotenv.config();
 
+
+const PORT = process.env.PORT || 5000
+
 //var indexRouter = require('./routes/index');
 var authRouter = require("./routes/auth");
 var userRouter = require('./routes/user');
@@ -34,16 +37,11 @@ mongoose.connection.on('error',(err)=>{
 
 
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
 //app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.use( authRouter);
 app.use(postsRouter);
@@ -80,5 +78,9 @@ if(process.env.NODE_ENV=="production"){
     res.sendFile(path.resolve(__dirname,'client','build','index.html'))
   })
 }
+
+app.listen(PORT,()=>{
+  console.log("server is running on",PORT)
+})
 
 module.exports = app;
