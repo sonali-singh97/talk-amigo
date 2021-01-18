@@ -204,7 +204,7 @@ const Feed = () => {
 
               <ul className="friend-list">
                 {userList &&
-                  userList.slice(0,4).map((user) => {
+                  userList.slice(0,3).map((user) => {
                     return <Friend key={user._id} user={user} />;
                   })}
               </ul>

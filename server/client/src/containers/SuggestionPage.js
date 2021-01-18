@@ -28,7 +28,7 @@ function SuggestionPage() {
             <div className="offset-md-3 col-md-6 offset-sm-2 col-sm-8  suggestion-page-list">
             {userList && userList.map(user =>
                { 
-                  return   <Friend key={user._id} user={user}/>
+                  return   <Friend key={user._id} user={user} />
                 })} 
               
               </div>

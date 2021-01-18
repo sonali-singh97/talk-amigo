@@ -172,6 +172,9 @@ function UserProfile() {
             <h3 style={{ color: "white" }}>
               {state ? state.username : "loading"}
             </h3>
+            <h4 style={{ color: "white" }}>
+            {state.bio ? state.bio : ""} 
+            </h4>
             <div
               style={{
                 display: "flex",

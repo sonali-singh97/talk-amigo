@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema ({
     expireToken:Date,
     image: {
         type: String,
-        default: "https://res.cloudinary.com/talk-amigo/image/upload/v1609559673/136-1366211_group-of-10-guys-login-user-icon-png_g56guw.jpg"
+        default: "https://res.cloudinary.com/talk-amigo/image/upload/v1610989192/dc5dp7q6wupbfu97wkv8.png"
     },
     followers: [{type: ObjectId , ref : 'User'}],
     following: [{type: ObjectId , ref: 'User'}]

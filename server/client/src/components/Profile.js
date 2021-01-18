@@ -239,12 +239,12 @@ function UserProfile() {
                   borderRadius: "80px",
                   paddingBottom: "10px ",
                 }}
-                src="https://i1.wp.com/coolpictures.in/wp-content/uploads/2020/03/Cool-and-Stylish-DP-for-Girls.jpg?fit=586%2C586&ssl=1"
+                src={userProfile.user.image}
               />
             </div>
             <div className="user-detail-box">
               <h3 style={{ color: "white" }}>{userProfile.user.username}</h3>
-              {/* <h4 style={{ color: "white" }}>{ userProfile.user.email}</h4> */}
+              <h4 style={{ color: "white" }}>{ userProfile.user.bio ? userProfile.user.bio : "" }</h4>
               <div
                 style={{
                   display: "flex",

@@ -174,13 +174,13 @@ function SignupPage() {
                 />
               </div>
 
-              <div className="form-group text-left  ">
+              {/* <div className="form-group text-left  ">
                 <label>Upload Image: </label>
                 <input
                   type="file"
                   onChange={(e) => setImg(e.target.files[0])}
                 />
-              </div>
+              </div> */}
               {/* <div className="form-group text-left  input-group">
 
                                     <div className="input-group-prepend">
