@@ -69,7 +69,7 @@ function Newpassword() {
             />
           </div>
 
-          <div className=" mt-0 pt-8 col-lg-3 col-md-4 offset-sm-4 col-sm-4 login-register-box">
+          <div className=" mt-0 pt-8 col-lg-3 col-md-4 offset-sm-3 col-sm-6 login-register-box reset-login-register-box ">
             <div className="">
             {error!==""? <div className='alert alert-danger' role='alert'>
                 {error}

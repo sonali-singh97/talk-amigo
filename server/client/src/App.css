@@ -82,10 +82,10 @@ body {
 
 @media (max-width: 480px) {
   .logo {
-    max-width: 50%;
-    max-height: 50%; }
+    max-width: 35%;
+    max-height: 35%; }
   .login-register-button {
-    font-size: 1rem; } }
+    font-size: 1.2rem; } }
 
 .illustration-div {
   position: relative; }
@@ -241,10 +241,10 @@ body {
 
 @media (max-width: 480px) {
   .logo {
-    max-width: 50%;
-    max-height: 50%; }
+    max-width: 35%;
+    max-height: 35%; }
   .login-register-button {
-    font-size: 1rem; } }
+    font-size: 1.2rem; } }
 
 .illustration-div {
   position: relative; }
@@ -387,6 +387,17 @@ body {
   .post .comments-box {
     max-height: 8rem;
     overflow-y: auto; }
+    .post .comments-box::-webkit-scrollbar {
+      padding-top: 1rem;
+      width: 0.5rem; }
+    .post .comments-box::-webkit-scrollbar-track {
+      background: #060930;
+      border-radius: 2rem; }
+    .post .comments-box::-webkit-scrollbar-thumb {
+      background: #b37389;
+      border-radius: 2rem; }
+    .post .comments-box::-webkit-scrollbar-thumb:hover {
+      background: #F4ABC4; }
   .post .icons__box {
     margin-right: 2rem;
     margin-bottom: 1rem;
@@ -398,6 +409,7 @@ body {
     height: 2.8rem;
     width: 2.8rem;
     padding: 0 4px;
+    margin-right: 1rem;
     display: inline-block;
     border: 1px solid #f4abc4;
     border-radius: 3px;
@@ -486,7 +498,10 @@ a.nav-link {
 
 @media (max-width: 480px) {
   .navbar-icons {
-    font-size: 1.4rem; }
+    font-size: 1.4rem;
+    margin-right: 1rem; }
+  .navbar-login-text {
+    font-size: 1.2rem; }
   .navbar-button {
     font-size: 1rem;
     margin-top: 1.5rem;
@@ -656,16 +671,25 @@ body {
 
 @media (max-width: 480px) {
   .logo {
-    max-width: 50%;
-    max-height: 50%; }
+    max-width: 35%;
+    max-height: 35%; }
   .login-register-button {
-    font-size: 1rem; } }
+    font-size: 1.2rem; } }
+
+.feedpage {
+  position: relative; }
+  .feedpage .post-box-wrapper {
+    padding: 0 8rem; }
+  .feedpage .suggestion-box-wrapper {
+    margin-top: 10rem;
+    margin-left: 82rem; }
 
 .friend-list-heading {
   display: flex;
   justify-content: space-evenly;
   color: #ffffff;
   padding: 2rem 1rem;
+  margin-right: 6rem;
   overflow: auto; }
   .friend-list-heading img {
     float: left;
@@ -677,7 +701,8 @@ body {
     font-size: 1.5rem; }
 
 .suggestions {
-  padding-top: 1.4rem; }
+  padding-top: 1.4rem;
+  margin-right: 4rem; }
   .suggestions .suggestion-heading {
     font-size: 2rem;
     color: #b37389;
@@ -696,7 +721,8 @@ body {
     margin-bottom: 1rem;
     border-bottom: solid 0.1rem #f4abc4; }
   .friend-list li {
-    padding-bottom: 2rem; }
+    padding-top: 1rem;
+    padding-bottom: 0.5rem; }
   .friend-list .suggestion-dp {
     float: left;
     width: 6rem;
@@ -733,39 +759,42 @@ body {
   .friend-list-heading:after {
     margin-top: 3rem;
     /* This creates some space between the element and the border. */ }
+  .friend-list-heading {
+    margin-right: 3rem; }
+  .suggestions {
+    margin-right: 2rem; }
   .suggestion-heading {
-    font-size: 1.6rem; }
+    font-size: 1.4rem; }
     .suggestion-heading .suggestion-page-link {
-      font-size: 1.4rem; }
+      font-size: 1.2rem; }
   .friend-list-heading img {
-    width: 8rem;
-    height: 8rem; }
+    width: 6rem;
+    height: 6rem; }
   .friend-list-heading .about-me {
-    font-size: 1.5rem; }
+    font-size: 1.2rem; }
   .friend-list {
     padding: 1rem; }
     .friend-list .suggestion-dp {
-      width: 4rem;
-      height: 4rem; }
+      width: 3rem;
+      height: 3rem; }
     .friend-list .name {
-      font-size: 1.3rem; }
+      font-size: 1.2rem; }
       .friend-list .name .follow-button {
-        font-size: 0.9rem;
-        margin: 0.5rem 0.5rem 1rem 6rem; }
+        font-size: 0.9rem; }
   .post-box-wrapper {
     margin-left: 1rem;
     margin-top: 3rem; }
   .suggestion-box-wrapper {
-    margin-left: 65rem !important;
+    margin-left: 60rem !important;
     margin-top: 15rem !important; } }
 
-.feedpage {
-  position: relative; }
+@media (max-width: 760px) {
   .feedpage .post-box-wrapper {
-    padding: 0 8rem; }
-  .feedpage .suggestion-box-wrapper {
-    margin-top: 10rem;
-    margin-left: 90rem; }
+    padding: 0 5rem; } }
+
+@media (max-width: 480px) {
+  .feedpage .post-box-wrapper {
+    padding: 0 1rem; } }
 
 *,
 *::after,
@@ -850,10 +879,10 @@ body {
 
 @media (max-width: 480px) {
   .logo {
-    max-width: 50%;
-    max-height: 50%; }
+    max-width: 35%;
+    max-height: 35%; }
   .login-register-button {
-    font-size: 1rem; } }
+    font-size: 1.2rem; } }
 
 .create-post-card {
   position: relative;
@@ -981,10 +1010,10 @@ body {
 
 @media (max-width: 480px) {
   .logo {
-    max-width: 50%;
-    max-height: 50%; }
+    max-width: 35%;
+    max-height: 35%; }
   .login-register-button {
-    font-size: 1rem; } }
+    font-size: 1.2rem; } }
 
 .reset-illustration-div {
   position: relative; }
@@ -992,14 +1021,14 @@ body {
     position: absolute;
     width: 30%;
     height: 50%;
-    left: 0.5rem;
+    left: 4rem;
     top: 0.5rem;
     transform: rotate(-21.05deg); }
   .reset-illustration-div .rocket-image {
     position: absolute;
     width: 15%;
     height: 50%;
-    left: 35rem;
+    left: 25rem;
     top: 4rem;
     margin-top: -7vw;
     transform: rotate(51.39deg); }
@@ -1007,7 +1036,7 @@ body {
     position: absolute;
     width: 17%;
     height: 35%;
-    left: 40rem;
+    left: 35rem;
     top: 25rem;
     transform: rotate(20.53deg); }
 
@@ -1018,12 +1047,12 @@ body {
   .reset-illustration-div .planet-image {
     width: 35%;
     height: 45%;
-    left: 0.5rem;
+    left: 6rem;
     top: 0.5rem; }
   .reset-illustration-div .rocket-image {
     width: 20%;
     height: 50%;
-    left: 25rem;
+    left: 15rem;
     top: 4rem; }
   .reset-illustration-div .camera-image {
     width: 25%;
@@ -1035,8 +1064,10 @@ body {
     padding: 0.5rem 0.5rem; } }
 
 @media (max-width: 480px) {
+  .reset-login-register-box {
+    margin: 0 4rem !important; }
   .reset-button {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     padding: 0.25rem 0.2rem; } }
 
 *,
@@ -1122,10 +1153,10 @@ body {
 
 @media (max-width: 480px) {
   .logo {
-    max-width: 50%;
-    max-height: 50%; }
+    max-width: 35%;
+    max-height: 35%; }
   .login-register-button {
-    font-size: 1rem; } }
+    font-size: 1.2rem; } }
 
 .suggestion-page-list {
   position: relative;
@@ -1144,8 +1175,7 @@ body {
     filter: blur(10px);
     background: inherit; }
   .suggestion-page-list .clearfix:focus-within {
-    margin-bottom: 1rem;
-    border-bottom: solid 0.1rem #f4abc4; }
+    margin-bottom: 1rem; }
   .suggestion-page-list li {
     padding: 2rem 0 1rem 3rem; }
   .suggestion-page-list .suggestion-dp {
@@ -1167,7 +1197,7 @@ body {
     .suggestion-page-list .name .follow-button {
       font-size: 1.4rem;
       color: #060930;
-      font-weight: bolder;
+      font-weight: 600;
       border-radius: 2.5rem;
       background: linear-gradient(90deg, #b37389 35%, #cc88a0 68%, #e1a4b9 95%);
       box-shadow: inset -.15rem -.15rem .25rem #b37389, .15rem .15rem .25rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
@@ -1187,14 +1217,11 @@ body {
 
 @media (max-width: 760px) {
   .suggestion-page-list .about {
-    margin-top: 0.8rem; }
-  .suggestion-page-list .name .follow-button {
-    margin-top: 1rem; } }
+    margin-top: 0.8rem; } }
 
 @media (max-width: 480px) {
   .suggestion-page-list .name .follow-button {
-    font-size: 1rem;
-    margin: 0.5rem 0.5rem 1rem 6rem; } }
+    font-size: 1rem; } }
 
 .Modal {
   background-color: white;
