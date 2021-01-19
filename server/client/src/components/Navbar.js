@@ -46,19 +46,19 @@ function Navbar() {
         </li>,
         <li className="nav-item">
           <a className="nav-link" href="#">
-            <Link to="/explore">
-              {/* <button className="btn btn-lg navbar-button mr-2">Explore</button> */}
-              <i className="fas fa-compass fa-2x  navbar-icons"></i>
-            </Link>
-          </a>
-        </li>,
-        <li className="nav-item">
-          <a className="nav-link" href="#">
             <Link to="/">
               <i className="fas fa-home fa-2x  navbar-icons"></i>
             </Link>
           </a>
         </li>,
+        <li className="nav-item">
+        <a className="nav-link" href="#">
+          <Link to="/explore">
+            {/* <button className="btn btn-lg navbar-button mr-2">Explore</button> */}
+            <i className="fas fa-compass fa-2x  navbar-icons"></i>
+          </Link>
+        </a>
+      </li>,
         <li className="nav-item">
           <a className="nav-link" href="#">
             <Link to="/user_profile">

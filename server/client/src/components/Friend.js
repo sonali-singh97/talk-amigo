@@ -82,7 +82,7 @@ function Friend(props) {
           <div className="  name">
             <div className="friend__details">
               <span>
-                <Link to={`/user/${props.user._id}`}>
+                <Link to={`/user/${props.user._id}`}  className="username">
                   {" "}
                   {props.user.username}
                 </Link>
@@ -102,14 +102,14 @@ function Friend(props) {
             ) : (
               <button
                 type="button"
-                className="btn  follow-button"
+                className="btn  follow-button text-button"
                 onClick={unfollowUser}
               >
                 Unfollow
               </button>
             )}
           </div>
-        </div>
+        </div> <hr />
       </li>
     </div>
   );
