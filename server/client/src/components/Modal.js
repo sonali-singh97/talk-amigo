@@ -60,7 +60,7 @@ const Modal = (props) => {
             />
 
             <div className="input-group-prepend"  >
-              <span className="input-group-text" style={{marginTop:5}}>
+              <span className="input-group-text" style={{marginTop:5 , marginBottom:2}}>
                 <i
                   className="fas fa-search  mt-2" style={{fontSize:20}}
                   onClick={() => fetchUsers(search)}

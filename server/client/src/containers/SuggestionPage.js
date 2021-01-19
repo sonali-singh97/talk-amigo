@@ -24,7 +24,9 @@ function SuggestionPage() {
 
     return(
         <div className=" below-navbar stardust-bg">
+          
             <div className="row ">
+            <div className="offset-md-3 col-md-6 offset-sm-2 col-sm-8 suggestion-page-heading " >Suggestions</div>
             <div className="offset-md-3 col-md-6 offset-sm-2 col-sm-8  suggestion-page-list">
             {userList && userList.map(user =>
                { 

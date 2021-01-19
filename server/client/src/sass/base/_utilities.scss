@@ -17,9 +17,21 @@
     margin-top: 10rem;
 }
 
+@media(max-width:992px){
+    .below-navbar{
+        margin-top: 6rem;
+    }
+}
+
 @media(max-width:768px){
     .hide-it{
         display: none;
+    }
+}
+
+@media(max-width:480px){
+    .below-navbar{
+        margin-top: 4rem;
     }
 }
 

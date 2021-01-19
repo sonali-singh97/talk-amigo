@@ -1,5 +1,11 @@
 @import "../base/base";
 
+
+.suggestion-page-heading{
+  color: #f4abc4;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
 .suggestion-page-list {
     position: relative;
     overflow: hidden;
@@ -19,13 +25,19 @@
     background: inherit;
        }
 
+       hr{
+         margin-top: 2rem;
+         border: none;
+         border-top: .14rem solid rgba(0,0,0,0.6);
+       }
+
     .clearfix:focus-within{
       margin-bottom: 1rem;
     }
 
     
     li {
-     padding: 2rem 0 1rem 3rem;
+     padding: 2rem 0 1rem 1rem;
     }
     .suggestion-dp {
         float: left;
@@ -49,6 +61,13 @@
             span{
               display: block;
             }
+
+            .username{
+              color: #f0d2dc;
+              &:hover{
+                color:#f4abc4;
+              }
+            }
            }
  
           a{
@@ -57,23 +76,16 @@
 
           .follow-button{
             font-size: 1.4rem;
-           // margin: 1.5rem 0.5rem 1rem 18rem;
-            color: $primary-blue-dark;
-            font-weight: 600;
-            border-radius: 2.5rem;
-            background: linear-gradient(90deg, rgba(179,115,137,1) 35%, rgba(204,136,160,1) 68%, rgba(225,164,185,1) 95%);   
-            box-shadow: inset -.15rem -.15rem .25rem #b37389,
-                 .15rem .15rem .25rem #7073a3,
-                  inset .25rem .15rem .25rem #f4abc4;
-
-            &:hover {
-                 background: rgb(179,115,137);
-                 background: linear-gradient(90deg, rgba(179,115,137,1) 0%, rgba(179,115,137,1) 100%, rgba(241,214,223,1) 100%);
-                 box-shadow: -.15rem -.05rem .25rem #7073a3,
-                        inset -.25rem -.25rem .25rem #b37389,
-                        .15rem .15rem .25rem #7073a3,
-                        inset .25rem .15rem .25rem #f4abc4;
-             }
+           color: #b37389;
+           font-weight: bolder;
+           
+           &:hover{
+             color: #f4abc4; 
+           }
+           &:focus{
+             outline: 0;
+             box-shadow: none;
+           }
           }
       }
   }
@@ -84,15 +96,15 @@
   .suggestion-page-list{
 
     .suggestion-dp {
-      width: 6rem;
-      height: 6rem;
+      width: 7rem;
+      height: 7rem;
     }
     
     .name{
-        font-size: 1.3rem;
+        font-size: 1.4rem;
 
         .follow-button{
-          font-size: 1rem;
+          font-size: 1.2rem;
           //margin: 0.5rem 05rem 1rem 1.2rem;
         }
       }
@@ -122,11 +134,16 @@
 @media(max-width:480px){
 
     .suggestion-page-list{
+
+      .suggestion-dp {
+        width: 6rem;
+        height: 6rem;
+      }
+      
         .name{
     
             .follow-button{
               font-size: 1rem;
-              //margin: 0.5rem 0.5rem 1rem 6rem;
             }
           }
     }}

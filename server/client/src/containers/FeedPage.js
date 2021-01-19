@@ -192,6 +192,7 @@ const Feed = () => {
                 </div>
               </div>
             )}
+            
             <hr/>
 
             <div className="suggestions">
