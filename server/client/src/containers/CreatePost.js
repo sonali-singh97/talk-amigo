@@ -86,7 +86,7 @@ function CreatePost() {
 
                 <button
                   onClick={() => post()}
-                  className="btn btn-lg  login-register-button"
+                  className="btn btn-lg  create-post-button"
                 >
                   POST
                 </button>

@@ -1,14 +1,16 @@
 
 .Modal {
 
-  background-color: white;
+  //background-color: white;
   border: 1px solid rgb(175, 175, 175);
   // padding: 1.5rem  2rem;
   position: fixed;
   z-index: 150;
   backdrop-filter: blur(5px);
-  background: rgba(255,255,255,0.25);
-  box-shadow: 10px 10px 20px -10px rgba(255, 255, 255, 0.3);
+  //background: rgba(255,255,255,0.25);
+  background: inherit;
+ // box-shadow: 10px 10px 20px -10px rgba(255, 255, 255, 0.3);
+  box-shadow: inset 40rem 40rem 2rem rgba(255, 255, 255, 0.1);
   color: white;
   border-right: 1px solid rgba(255,255,255,0.2);
   border-bottom: 1px solid rgba(255,255,255,0.2);
@@ -26,26 +28,34 @@
      top: 10%;
      box-sizing: border-box;
      transition: all 0.3s ease-out;
-    overflow: auto;
+    overflow: visible;
+  
 
-    &::-webkit-scrollbar {
-      padding-top: 1rem;
-     width: 0.5rem;
-     max-height: 50%; height: 50%;
-  }
-  &::-webkit-scrollbar-thumb {
-     background:#b37389;
-     border-radius: 2rem;
-  }
-  &::-webkit-scrollbar-thumb:hover {
-     background:#F4ABC4;
-  }
-  &::-webkit-scrollbar-track-piece:start {
-    margin-top: 1rem;
-  }
-  &::-webkit-scrollbar-track-piece:end {
-    margin-bottom: 1rem;
-  }
+    .user-list{
+      max-height: 25rem;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        padding-top: 1rem;
+        width: 0.5rem;
+        max-height: 50%; 
+        height: 50%;
+      }
+      &::-webkit-scrollbar-thumb {
+        background:#b37389;
+        border-radius: 2rem;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background:#F4ABC4;
+      }
+      &::-webkit-scrollbar-track-piece:start {
+        margin-top: 1rem;
+      }
+      &::-webkit-scrollbar-track-piece:end {
+        margin-bottom: 1rem;
+      }
+    }
+    
   
  
    &__list{
@@ -59,14 +69,15 @@
 
      hr{
        border:none;
-       border-top: .1rem solid rgba(0,0,0,0.4);
+       //border-top: .1rem solid rgba(0,0,0,0.4);
+       border-top: .1rem solid #f0d2dc;
      }
  
    }
 
    .close-icon{
-    //  margin-top: -2rem;
-    // margin-right: -4rem;
+     margin-top: -3rem;
+     margin-right: -4rem;
      font-size: 2rem;
      color:$primary-pink;
      float:right;
