@@ -969,6 +969,22 @@ body {
     -webkit-box-shadow: none;
     box-shadow: none; }
 
+.create-post-button {
+  border: .2rem solid #F4ABC4;
+  background-color: transparent;
+  color: #ffffff;
+  font-weight: bolder;
+  border-radius: 2rem;
+  font-size: 1.6rem;
+  -webkit-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear; }
+  .create-post-button:hover {
+    background-color: #F4ABC4;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear; }
+
 *,
 *::after,
 *::before {
@@ -1292,13 +1308,12 @@ body {
     font-size: 1rem; } }
 
 .Modal {
-  background-color: white;
   border: 1px solid #afafaf;
   position: fixed;
   z-index: 150;
   backdrop-filter: blur(5px);
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 10px 10px 20px -10px rgba(255, 255, 255, 0.3);
+  background: inherit;
+  box-shadow: inset 40rem 40rem 2rem rgba(255, 255, 255, 0.1);
   color: white;
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -1311,24 +1326,27 @@ body {
   top: 10%;
   box-sizing: border-box;
   transition: all 0.3s ease-out;
-  overflow: auto; }
+  overflow: visible; }
   @media only screen and (max-width: 50em) {
     .Modal {
       width: 35rem; } }
-  .Modal::-webkit-scrollbar {
-    padding-top: 1rem;
-    width: 0.5rem;
-    max-height: 50%;
-    height: 50%; }
-  .Modal::-webkit-scrollbar-thumb {
-    background: #b37389;
-    border-radius: 2rem; }
-  .Modal::-webkit-scrollbar-thumb:hover {
-    background: #F4ABC4; }
-  .Modal::-webkit-scrollbar-track-piece:start {
-    margin-top: 1rem; }
-  .Modal::-webkit-scrollbar-track-piece:end {
-    margin-bottom: 1rem; }
+  .Modal .user-list {
+    max-height: 25rem;
+    overflow-y: auto; }
+    .Modal .user-list::-webkit-scrollbar {
+      padding-top: 1rem;
+      width: 0.5rem;
+      max-height: 50%;
+      height: 50%; }
+    .Modal .user-list::-webkit-scrollbar-thumb {
+      background: #b37389;
+      border-radius: 2rem; }
+    .Modal .user-list::-webkit-scrollbar-thumb:hover {
+      background: #F4ABC4; }
+    .Modal .user-list::-webkit-scrollbar-track-piece:start {
+      margin-top: 1rem; }
+    .Modal .user-list::-webkit-scrollbar-track-piece:end {
+      margin-bottom: 1rem; }
   .Modal__list {
     padding: 1rem; }
     .Modal__list img {
@@ -1338,8 +1356,10 @@ body {
       margin-right: 1rem; }
     .Modal__list hr {
       border: none;
-      border-top: 0.1rem solid rgba(0, 0, 0, 0.4); }
+      border-top: .1rem solid #f0d2dc; }
   .Modal .close-icon {
+    margin-top: -3rem;
+    margin-right: -4rem;
     font-size: 2rem;
     color: #f4abc4;
     float: right;

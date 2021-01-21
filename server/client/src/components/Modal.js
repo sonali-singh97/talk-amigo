@@ -69,6 +69,7 @@ const Modal = (props) => {
             </div>
           </div>
 
+<div className="user-list">
           {users &&
             users.map((user) => {
               return (
@@ -108,7 +109,7 @@ const Modal = (props) => {
                 </div>
               );
             })}
-        </div>
+        </div></div>
       </div>
     </>
   );

@@ -64,3 +64,22 @@
         box-shadow: none;
       }
 }
+
+.create-post-button{
+    border: .2rem solid #F4ABC4;
+    background-color: transparent;
+    color: #ffffff;
+    font-weight: bolder;
+    border-radius: 2rem;
+    font-size: 1.6rem;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+
+    &:hover{
+        background-color:  #F4ABC4;
+        -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+    }
+}
