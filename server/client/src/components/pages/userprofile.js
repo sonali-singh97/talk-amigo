@@ -132,7 +132,7 @@ function UserProfile() {
         const newData = data.map((item) => {
           if (item._id !== result._id) {
             const comments = item.comments.filter(
-              (comment) => comment._id != commentId
+              (comment) => comment._id !== commentId
             );
             item.comments = comments;
           }
@@ -169,11 +169,11 @@ function UserProfile() {
             />
           </div>
           <div className="user-detail-box">
-            <h3 style={{ color: "white" }}>
+            <h3 className="User-Name" style={{ color: "white" }}>
               {state ? state.username : "loading"}
             </h3>
             <h4 style={{ color: "white" }}>
-            {state.bio ? state.bio : ""} 
+            {state ? state.bio : ""} 
             </h4>
             <div
               style={{
@@ -183,11 +183,11 @@ function UserProfile() {
                 color: "white",
               }}
             >
-              <h5 className="details">{myposts.length} posts</h5>
-              <h5 className="details">
+              <h5 className="details n-o-posts">{myposts.length} posts</h5>
+              <h5 className="details n-o-followers">
                 {state ? state.followers.length : 0} followers
               </h5>
-              <h5 className="details">
+              <h5 className="details n-o-followers">
                 {state ? state.following.length : 0} following
               </h5>
             </div>

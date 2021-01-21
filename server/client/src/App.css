@@ -597,6 +597,8 @@ a.nav-link {
     .user-detail-box .details {
       margin-right: 2rem;
       margin-top: 0.5rem; }
+    .user-detail-box .User-Name {
+      margin-bottom: 1.5rem; }
   .user-detail-button {
     background: linear-gradient(90deg, #b37389 0%, #f4abc4 70%, #f1d6df 100%);
     box-shadow: inset -.25rem -.25rem .25rem #b37389, .15rem .15rem .5rem #7073a3, inset .15rem .25rem .25rem #b37389;
