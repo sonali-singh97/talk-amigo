@@ -23,7 +23,7 @@ a.nav-link{
     border-radius: 3rem;
     margin-left: 3rem;
     padding: 0.5rem 1.5rem;
-    font-size: 1.6rem;
+    font-size: $default-font-size;
     
     &:hover {
         background: rgb(179,115,137);
@@ -44,7 +44,7 @@ a.nav-link{
   }
 
   .navbar-login-text{
-    font-size: 1.4rem;
+    font-size: $default-font-size-small;
     font-weight: bolder;
     color: #f0d2dc;
   }
@@ -66,7 +66,7 @@ a.nav-link{
  @media (max-width: 768px) {
 
   .navbar-icons{
-    font-size: 1.6rem;
+    font-size: $default-font-size;
   }
 
   .navbar-button{
@@ -79,7 +79,7 @@ a.nav-link{
 @media (max-width: 480px) {
 
   .navbar-icons{
-    font-size: 1.4rem;
+    font-size: $default-font-size-small;
     margin-right: 1rem;
   }
   .navbar-login-link{

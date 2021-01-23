@@ -1,4 +1,5 @@
 @import "../base/base";
+@import "../abstracts/variables";
 
 
 .feedpage {
@@ -35,21 +36,21 @@
 
   .about-me {
     margin-top: 1.5rem;
-    font-size: 1.5rem;
+    font-size: $default-font-size;
   }
 }
 
 .suggestions {
-  padding-top: 1.4rem;
+  padding-top: $default-font-size-small;
   margin-right: 4rem;
 
   .suggestion-heading {
-    font-size: 2rem;
+    font-size: $default-heading-size;
     color: #b37389;
     padding-left: 1.2rem;
 
     .suggestion-page-link {
-      font-size: 1.6rem;
+      font-size: $default-font-size;
       padding-left: 2rem;
       color: #ffffff;
 
@@ -93,7 +94,7 @@
     align-items: center;
     justify-content: space-between;
     color: #ffffff;
-    font-size: 1.4rem;
+    font-size: $default-font-size-small;
      .friend__details {
       span {
         display: block;
@@ -144,7 +145,7 @@
 
 
   .suggestion-heading {
-    font-size: 1.4rem;
+    font-size: $default-heading-size-small;
 
     .suggestion-page-link {
       font-size: 1.2rem;
@@ -158,7 +159,7 @@
     }
 
     .about-me {
-      font-size: 1.4rem;
+      font-size: $default-font-size-small;
     }
   }
 
@@ -171,7 +172,7 @@
     }
 
     .name {
-      font-size: 1.4rem;
+      font-size: $default-font-size-small;
 
       .follow-button {
         font-size: 1.2rem;

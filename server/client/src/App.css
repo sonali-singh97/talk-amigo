@@ -466,9 +466,19 @@ body {
     filter: blur(10px);
     background: inherit; }
 
+@media (max-width: 992px) {
+  .post .card-body {
+    height: 50rem; } }
+
 @media (max-width: 768px) {
   .post {
     margin-right: 0; } }
+
+@media (max-width: 480px) {
+  .post .card-body {
+    height: 30rem; }
+    .post .card-body .post__image {
+      object-fit: fill; } }
 
 .navbar {
   z-index: 2;
@@ -731,13 +741,13 @@ body {
     border-radius: 50%; }
   .friend-list-heading .about-me {
     margin-top: 1.5rem;
-    font-size: 1.5rem; }
+    font-size: 1.6rem; }
 
 .suggestions {
   padding-top: 1.4rem;
   margin-right: 4rem; }
   .suggestions .suggestion-heading {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #b37389;
     padding-left: 1.2rem; }
     .suggestions .suggestion-heading .suggestion-page-link {
@@ -799,7 +809,7 @@ body {
   .suggestions {
     margin-right: 2rem; }
   .suggestion-heading {
-    font-size: 1.4rem; }
+    font-size: 1.8rem; }
     .suggestion-heading .suggestion-page-link {
       font-size: 1.2rem; }
   .friend-list-heading img {
@@ -1232,7 +1242,7 @@ body {
 
 .suggestion-page-heading {
   color: #f4abc4;
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 2rem; }
 
 .suggestion-page-list {

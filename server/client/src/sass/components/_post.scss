@@ -1,3 +1,5 @@
+@import "../abstracts/variables";
+
 .post {
   position: relative;
   padding: 0.5rem;
@@ -178,9 +180,30 @@
   // }
 }
 
+
+@media (max-width: 992px) {
+  .post{
+    .card-body{
+      height: 50rem;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .post{
     margin-right: 0;
-  }
-
+   }
 }
+
+@media (max-width: 480px) {
+  .post{
+    .card-body{
+      height: 30rem;
+      .post__image{
+        object-fit: fill;
+      }
+    }
+  }
+}
+
+

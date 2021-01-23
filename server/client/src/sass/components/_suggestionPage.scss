@@ -1,9 +1,10 @@
 @import "../base/base";
+@import "../abstracts/variables";
 
 
 .suggestion-page-heading{
   color: #f4abc4;
-  font-size: 2rem;
+  font-size: $default-heading-size;
   margin-bottom: 2rem;
 }
 .suggestion-page-list {
@@ -53,7 +54,7 @@
         align-items: center;
        justify-content: space-between;
       color: #ffffff;
-          font-size: 1.6rem;
+          font-size: $default-font-size;
           padding-left: 2rem;
 
           & .friend__details{
@@ -75,7 +76,7 @@
           }
 
           .follow-button{
-            font-size: 1.4rem;
+            font-size: $default-font-size-small;
            color: #b37389;
            font-weight: bolder;
            
@@ -101,7 +102,7 @@
     }
     
     .name{
-        font-size: 1.4rem;
+        font-size: $default-font-size-small;
 
         .follow-button{
           font-size: 1.2rem;
