@@ -15,6 +15,7 @@ import Newpassword from "./components/pages/Newpassword";
 import SuggestionPage from './containers/SuggestionPage';
 import {reducer, initialState} from "./reducers/userReducer";
 import './App.css';
+import ImagePreview from "./components/ImagePreview";
 
 export const UserContext = createContext();
 
@@ -44,6 +45,8 @@ return(
   <Route path ="/reset" exact component = {Resetpage} />
   <Route path = "/reset/:token" component={Newpassword}></Route>
   <Route path="/suggestion_page" exact component= {SuggestionPage} />
+  <Route path="/preview" exact component= {ImagePreview} />
+
   </Switch>
 )
 }
