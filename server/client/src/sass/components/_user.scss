@@ -5,7 +5,7 @@
   
     //background-color: $secondary-blue;
     padding:2rem;
-    border-radius:3px;
+    border-radius:2px;
     max-width:  100rem  ;
     flex-wrap: wrap;
    // justify-content: space-evenly;
@@ -57,6 +57,13 @@
     }
   }
 
+  .User-Image{
+  //  border-radius: 150px;
+  //  background: #060930;
+   box-shadow:  -8px -8px 28px #040620, 
+             8px 8px 28px #080c40;
+  }
+
 
   .like-comment{
     position: absolute;
@@ -92,16 +99,17 @@
 
 .user-detail{
   position: relative;
+  // margin-top:3rem;
   // margin-bottom:3rem;
 
   &-box{
     position: absolute;
-    top: 5rem;
+    top: 3rem;
     left:25rem;
 
     .details{
       margin-right: 2rem;
-      margin-top: 0.5rem;
+      margin-top: 1rem;
       
     }
 
@@ -125,7 +133,10 @@
     font-weight: bolder;
     border-radius: 4rem;
     margin: 1rem ;
-    margin-left: 0;
+    // margin-left: 0;
+    // margin-right:2rem;
+    // margin-top:1.5rem;
+    margin:1.2rem 2rem 0 0;
     // margin-bottom:2rem;
     padding: 0.5rem 2rem;
     font-size: 1.2rem;

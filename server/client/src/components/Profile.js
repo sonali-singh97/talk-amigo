@@ -227,23 +227,24 @@ function UserProfile() {
               display: "flex",
               justifyContent: "start",
               maxWidth: "700px",
-              margin: "18px auto",
-              borderBottom: "1px solid grey",
+              margin: "36px auto",
+              // marginTop:"1rem",
+              // borderBottom: "1.5px solid grey",
             }}
           >
             <div>
               <img
                 style={{
-                  width: "160px",
-                  height: "160px",
-                  borderRadius: "80px",
+                  width: "175px",
+                  height: "175px",
+                  borderRadius: "100%",
                   paddingBottom: "10px ",
                 }}
                 src={userProfile.user.image}
               />
             </div>
             <div className="user-detail-box">
-              <h3 style={{ color: "white" }}>{userProfile.user.username}</h3>
+              <h2 style={{ color: "white",marginBottom:"1.5rem" }}>{userProfile.user.username}</h2>
               <h4 style={{ color: "white" }}>{ userProfile.user.bio ? userProfile.user.bio : "" }</h4>
               <div
                 style={{
@@ -287,7 +288,8 @@ function UserProfile() {
             </div>
           </div>
 
-          <div className="Gallery  background-texture-gallery">
+          <div className="Gallery  background-texture-gallery"
+          style={{ borderTop: "0.2rem solid grey", marginTop: "3.5rem"}}>
             {userProfile.posts.map((item) => (
              <GalleryImage
              key={item._id}
