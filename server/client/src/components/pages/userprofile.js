@@ -206,7 +206,7 @@ function UserProfile() {
 
         <div
           className="Gallery  background-texture-gallery"
-          style={{ borderTop: "0.15rem solid grey" }}
+          style={{ borderTop: "0.2rem solid grey", marginTop: "3.5rem" }}
         >
           {myposts.map((item) => (
             <GalleryImage
