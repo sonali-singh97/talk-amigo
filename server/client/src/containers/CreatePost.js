@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import Navbar from "../components/Navbar";
+
 
 function CreatePost() {
   const history = useHistory("");
   // const [title, setTitle] = useState("");
   const [caption, setCaption] = useState("");
   const [img, setImg] = useState("");
-  const [url, setUrl] = useState("");
+  const [url, setUrl] = useState(null);
   let [error, setError] = useState("");
 
   useEffect(() => {
@@ -71,7 +71,9 @@ function CreatePost() {
                     onChange={(e) => setImg(e.target.files[0])}
                   />
                 </div>
-
+                 {
+                   img && <div> <img src={URL.createObjectURL(img)} alt="post"/></div>
+                 }
                 <div className="form-group text-left  ">
                   <input
                     type="textarea"
