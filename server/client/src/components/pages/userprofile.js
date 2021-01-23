@@ -154,7 +154,7 @@ function UserProfile() {
             justifyContent: "start",
             maxWidth: "700px",
             margin: "18px auto",
-            borderBottom: "1px solid grey"
+            // borderBottom: "1px solid grey"
           }}
         >
           <div>

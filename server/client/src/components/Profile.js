@@ -227,7 +227,7 @@ function UserProfile() {
               display: "flex",
               justifyContent: "start",
               maxWidth: "700px",
-              margin: "36px auto",
+              margin: "36px auto 18px",
               // marginTop:"1rem",
               // borderBottom: "1.5px solid grey",
             }}
@@ -238,7 +238,7 @@ function UserProfile() {
                   width: "175px",
                   height: "175px",
                   borderRadius: "100%",
-                  paddingBottom: "10px ",
+                  paddingBottom: "5px ",
                 }}
                 src={userProfile.user.image}
               />
