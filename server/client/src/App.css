@@ -7,9 +7,13 @@
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  height: 100%; }
 
 body {
+  min-height: 100vh;
+  min-height: 100%;
+  overflow: auto;
   background-color: #060930;
   box-sizing: border-box;
   background-attachment: fixed;
@@ -172,9 +176,13 @@ body {
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  height: 100%; }
 
 body {
+  min-height: 100vh;
+  min-height: 100%;
+  overflow: auto;
   background-color: #060930;
   box-sizing: border-box;
   background-attachment: fixed;
@@ -637,9 +645,13 @@ a.nav-link {
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  height: 100%; }
 
 body {
+  min-height: 100vh;
+  min-height: 100%;
+  overflow: auto;
   background-color: #060930;
   box-sizing: border-box;
   background-attachment: fixed;
@@ -806,7 +818,8 @@ body {
 
 .suggestion-box-wrapper hr {
   border: none;
-  border-bottom: 1px solid white; }
+  border-bottom: 1px solid white;
+  margin-right: 4rem; }
 
 @media (max-width: 992px) {
   .friend-list-heading {
@@ -835,7 +848,9 @@ body {
     margin-top: 2rem; }
   .suggestion-box-wrapper {
     margin-left: 65rem !important;
-    margin-top: 10rem !important; } }
+    margin-top: 10rem !important; }
+    .suggestion-box-wrapper hr {
+      margin-right: 1rem; } }
 
 @media (max-width: 760px) {
   .feedpage .post-box-wrapper {
@@ -849,6 +864,10 @@ body {
     margin-left: 0;
     padding: 0 1rem; } }
 
+@media (min-width: 1400px) {
+  .feedpage .suggestion-box-wrapper {
+    margin-left: 92rem; } }
+
 *,
 *::after,
 *::before {
@@ -857,9 +876,13 @@ body {
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  height: 100%; }
 
 body {
+  min-height: 100vh;
+  min-height: 100%;
+  overflow: auto;
   background-color: #060930;
   box-sizing: border-box;
   background-attachment: fixed;
@@ -993,14 +1016,19 @@ body {
   font-weight: bolder;
   border-radius: 2rem;
   font-size: 1.6rem;
-  -webkit-transition: background-color 1000ms linear;
-  -ms-transition: background-color 1000ms linear;
-  transition: background-color 1000ms linear; }
+  -webkit-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear; }
   .create-post-button:hover {
     background-color: #F4ABC4;
-    -webkit-transition: background-color 1000ms linear;
-    -ms-transition: background-color 1000ms linear;
-    transition: background-color 1000ms linear; }
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear; }
+
+.preview-img {
+  height: 50%;
+  width: 100%;
+  object-fit: cover; }
 
 *,
 *::after,
@@ -1010,9 +1038,13 @@ body {
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  height: 100%; }
 
 body {
+  min-height: 100vh;
+  min-height: 100%;
+  overflow: auto;
   background-color: #060930;
   box-sizing: border-box;
   background-attachment: fixed;
@@ -1159,9 +1191,13 @@ body {
   box-sizing: inherit; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  height: 100%; }
 
 body {
+  min-height: 100vh;
+  min-height: 100%;
+  overflow: auto;
   background-color: #060930;
   box-sizing: border-box;
   background-attachment: fixed;

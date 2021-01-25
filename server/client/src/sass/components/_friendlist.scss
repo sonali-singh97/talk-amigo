@@ -131,7 +131,7 @@
  hr{
     border: none;
     border-bottom: 1px  solid rgb(255, 255, 255);
-
+    margin-right: 4rem;
  }
 }
 @media (max-width: 992px) {
@@ -188,6 +188,10 @@
     margin-left: 65rem !important;
     margin-top: 10rem !important;
 
+    hr{
+      margin-right: 1rem;
+    }
+
    
   }
 }
@@ -208,6 +212,14 @@
       margin-top: 0;
       margin-left: 0;
       padding: 0 1rem;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .feedpage{
+    .suggestion-box-wrapper {
+      margin-left: 92rem;
     }
   }
 }
