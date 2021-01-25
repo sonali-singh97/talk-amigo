@@ -153,25 +153,26 @@ function UserProfile() {
             display: "flex",
             justifyContent: "start",
             maxWidth: "700px",
-            margin: "18px auto",
-            //  borderBottom: "1px solid grey"
+            margin: "25px auto",
+            // borderBottom: "1px solid grey"
           }}
         >
           <div>
-            <img
+            <img className="User-Image"
               style={{
-                width: "160px",
-                height: "160px",
-                borderRadius: "80px",
+                width: "175px",
+                height: "175px",
+                borderRadius:"100%" ,
                 paddingBottom: "10px ",
+                
               }}
               src={state ? state.image : null}
             />
           </div>
           <div className="user-detail-box">
-            <h3 className="User-Name" style={{ color: "white" }}>
+            <h2 className="User-Name" style={{ color: "white" }}>
               {state ? state.username : "loading"}
-            </h3>
+            </h2>
             <h4 style={{ color: "white" }}>
             {state ? state.bio : ""} 
             </h4>
@@ -196,7 +197,7 @@ function UserProfile() {
             <button type="button" className="btn  user-detail-button">Message</button>
           </div> */}
 
-            <button className="btn user-detail-button" onClick={handleShow}>
+            <button className="btn  user-detail-button" onClick={handleShow}>
               Edit Profile
             </button>
 
