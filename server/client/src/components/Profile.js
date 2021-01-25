@@ -227,7 +227,7 @@ function UserProfile() {
               display: "flex",
               justifyContent: "start",
               maxWidth: "700px",
-              margin: "36px auto 18px",
+              margin: "25px auto 18px",
               // marginTop:"1rem",
               // borderBottom: "1.5px solid grey",
             }}

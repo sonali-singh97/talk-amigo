@@ -153,7 +153,7 @@ function UserProfile() {
             display: "flex",
             justifyContent: "start",
             maxWidth: "700px",
-            margin: "5px auto",
+            margin: "25px auto",
             // borderBottom: "1px solid grey"
           }}
         >
@@ -197,7 +197,7 @@ function UserProfile() {
             <button type="button" className="btn  user-detail-button">Message</button>
           </div> */}
 
-            <button className="btn user-detail-button" onClick={handleShow}>
+            <button className="btn  user-detail-button" onClick={handleShow}>
               Edit Profile
             </button>
 

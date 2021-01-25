@@ -602,19 +602,22 @@ a.nav-link {
     .user-detail-box .User-Name {
       margin-bottom: 1.5rem; }
   .user-detail-button {
-    background: linear-gradient(90deg, #b37389 0%, #f4abc4 70%, #f1d6df 100%);
-    box-shadow: inset -.25rem -.25rem .25rem #b37389, .15rem .15rem .5rem #7073a3, inset .15rem .25rem .25rem #b37389;
-    color: #000000;
+    border: .2rem solid #F4ABC4;
+    background-color: transparent;
+    color: #ffffff;
     font-weight: bolder;
-    border-radius: 4rem;
-    margin: 1rem;
-    margin: 1.2rem 2rem 0 0;
-    padding: 0.5rem 2rem;
+    border-radius: 2rem;
     font-size: 1.2rem;
-    border-width: 0; }
+    padding: 0.7rem 1.5rem;
+    margin: 1rem 1.5rem 0 0;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear; }
     .user-detail-button:hover {
-      background: #b37389;
-      background: linear-gradient(90deg, #b37389 0%, #b37389 100%, #f1d6df 100%); }
+      background-color: #F4ABC4;
+      -webkit-transition: background-color 1000ms linear;
+      -ms-transition: background-color 1000ms linear;
+      transition: background-color 1000ms linear; }
 
 *,
 *::after,
