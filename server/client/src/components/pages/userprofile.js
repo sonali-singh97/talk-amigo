@@ -153,7 +153,7 @@ function UserProfile() {
             display: "flex",
             justifyContent: "start",
             maxWidth: "700px",
-            margin: "18px auto",
+            margin: "5px auto",
             // borderBottom: "1px solid grey"
           }}
         >

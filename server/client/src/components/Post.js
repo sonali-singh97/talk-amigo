@@ -64,7 +64,7 @@ function Post(props) {
 
           <hr />
           <div
-            className={props.post.comments.length != 0 ? "comments-box" : ""}
+            className={props.post.comments.length !== 0 ? "comments-box" : ""}
           >
             {props.post.comments.map((comment) => {
               console.log(comment) 
@@ -87,7 +87,7 @@ function Post(props) {
               </div> )
            })}
           </div>
-          {props.post.comments.length != 0 && <hr />}
+          {props.post.comments.length !== 0 && <hr />}
           <div className="d-flex" style={{textAlign:"left"}}>
             <form
               onSubmit={(e) => {
