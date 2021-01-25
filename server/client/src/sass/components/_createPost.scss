@@ -73,14 +73,23 @@
     font-weight: bolder;
     border-radius: 2rem;
     font-size: 1.6rem;
-    -webkit-transition: background-color 1000ms linear;
-    -ms-transition: background-color 1000ms linear;
-    transition: background-color 1000ms linear;
+    -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
 
     &:hover{
         background-color:  #F4ABC4;
-        -webkit-transition: background-color 1000ms linear;
-    -ms-transition: background-color 1000ms linear;
-    transition: background-color 1000ms linear;
+        -webkit-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
     }
 }
+
+.preview-img{
+    height: 50%;
+    width:100%;
+    object-fit: cover;
+}
+
+
+

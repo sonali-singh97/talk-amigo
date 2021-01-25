@@ -55,24 +55,24 @@ function CreatePost() {
   };
 
   return (
-    <div className="container-fluid stardust-bg below-navbar">
+    <div className="container-fluid stardust-bg below-navbar" style={{height: "100vh"}}>
       {/* <Navbar /> */}
       <div className="container">
-        <div className="row ">
+        <div className="row justify-content-center">
           {" "}
-          <div className="offset-lg-4 col-lg-4 offset-md-3 col-md-6 offset-sm-2 col-sm-8">
+          <div className=" col-lg-5  col-md-6  col-sm-8">
             <div className="card text-white bg-transparent create-post-card">
               <div className="card-header">Create Post</div>
               <div className="card-body">
                 <div className="form-group text-left  ">
-                  <label>Upload Image: </label>
+                  <label>Upload Image: </label> <br />
                   <input
                     type="file"
                     onChange={(e) => setImg(e.target.files[0])}
                   />
                 </div>
                  {
-                   img && <div> <img src={URL.createObjectURL(img)} alt="post"/></div>
+                   img && <div> <img src={URL.createObjectURL(img)} alt="post"  className="preview-img"/></div>
                  }
                 <div className="form-group text-left  ">
                   <input
