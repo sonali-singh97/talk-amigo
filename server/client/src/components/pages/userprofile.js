@@ -163,7 +163,7 @@ function UserProfile() {
                 width: "175px",
                 height: "175px",
                 borderRadius:"100%" ,
-                paddingBottom: "10px ",
+                paddingBottom: "1rem",
                 
               }}
               src={state ? state.image : null}

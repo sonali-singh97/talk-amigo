@@ -203,7 +203,7 @@ function UserProfile() {
         const newData = data.map((item) => {
           if (item._id !== result._id) {
             const comments = item.comments.filter(
-              (comment) => comment._id != commentId
+              (comment) => comment._id !== commentId
             );
             item.comments = comments;
           }
