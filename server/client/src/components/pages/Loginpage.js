@@ -50,7 +50,7 @@ function Loginpage() {
       });
   };
   return (
-    <div className="container-fluid stardust-bg  below-navbar">
+    <div className="container-fluid stardust-bg  below-navbar"  style={{height: "100vh"}}>
       {/* <div  >  <img src="images/logo.png" alt="logo" className="logo" /> </div> */}
       <img src="images/star1.png" alt="star" className="star1  hide-it" />
       <img src="images/star1.png" alt="star" className="star2  hide-it" />

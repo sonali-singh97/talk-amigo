@@ -108,7 +108,7 @@ function Navbar() {
     <div className="container-fluid">
       <nav className="navbar  navbar-expand  navbar-light fixed-top pt-0 pb-0">
         <div className="container-fluid">
-          <Link className="navbar-brand" to={state ? "/feed" : "/signup"}>
+          <Link className="navbar-brand p-0" to={state ? "/feed" : "/signup"}>
             {" "}
             <img src="images/logo.png" alt="logo" className="logo" />{" "}
           </Link>

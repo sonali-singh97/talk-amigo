@@ -45,7 +45,6 @@ return(
   <Route path ="/reset" exact component = {Resetpage} />
   <Route path = "/reset/:token" component={Newpassword}></Route>
   <Route path="/suggestion_page" exact component= {SuggestionPage} />
-  <Route path="/preview" exact component= {ImagePreview} />
 
   </Switch>
 )

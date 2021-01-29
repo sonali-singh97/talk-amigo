@@ -21,8 +21,8 @@ body {
   /* padding-left: 0; */ }
 
 .logo {
-  display: block;
-  max-width: 35%;
+  display: inline-block;
+  max-width: 40%;
   max-height: 35%;
   width: auto;
   height: auto; }
@@ -92,8 +92,8 @@ body {
 
 @media (max-width: 480px) {
   .logo {
-    max-width: 30%;
-    max-height: 30%; }
+    max-width: 40%;
+    max-height: 40%; }
   .login-register-button {
     font-size: 1.2rem; } }
 
@@ -190,8 +190,8 @@ body {
   /* padding-left: 0; */ }
 
 .logo {
-  display: block;
-  max-width: 35%;
+  display: inline-block;
+  max-width: 40%;
   max-height: 35%;
   width: auto;
   height: auto; }
@@ -261,8 +261,8 @@ body {
 
 @media (max-width: 480px) {
   .logo {
-    max-width: 30%;
-    max-height: 30%; }
+    max-width: 40%;
+    max-height: 40%; }
   .login-register-button {
     font-size: 1.2rem; } }
 
@@ -540,14 +540,18 @@ a.nav-link {
 
 @media (max-width: 480px) {
   .navbar-icons {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     margin-right: 1rem; }
-  .navbar-login-link .navbar-login-text {
-    font-size: 1.2rem; }
+  .navbar-login-link {
+    margin-left: -8rem; }
+    .navbar-login-link .navbar-login-text {
+      font-size: 1.2rem; }
   .navbar-button {
     font-size: 1rem;
     margin-top: 1.5rem;
-    padding: 0.25rem 1rem; } }
+    padding: 0.25rem 1rem; }
+  .navbar-brand {
+    margin-right: -10rem; } }
 
 .Gallery {
   display: flex;
@@ -659,8 +663,8 @@ body {
   /* padding-left: 0; */ }
 
 .logo {
-  display: block;
-  max-width: 35%;
+  display: inline-block;
+  max-width: 40%;
   max-height: 35%;
   width: auto;
   height: auto; }
@@ -730,8 +734,8 @@ body {
 
 @media (max-width: 480px) {
   .logo {
-    max-width: 30%;
-    max-height: 30%; }
+    max-width: 40%;
+    max-height: 40%; }
   .login-register-button {
     font-size: 1.2rem; } }
 
@@ -890,8 +894,8 @@ body {
   /* padding-left: 0; */ }
 
 .logo {
-  display: block;
-  max-width: 35%;
+  display: inline-block;
+  max-width: 40%;
   max-height: 35%;
   width: auto;
   height: auto; }
@@ -961,8 +965,8 @@ body {
 
 @media (max-width: 480px) {
   .logo {
-    max-width: 30%;
-    max-height: 30%; }
+    max-width: 40%;
+    max-height: 40%; }
   .login-register-button {
     font-size: 1.2rem; } }
 
@@ -1052,8 +1056,8 @@ body {
   /* padding-left: 0; */ }
 
 .logo {
-  display: block;
-  max-width: 35%;
+  display: inline-block;
+  max-width: 40%;
   max-height: 35%;
   width: auto;
   height: auto; }
@@ -1123,8 +1127,8 @@ body {
 
 @media (max-width: 480px) {
   .logo {
-    max-width: 30%;
-    max-height: 30%; }
+    max-width: 40%;
+    max-height: 40%; }
   .login-register-button {
     font-size: 1.2rem; } }
 
@@ -1205,8 +1209,8 @@ body {
   /* padding-left: 0; */ }
 
 .logo {
-  display: block;
-  max-width: 35%;
+  display: inline-block;
+  max-width: 40%;
   max-height: 35%;
   width: auto;
   height: auto; }
@@ -1276,8 +1280,8 @@ body {
 
 @media (max-width: 480px) {
   .logo {
-    max-width: 30%;
-    max-height: 30%; }
+    max-width: 40%;
+    max-height: 40%; }
   .login-register-button {
     font-size: 1.2rem; } }
 
