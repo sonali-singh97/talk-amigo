@@ -15,7 +15,7 @@ import Newpassword from "./components/pages/Newpassword";
 import SuggestionPage from './containers/SuggestionPage';
 import {reducer, initialState} from "./reducers/userReducer";
 import './App.css';
-import ImagePreview from "./components/ImagePreview";
+
 
 export const UserContext = createContext();
 
