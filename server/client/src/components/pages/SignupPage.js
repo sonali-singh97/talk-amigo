@@ -79,7 +79,7 @@ function SignupPage() {
   };
 
   return (
-    <div className="container-fluid stardust-bg  below-navbar">
+    <div className="container-fluid stardust-bg  below-navbar"  style={{height: "100vh"}}>
       {/* <div> <img src="images/logo.png" alt="logo" className="logo" /> </div> */}
 
       <div className="container-fluid doodle-dots-bg">

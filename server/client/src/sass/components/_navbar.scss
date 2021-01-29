@@ -11,6 +11,7 @@
 a.nav-link{
   text-decoration: none;
 }
+
 .navbar-button{
   background: linear-gradient(90deg, rgba(179,115,137,1) 35%, rgba(204,136,160,1) 68%, rgba(225,164,185,1) 95%);   
     box-shadow: inset -.25rem -.25rem .25rem #b37389,
@@ -79,10 +80,11 @@ a.nav-link{
 @media (max-width: 480px) {
 
   .navbar-icons{
-    font-size: $default-font-size-small;
+    font-size: $default-font-size;
     margin-right: 1rem;
   }
   .navbar-login-link{
+    margin-left: -8rem;
     .navbar-login-text{
       font-size: 1.2rem;
     }
@@ -93,6 +95,15 @@ a.nav-link{
     font-size: 1rem;
     margin-top: 1.5rem;
     padding: 0.25rem 1rem;
+  }
+
+
+  //make icons closer to logo
+  .navbar-brand{
+    margin-right: -10rem;
+    // height: fit-content;
+    // width: fit-content;
+    
   }
 }
 
