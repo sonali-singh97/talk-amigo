@@ -12,10 +12,10 @@ People have always been looking for ways to connect and network with each other.
 
 ## How to run it?
 
-1. Clone the repository
+1. Clone the repository <br>
      `$ git clone https://github.com/sonali-singh97/talk-amigo.git`
 
-2. Navigate into cloned repository
+2. Navigate into cloned repository <br>
      `$ cd talk-amigo`
 
 3. Install dependencies
@@ -52,23 +52,29 @@ People have always been looking for ways to connect and network with each other.
 
 ### Here are some screenshots
 
-**Signup and login page**
-![signup page](/server/client/public/images/signup-page.png)
+
+**Signup and login page**   <br>
+
+![signup page](/server/client/public/images/signup-page.png) <br>
 ![login page](/server/client/public/images/login-page.png)
 
-**Homepage** : like and comment on posts
-![homepage](/server/client/public/images/homepage.png)
+
+**Homepage** : like and comment on posts   <br>
+![homepage](/server/client/public/images/homepage.png)   <br>
 ![homepage](/server/client/public/images/homepage2.png)
 
-**Profile page** : view, edit profile and posts
-![profile page](/server/client/public/images/profile-page.png)
-![edit profile](/server/client/public/images/edit-profile.png)
+
+**Profile page** : view, edit profile and posts   <br>
+![profile page](/server/client/public/images/profile-page.png)   <br>
+![edit profile](/server/client/public/images/edit-profile.png)   <br>
 ![post](/server/client/public/images/post.png)
 
-**Create post** : create post by uploading image with or without caption
+
+**Create post** : create post by uploading image with or without caption  <br>
 ![create post](/server/client/public/images/create-post.png)
 
-**Search box** : search for other users
+
+**Search box** : search for other users  <br>
 ![search box](/server/client/public/images/search-box.png)
 
 
