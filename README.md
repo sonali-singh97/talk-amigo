@@ -1,4 +1,4 @@
-# Talk Amigo
+# Talk Amigo  <img alt="hackerrank" title="hackerrank" src="https://img.shields.io/badge/ Social media-Application-ff69b4.svg"/>
 People have always been looking for ways to connect and network with each other. And, in this age of digitisation, people have found ways to be socially active on the internet, which is possible with the advent of the numerous social networking platforms and apps.
 
 **Talk Amigo** is a social media platform that allows you to share pictures, view them, comment on them and like them.
