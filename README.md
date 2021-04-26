@@ -58,27 +58,29 @@ People have always been looking for ways to connect and network with each other.
 
 ### Here are some screenshots
 
+**Signup page** 
+<p>
+![signup page](/server/client/public/images/signup-page.png) 
+</p>
 
-**Signup page**   <br>
+**Timeline** : All users posts  
+<p>
+![homepage](/server/client/public/images/homepage.png) </p>
 
-![signup page](/server/client/public/images/signup-page.png) <br>
+**Profile page** : Customize your profile  
+<p>
+![profile page](/server/client/public/images/profile-page.png) </p>
 
-**Timeline** : All users posts   <br>
-![homepage](/server/client/public/images/homepage.png)   <br>
+**Create post** : create post by uploading image with or without caption 
+<p>
+![create post](/server/client/public/images/create-post.png) </p>
 
-**Profile page** : Customize your profile  <br>
-![profile page](/server/client/public/images/profile-page.png)   <br>
-
-**Create post** : create post by uploading image with or without caption  <br>
-![create post](/server/client/public/images/create-post.png)
-
-
-**Search box** : search for other users  <br>
-![search box](/server/client/public/images/search-box.png)
-
+**Search box** : search for other users  
+<p>
+![search box](/server/client/public/images/search-box.png) </p>
 
 
-## What we learned?
+
 
 
 
