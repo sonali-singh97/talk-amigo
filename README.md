@@ -1,20 +1,27 @@
-# talk-amigo
+# Talk Amigo
 People have always been looking for ways to connect and network with each other. And, in this age of digitisation, people have found ways to be socially active on the internet, which is possible with the advent of the numerous social networking platforms and apps.
 
-**talk-amigo** is a social media platform that allows you to share pictures, view them, comment on them and like them.
+**Talk Amigo** is a social media platform that allows you to share pictures, view them, comment on them and like them.
 
 
-## Features:
+## Features
 - User signup, login and authentication.
 - Customize your user profile
 - Followers and Following
 - Search users
 - Upload posts,like them and add comments
+- Forgot & Reset Password
 
 
-## How we built it?
-### Frontend
-### Backend
+## Technologies
++ React
++ React Hooks
++ Context API for state management
++ Node.js
++ Express.js
++ MongoDB 
+
+
 
 ## How to run it?
 
@@ -63,7 +70,7 @@ People have always been looking for ways to connect and network with each other.
 <img src="/server/client/public/images/signup-page.png"> 
 </p>
 
-- Timeline : All users posts  
+- Timeline : Timeline is the landing page of the application. It shows all the posts of followers and followee.
 <p>
 <img src="/server/client/public/images/homepage.png" />
 </p>
