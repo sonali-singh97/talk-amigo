@@ -4,7 +4,13 @@ People have always been looking for ways to connect and network with each other.
 **talk-amigo** is a social media platform that allows you to share pictures, view them, comment on them and like them.
 
 
-## What it does?
+## Features:
+- User signup, login and authentication.
+- Customize your user profile
+- Followers and Following
+- Search users
+- Upload posts,like them and add comments
+
 
 ## How we built it?
 ### Frontend
@@ -53,22 +59,15 @@ People have always been looking for ways to connect and network with each other.
 ### Here are some screenshots
 
 
-**Signup and login page**   <br>
+**Signup page**   <br>
 
 ![signup page](/server/client/public/images/signup-page.png) <br>
-![login page](/server/client/public/images/login-page.png)
 
-
-**Homepage** : like and comment on posts   <br>
+**Timeline** : All users posts   <br>
 ![homepage](/server/client/public/images/homepage.png)   <br>
-![homepage](/server/client/public/images/homepage2.png)
 
-
-**Profile page** : view, edit profile and posts   <br>
+**Profile page** : Customize your profile  <br>
 ![profile page](/server/client/public/images/profile-page.png)   <br>
-![edit profile](/server/client/public/images/edit-profile.png)   <br>
-![post](/server/client/public/images/post.png)
-
 
 **Create post** : create post by uploading image with or without caption  <br>
 ![create post](/server/client/public/images/create-post.png)
