@@ -60,24 +60,24 @@ People have always been looking for ways to connect and network with each other.
 
 **Signup page** 
 <p>
-![signup page](/server/client/public/images/signup-page.png) 
+<img src="/server/client/public/images/signup-page.png"> 
 </p>
 
 **Timeline** : All users posts  
 <p>
-![homepage](/server/client/public/images/homepage.png) </p>
+<img src="/server/client/public/images/homepage.png" />
 
 **Profile page** : Customize your profile  
 <p>
-![profile page](/server/client/public/images/profile-page.png) </p>
+<img src= "/server/client/public/images/profile-page.png" />
 
 **Create post** : create post by uploading image with or without caption 
 <p>
-![create post](/server/client/public/images/create-post.png) </p>
+<img src="/server/client/public/images/create-post.png" />
 
 **Search box** : search for other users  
 <p>
-![search box](/server/client/public/images/search-box.png) </p>
+<img src="/server/client/public/images/search-box.png" />
 
 
 
