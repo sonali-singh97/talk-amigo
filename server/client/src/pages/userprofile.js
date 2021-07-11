@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
-import GalleryImage from "../GalleryImage";
-import { UserContext } from "../../App";
-import EditModal from "../EditProfile";
+import GalleryImage from "../components/GalleryImage";
+import { UserContext } from "../App";
+import EditModal from "../components/EditProfile";
 
 function UserProfile() {
   const { state, dispatch } = useContext(UserContext);

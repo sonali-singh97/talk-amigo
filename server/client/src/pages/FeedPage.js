@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Post from "../components/Post";
+//import Post from "../components/Post";
+import Post from "../components/post/index"
 // import Navbar from "../components/Navbar";
 import Friend from "../components/Friend";
 import { UserContext } from "../App";
