@@ -2,17 +2,18 @@
 import React, { useEffect, createContext, useReducer, useContext } from "react";
 import { BrowserRouter, useHistory, Switch } from "react-router-dom";
 import { Route } from "react-router";
-import Loginpage from "./components/pages/Loginpage";
-import SignupPage from "./components/pages/SignupPage";
-import FeedPage from "./containers/FeedPage";
-import FollowingPosts from "./containers/followingPosts";
+import Loginpage from "./pages/Loginpage";
+import SignupPage from "./pages/SignupPage";
+import FeedPage from "./pages/FeedPage";
+import FollowingPosts from "./pages/followingPosts";
 import Navbar from "./components/Navbar";
-import UserProfile from "./components/pages/userprofile";
-import Profile from "./components/Profile";
-import CreatePost from "./containers/CreatePost";
-import Resetpage from "./components/pages/Reset";
-import Newpassword from "./components/pages/Newpassword";
-import SuggestionPage from './containers/SuggestionPage';
+import UserProfile from "./pages/userprofile";
+//import Profile from "./components/Profile";
+import Profile from "./components/profile/index";
+import CreatePost from "./pages/CreatePost";
+import Resetpage from "./pages/Reset";
+import Newpassword from "./pages/Newpassword";
+import SuggestionPage from './pages/SuggestionPage';
 import {reducer, initialState} from "./reducers/userReducer";
 import './App.css';
 
