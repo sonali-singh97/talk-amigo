@@ -11,10 +11,7 @@ function Post(props) {
   return (
     <div className=" post-container">
       <div className="card post">
-        <div className="card-header">
-          <Header post={props.post} state={props.state} delete={props.delete} />
-
-        </div>
+        <Header post={props.post} state={props.state} delete={props.delete} />
 
         <div className="card-body">
           <img src={props.post.photo} className="post__image" />
@@ -36,7 +33,7 @@ function Post(props) {
             {props.post.comments.map((comment) => {
               console.log(comment)
               return (
-                <div key={comment._id} className="post__comment">
+                <div key={comment._id} >
                   <Comment comment={comment} state={props.state} post={props.post} deleteComment={props.deleteComment} comment_id={comment._id} />
                 </div >
               )

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Header(props) {
 
   return (
-    <div >
+    <div className="card-header">
       <div>
         <img src={props.post.postedBy.image} className="post__avatar" />
         <span className="post__user bold-text">

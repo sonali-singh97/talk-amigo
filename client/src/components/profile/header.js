@@ -161,9 +161,6 @@ function Header(props) {
                   </button>
                 )}
 
-                <button type="button" className="btn  user-detail-button">
-                  Message
-                </button>
               </div>
             </div>
           </div>

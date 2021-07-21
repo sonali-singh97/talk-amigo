@@ -52,16 +52,7 @@ function Resetpage() {
       <div className="container-fluid  ">
         <div className="row">
           <div className="mt-0 pt-0 col-md-4  d-flex justify-content-start  reset-illustration-div">
-            {/* <img
-              src="images/planet.png"
-              alt="planet"
-              className="planet-image"
-            /> */}
-            {/* <img
-              src="images/Saly-6.png"
-              alt="person"
-              className="person-image img-fluid"
-            /> */}
+
             <img
               src="images/rocket.png"
               alt="rocket"

@@ -59,7 +59,7 @@ body {
 
 .login-register-button {
   background: linear-gradient(90deg, #b37389 35%, #cc88a0 68%, #e1a4b9 95%);
-  box-shadow: inset -.25rem -.25rem .25rem #b37389, .25rem .15rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4;
+  box-shadow: inset -.25rem -.25rem .25rem #b37389, .25rem .15rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4;
   color: #000000;
   font-weight: bolder;
   border-radius: 3.75rem;
@@ -68,7 +68,7 @@ body {
   .login-register-button:hover {
     background: #b37389;
     background: linear-gradient(90deg, #b37389 0%, #b37389 100%, #f1d6df 100%);
-    box-shadow: -.25rem -.15rem .25rem #7073a3, inset -.25rem -.25rem .25rem #b37389, .25rem .25rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
+    box-shadow: -.25rem -.15rem .25rem #7073a3, inset -.25rem -.25rem .25rem #b37389, .25rem .25rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
 
 .forgot-password {
   text-align: end;
@@ -228,7 +228,7 @@ body {
 
 .login-register-button {
   background: linear-gradient(90deg, #b37389 35%, #cc88a0 68%, #e1a4b9 95%);
-  box-shadow: inset -.25rem -.25rem .25rem #b37389, .25rem .15rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4;
+  box-shadow: inset -.25rem -.25rem .25rem #b37389, .25rem .15rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4;
   color: #000000;
   font-weight: bolder;
   border-radius: 3.75rem;
@@ -237,7 +237,7 @@ body {
   .login-register-button:hover {
     background: #b37389;
     background: linear-gradient(90deg, #b37389 0%, #b37389 100%, #f1d6df 100%);
-    box-shadow: -.25rem -.15rem .25rem #7073a3, inset -.25rem -.25rem .25rem #b37389, .25rem .25rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
+    box-shadow: -.25rem -.15rem .25rem #7073a3, inset -.25rem -.25rem .25rem #b37389, .25rem .25rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
 
 .forgot-password {
   text-align: end;
@@ -335,6 +335,183 @@ body {
 @media (max-width: 768px) {
   .treeperson-image {
     display: none; } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  height: 100%; }
+
+body {
+  min-height: 100vh;
+  min-height: 100%;
+  overflow: auto;
+  background-color: #060930;
+  box-sizing: border-box;
+  background-attachment: fixed;
+  padding: 3rem;
+  /* padding-left: 0; */ }
+
+.logo {
+  display: inline-block;
+  max-width: 40%;
+  max-height: 35%;
+  width: auto;
+  height: auto; }
+
+.login-register-box {
+  color: #ffffff;
+  padding: 3rem;
+  margin: 1.5rem  auto; }
+
+.input-group {
+  border-bottom: 0.24rem solid #595B83;
+  border-radius: 0.5rem; }
+  .input-group:focus-within {
+    border-color: #ffffff; }
+
+.input-group-text {
+  background-color: transparent;
+  border: none;
+  margin: 2.5rem auto 1rem;
+  color: #ffffff; }
+
+.login-register-input {
+  background-color: transparent;
+  border-style: none;
+  color: #ffffff;
+  margin: 2.5rem auto;
+  font-size: 1.4rem; }
+
+.login-register-box .form-control:focus {
+  background-color: transparent;
+  color: #ffffff;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.login-register-button {
+  background: linear-gradient(90deg, #b37389 35%, #cc88a0 68%, #e1a4b9 95%);
+  box-shadow: inset -.25rem -.25rem .25rem #b37389, .25rem .15rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4;
+  color: #000000;
+  font-weight: bolder;
+  border-radius: 3.75rem;
+  margin-top: 3rem;
+  font-size: 1.6rem; }
+  .login-register-button:hover {
+    background: #b37389;
+    background: linear-gradient(90deg, #b37389 0%, #b37389 100%, #f1d6df 100%);
+    box-shadow: -.25rem -.15rem .25rem #7073a3, inset -.25rem -.25rem .25rem #b37389, .25rem .25rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
+
+.forgot-password {
+  text-align: end;
+  margin: 1rem auto 2rem;
+  font-size: 1.2rem; }
+
+.login-register-box p {
+  text-align: center;
+  margin: 0 auto; }
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 56.25%; } }
+
+@media only screen and (max-width: 768x) {
+  html {
+    font-size: 50%; }
+  .logo {
+    max-width: 35%;
+    max-height: 35%; } }
+
+@media (max-width: 480px) {
+  .logo {
+    max-width: 40%;
+    max-height: 40%; }
+  .login-register-button {
+    font-size: 1.2rem; } }
+
+.suggestion-page-heading {
+  color: #f4abc4;
+  font-size: 2.2rem;
+  margin-bottom: 2rem; }
+
+.suggestion-page-list {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  background: inherit; }
+  .suggestion-page-list:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.3);
+    filter: blur(10px);
+    background: inherit; }
+  .suggestion-page-list hr {
+    margin-top: 2rem;
+    border: none;
+    border-top: 0.14rem solid rgba(0, 0, 0, 0.6); }
+  .suggestion-page-list .clearfix:focus-within {
+    margin-bottom: 1rem; }
+  .suggestion-page-list li {
+    padding: 2rem 0 1rem 1rem; }
+  .suggestion-page-list .suggestion-dp {
+    float: left;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%; }
+  .suggestion-page-list .name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+    font-size: 1.6rem;
+    padding-left: 2rem; }
+    .suggestion-page-list .name .friend__details span {
+      display: block; }
+    .suggestion-page-list .name .friend__details .username {
+      color: #f0d2dc; }
+      .suggestion-page-list .name .friend__details .username:hover {
+        color: #f4abc4; }
+    .suggestion-page-list .name a {
+      color: #fff; }
+    .suggestion-page-list .name .follow-button {
+      font-size: 1.4rem;
+      color: #b37389;
+      font-weight: bolder; }
+      .suggestion-page-list .name .follow-button:hover {
+        color: #f4abc4; }
+      .suggestion-page-list .name .follow-button:focus {
+        outline: 0;
+        box-shadow: none; }
+
+@media (max-width: 992px) {
+  .suggestion-page-list .suggestion-dp {
+    width: 7rem;
+    height: 7rem; }
+  .suggestion-page-list .name {
+    font-size: 1.4rem; }
+    .suggestion-page-list .name .follow-button {
+      font-size: 1.2rem; } }
+
+@media (max-width: 760px) {
+  .suggestion-page-list .about {
+    margin-top: 0.8rem; } }
+
+@media (max-width: 480px) {
+  .suggestion-page-list .suggestion-dp {
+    width: 6rem;
+    height: 6rem; }
+  .suggestion-page-list .name .follow-button {
+    font-size: 1rem; } }
 
 .round-box {
   display: inline-block;
@@ -498,7 +675,7 @@ a.nav-link {
 
 .navbar-button {
   background: linear-gradient(90deg, #b37389 35%, #cc88a0 68%, #e1a4b9 95%);
-  box-shadow: inset -.25rem -.25rem .25rem #b37389, .15rem .15rem .25rem #7073a3, inset .25rem .15rem .25rem #f4abc4;
+  box-shadow: inset -.25rem -.25rem .25rem #b37389, .15rem .15rem .25rem #7073a3, inset .25rem .15rem .25rem #f4abc4;
   color: #ffffff;
   text-decoration: none;
   font-weight: bolder;
@@ -509,7 +686,7 @@ a.nav-link {
   .navbar-button:hover {
     background: #b37389;
     background: linear-gradient(90deg, #b37389 0%, #b37389 100%, #f1d6df 100%);
-    box-shadow: -.05rem -.05rem .25rem #7073a3, inset -.25rem -.25rem .25rem #b37389, .05rem .05rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
+    box-shadow: -.05rem -.05rem .25rem #7073a3, inset -.25rem -.25rem .25rem #b37389, .05rem .05rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
 
 .navbar-login-link {
   margin-right: 3rem; }
@@ -587,10 +764,13 @@ a.nav-link {
 @media (max-width: 600px) {
   .column {
     flex: 100%;
-    max-width: 100%; } }
+    max-width: 100%; }
+  .User-Image {
+    width: 200px;
+    height: 200px; } }
 
 .User-Image {
-  box-shadow: -8px -8px 28px #040620,  8px 8px 28px #080c40; }
+  box-shadow: -8px -8px 28px #040620,  8px 8px 28px #080c40; }
 
 .like-comment {
   position: absolute;
@@ -701,7 +881,7 @@ body {
 
 .login-register-button {
   background: linear-gradient(90deg, #b37389 35%, #cc88a0 68%, #e1a4b9 95%);
-  box-shadow: inset -.25rem -.25rem .25rem #b37389, .25rem .15rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4;
+  box-shadow: inset -.25rem -.25rem .25rem #b37389, .25rem .15rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4;
   color: #000000;
   font-weight: bolder;
   border-radius: 3.75rem;
@@ -710,7 +890,7 @@ body {
   .login-register-button:hover {
     background: #b37389;
     background: linear-gradient(90deg, #b37389 0%, #b37389 100%, #f1d6df 100%);
-    box-shadow: -.25rem -.15rem .25rem #7073a3, inset -.25rem -.25rem .25rem #b37389, .25rem .25rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
+    box-shadow: -.25rem -.15rem .25rem #7073a3, inset -.25rem -.25rem .25rem #b37389, .25rem .25rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
 
 .forgot-password {
   text-align: end;
@@ -870,7 +1050,7 @@ body {
 
 @media (min-width: 1400px) {
   .feedpage .suggestion-box-wrapper {
-    margin-left: 92rem; } }
+    margin-left: 65%; } }
 
 *,
 *::after,
@@ -932,7 +1112,7 @@ body {
 
 .login-register-button {
   background: linear-gradient(90deg, #b37389 35%, #cc88a0 68%, #e1a4b9 95%);
-  box-shadow: inset -.25rem -.25rem .25rem #b37389, .25rem .15rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4;
+  box-shadow: inset -.25rem -.25rem .25rem #b37389, .25rem .15rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4;
   color: #000000;
   font-weight: bolder;
   border-radius: 3.75rem;
@@ -941,7 +1121,7 @@ body {
   .login-register-button:hover {
     background: #b37389;
     background: linear-gradient(90deg, #b37389 0%, #b37389 100%, #f1d6df 100%);
-    box-shadow: -.25rem -.15rem .25rem #7073a3, inset -.25rem -.25rem .25rem #b37389, .25rem .25rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
+    box-shadow: -.25rem -.15rem .25rem #7073a3, inset -.25rem -.25rem .25rem #b37389, .25rem .25rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
 
 .forgot-password {
   text-align: end;
@@ -1094,7 +1274,7 @@ body {
 
 .login-register-button {
   background: linear-gradient(90deg, #b37389 35%, #cc88a0 68%, #e1a4b9 95%);
-  box-shadow: inset -.25rem -.25rem .25rem #b37389, .25rem .15rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4;
+  box-shadow: inset -.25rem -.25rem .25rem #b37389, .25rem .15rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4;
   color: #000000;
   font-weight: bolder;
   border-radius: 3.75rem;
@@ -1103,7 +1283,7 @@ body {
   .login-register-button:hover {
     background: #b37389;
     background: linear-gradient(90deg, #b37389 0%, #b37389 100%, #f1d6df 100%);
-    box-shadow: -.25rem -.15rem .25rem #7073a3, inset -.25rem -.25rem .25rem #b37389, .25rem .25rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
+    box-shadow: -.25rem -.15rem .25rem #7073a3, inset -.25rem -.25rem .25rem #b37389, .25rem .25rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
 
 .forgot-password {
   text-align: end;
@@ -1186,183 +1366,6 @@ body {
   .reset-button {
     font-size: 1.2rem;
     padding: 0.25rem 0.2rem; } }
-
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
-
-html {
-  font-size: 62.5%;
-  height: 100%; }
-
-body {
-  min-height: 100vh;
-  min-height: 100%;
-  overflow: auto;
-  background-color: #060930;
-  box-sizing: border-box;
-  background-attachment: fixed;
-  padding: 3rem;
-  /* padding-left: 0; */ }
-
-.logo {
-  display: inline-block;
-  max-width: 40%;
-  max-height: 35%;
-  width: auto;
-  height: auto; }
-
-.login-register-box {
-  color: #ffffff;
-  padding: 3rem;
-  margin: 1.5rem  auto; }
-
-.input-group {
-  border-bottom: 0.24rem solid #595B83;
-  border-radius: 0.5rem; }
-  .input-group:focus-within {
-    border-color: #ffffff; }
-
-.input-group-text {
-  background-color: transparent;
-  border: none;
-  margin: 2.5rem auto 1rem;
-  color: #ffffff; }
-
-.login-register-input {
-  background-color: transparent;
-  border-style: none;
-  color: #ffffff;
-  margin: 2.5rem auto;
-  font-size: 1.4rem; }
-
-.login-register-box .form-control:focus {
-  background-color: transparent;
-  color: #ffffff;
-  -webkit-box-shadow: none;
-  box-shadow: none; }
-
-.login-register-button {
-  background: linear-gradient(90deg, #b37389 35%, #cc88a0 68%, #e1a4b9 95%);
-  box-shadow: inset -.25rem -.25rem .25rem #b37389, .25rem .15rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4;
-  color: #000000;
-  font-weight: bolder;
-  border-radius: 3.75rem;
-  margin-top: 3rem;
-  font-size: 1.6rem; }
-  .login-register-button:hover {
-    background: #b37389;
-    background: linear-gradient(90deg, #b37389 0%, #b37389 100%, #f1d6df 100%);
-    box-shadow: -.25rem -.15rem .25rem #7073a3, inset -.25rem -.25rem .25rem #b37389, .25rem .25rem .5rem #7073a3, inset .25rem .15rem .25rem #f4abc4; }
-
-.forgot-password {
-  text-align: end;
-  margin: 1rem auto 2rem;
-  font-size: 1.2rem; }
-
-.login-register-box p {
-  text-align: center;
-  margin: 0 auto; }
-
-@media only screen and (max-width: 1200px) {
-  html {
-    font-size: 56.25%; } }
-
-@media only screen and (max-width: 768x) {
-  html {
-    font-size: 50%; }
-  .logo {
-    max-width: 35%;
-    max-height: 35%; } }
-
-@media (max-width: 480px) {
-  .logo {
-    max-width: 40%;
-    max-height: 40%; }
-  .login-register-button {
-    font-size: 1.2rem; } }
-
-.suggestion-page-heading {
-  color: #f4abc4;
-  font-size: 2.2rem;
-  margin-bottom: 2rem; }
-
-.suggestion-page-list {
-  position: relative;
-  overflow: hidden;
-  border-radius: 5px;
-  background: inherit; }
-  .suggestion-page-list:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.3);
-    filter: blur(10px);
-    background: inherit; }
-  .suggestion-page-list hr {
-    margin-top: 2rem;
-    border: none;
-    border-top: 0.14rem solid rgba(0, 0, 0, 0.6); }
-  .suggestion-page-list .clearfix:focus-within {
-    margin-bottom: 1rem; }
-  .suggestion-page-list li {
-    padding: 2rem 0 1rem 1rem; }
-  .suggestion-page-list .suggestion-dp {
-    float: left;
-    width: 8rem;
-    height: 8rem;
-    border-radius: 50%; }
-  .suggestion-page-list .name {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #ffffff;
-    font-size: 1.6rem;
-    padding-left: 2rem; }
-    .suggestion-page-list .name .friend__details span {
-      display: block; }
-    .suggestion-page-list .name .friend__details .username {
-      color: #f0d2dc; }
-      .suggestion-page-list .name .friend__details .username:hover {
-        color: #f4abc4; }
-    .suggestion-page-list .name a {
-      color: #fff; }
-    .suggestion-page-list .name .follow-button {
-      font-size: 1.4rem;
-      color: #b37389;
-      font-weight: bolder; }
-      .suggestion-page-list .name .follow-button:hover {
-        color: #f4abc4; }
-      .suggestion-page-list .name .follow-button:focus {
-        outline: 0;
-        box-shadow: none; }
-
-@media (max-width: 992px) {
-  .suggestion-page-list .suggestion-dp {
-    width: 7rem;
-    height: 7rem; }
-  .suggestion-page-list .name {
-    font-size: 1.4rem; }
-    .suggestion-page-list .name .follow-button {
-      font-size: 1.2rem; } }
-
-@media (max-width: 760px) {
-  .suggestion-page-list .about {
-    margin-top: 0.8rem; } }
-
-@media (max-width: 480px) {
-  .suggestion-page-list .suggestion-dp {
-    width: 6rem;
-    height: 6rem; }
-  .suggestion-page-list .name .follow-button {
-    font-size: 1rem; } }
 
 .Modal {
   border: 1px solid #afafaf;

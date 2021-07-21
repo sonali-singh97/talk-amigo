@@ -3,7 +3,7 @@ import React from "react";
 function Comment(props) {
 
   return (
-    <div>
+    <div className="post__comment">
       <div>
         <img src={props.comment.postedBy.image} className="post__avatar" />
         <span className="post__comment-name ">

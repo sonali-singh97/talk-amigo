@@ -54,7 +54,7 @@ function Post(props) {
           </span>
           <span className="icons__box round-box">
             <i class="fas fa-comments icon"></i>
-            <span>{props.post.likes.length}</span>
+            <span>{props.post.comments.length}</span>
           </span>
 
           <div class="post__details">
